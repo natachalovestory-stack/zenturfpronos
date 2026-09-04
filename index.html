@@ -1,89 +1,654 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>sorecturf | نظام تحليل سباقات الخيل</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zenturfpronos | تحليل وتوقعات سباقات الخيل</title>
+
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f3f6f4;color:#17201c}
-:root{--g:#063b2d;--g2:#087548;--gold:#d7ad48;--red:#b83b3b}
-header{background:linear-gradient(135deg,#03291f,#086343);color:#fff}.nav{max-width:1250px;margin:auto;padding:14px 18px;display:flex;align-items:center;gap:24px}.logo{font-size:27px;font-weight:900}.logo i{color:#69cc91;font-style:normal}.sub{display:block;font-size:10px;color:#e3cc82;font-weight:normal}nav{display:flex;gap:18px;margin-right:auto}nav a{color:#fff;text-decoration:none;font-size:13px}.btn{border:0;border-radius:8px;padding:11px 17px;background:#18a456;color:#fff;font-weight:bold;cursor:pointer}.btn.gold{background:#a37a16}.hero{background:linear-gradient(90deg,#03291ff0,#03291f70),url('hero.jpg') center/cover;min-height:290px;color:#fff}.heroIn{max-width:1250px;margin:auto;padding:50px 20px}.hero h1{font-size:40px;margin:0 0 10px}.hero p{font-size:17px;line-height:1.8;max-width:680px}.wrap{max-width:1250px;margin:24px auto;padding:0 15px}.layout{display:grid;grid-template-columns:1fr 330px;gap:20px}.card{background:#fff;border-radius:12px;padding:18px;margin-bottom:18px;box-shadow:0 3px 15px #0000000b}.card h2{color:var(--g);margin:0 0 15px;font-size:19px}.form{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.form label{font-size:12px;font-weight:bold}.form input,.form select{width:100%;margin-top:5px;padding:10px;border:1px solid #d8e0db;border-radius:7px}.tableWrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:930px}th{background:var(--g);color:#fff;padding:9px;font-size:12px}td{padding:7px;border-bottom:1px solid #e8eeeb;text-align:center;font-size:12px}td input{width:62px;padding:7px;border:1px solid #dce3df;border-radius:5px}.name{width:130px!important}.score{font-weight:900;color:var(--g2);font-size:15px}.stars{color:var(--gold);letter-spacing:1px}.tag{padding:4px 7px;border-radius:15px;background:#e9f6ef;color:#087548;font-weight:bold}.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:9px}.pick{padding:13px;border:1px solid #dce8e0;border-radius:10px;background:#f8fbf9}.pick strong{font-size:22px;color:var(--g)}.pick .title{font-weight:bold}.pick small{color:#68756f}.notice{padding:12px;border-right:4px solid var(--gold);background:#fff9e8;border-radius:7px;font-size:12px;line-height:1.8}.metric{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid #edf1ee}.metric b{color:var(--g)}footer{background:#052e24;color:white;text-align:center;padding:24px;font-size:12px}@media(max-width:850px){nav{display:none}.layout{grid-template-columns:1fr}.form{grid-template-columns:1fr 1fr}.grid5{grid-template-columns:1fr 1fr}.hero h1{font-size:29px}}
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,Tahoma,sans-serif;
+    background:#f4f6f8;
+    color:#222;
+}
+
+header{
+    background:#111827;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#22c55e;
+}
+
+.sub{
+    display:block;
+    font-size:14px;
+    margin-top:7px;
+    color:#cbd5e1;
+}
+
+.container{
+    max-width:1100px;
+    margin:20px auto;
+    padding:0 12px;
+}
+
+.card{
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 2px 10px rgba(0,0,0,.07);
+}
+
+.hero{
+    text-align:center;
+}
+
+.hero h1{
+    margin-top:5px;
+    color:#111827;
+}
+
+.hero p{
+    color:#555;
+    line-height:1.8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    border:1px solid #d1d5db;
+    border-radius:7px;
+    font-size:15px;
+}
+
+.table-wrap{
+    overflow-x:auto;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:900px;
+}
+
+th{
+    background:#111827;
+    color:white;
+    padding:10px;
+}
+
+td{
+    border-bottom:1px solid #ddd;
+    padding:7px;
+    text-align:center;
+}
+
+td input{
+    min-width:75px;
+}
+
+button{
+    border:0;
+    border-radius:8px;
+    padding:11px 16px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    margin:5px;
+}
+
+.add{
+    background:#2563eb;
+    color:white;
+}
+
+.analyze{
+    background:#16a34a;
+    color:white;
+}
+
+.reset{
+    background:#6b7280;
+    color:white;
+}
+
+.info{
+    background:#eff6ff;
+    border-right:4px solid #2563eb;
+    padding:12px;
+    line-height:1.8;
+}
+
+.result{
+    margin-top:15px;
+}
+
+.result-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px;
+    margin:7px 0;
+    background:#f8fafc;
+    border-radius:8px;
+    border-right:5px solid #16a34a;
+}
+
+.rank{
+    font-size:20px;
+    font-weight:bold;
+}
+
+.score{
+    font-weight:bold;
+    color:#15803d;
+}
+
+.method{
+    line-height:2;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+    font-size:13px;
+}
+
+@media(max-width:700px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .logo{
+        font-size:25px;
+    }
+
+    .card{
+        padding:12px;
+    }
+}
 </style>
 </head>
+
 <body>
-<header><div class="nav">
-<div class="logo">sorec<i>turf</i><span class="sub">منصة تحليل وتوقعات سباقات الخيل</span></div>
-<nav><a href="#race">السباق</a><a href="#horses">الخيل</a><a href="#pred">التوقعات</a><a href="#method">طريقة التحليل</a></nav>
-<button class="btn" onclick="document.getElementById('pred').scrollIntoView({behavior:'smooth'})">شاهد الترشيح</button>
-</div></header>
-<section class="hero"><div class="heroIn"><h1>تحليل سباقات الخيل بذكاء</h1><p>أدخل معطيات السباق والخيول، وسيقوم sorecturf بحساب مؤشر ترشيح موحد يساعدك على ترتيب الخيول من الأقوى إلى الأضعف.</p><button class="btn" onclick="document.getElementById('horses').scrollIntoView({behavior:'smooth'})">ابدأ الآن 🏇</button></div></section>
 
-<main class="wrap"><div class="layout"><section>
-<div class="card" id="race"><h2>📅 معلومات السباق</h2>
-<div class="form">
-<label>اسم السباق<input id="raceName" value="Quinté du jour"></label>
-<label>المضمار<input id="track" value="Vincennes"></label>
-<label>نوع السباق<select id="type"><option>Trot</option><option>Plat</option><option>Obstacle</option></select></label>
-<label>المسافة<input id="dist" value="2700 م"></label>
-<label>التاريخ<input type="date" id="date"></label>
-<label>الساعة<input type="time" id="time" value="13:50"></label>
-<label>عدد المشاركين<input id="count" type="number" value="10"></label>
-<label>ملاحظة<input id="note" value="تحليل تجريبي"></label>
-</div></div>
+<header>
+    <div class="logo">
+        ZENTURF<span>PRONOS</span>
+    </div>
+    <span class="sub">
+        منصة تحليل وتوقعات سباقات الخيل
+    </span>
+</header>
 
-<div class="card" id="horses"><h2>🐎 معطيات الخيول</h2>
-<div class="notice">النموذج يعطي مؤشراً إحصائياً تجريبياً. لا توجد خوارزمية تضمن نتيجة السباق، والنتيجة الفعلية تتأثر بعوامل كثيرة.</div><br>
-<div class="tableWrap"><table><thead><tr>
-<th>رقم</th><th>الحصان</th><th>آخر 5 نتائج<br>(مثال 1-3-2-5-1)</th><th>الأودز</th><th>السائق</th><th>المدرب</th><th>ملاءمة المسافة %</th><th>الحالة %</th><th>ثبات %</th><th>النقاط</th>
-</tr></thead><tbody id="rows"></tbody></table></div>
-<br><button class="btn" onclick="add()">+ إضافة حصان</button> <button class="btn gold" onclick="calc()">🔎 تحليل وترتيب</button>
+<div class="container">
+
+<div class="card hero">
+    <h1>🏇 تحليل سباقات الخيل بذكاء</h1>
+
+    <p>
+        أدخل معطيات السباق والخيول، وسيقوم
+        <strong>Zenturfpronos</strong>
+        بحساب مؤشر ترشيح إحصائي يساعد على ترتيب الخيول
+        من الأقوى إلى الأضعف.
+    </p>
+
+    <div class="info">
+        ⚠️ هذا النظام تجريبي للتحليل الإحصائي ولا يضمن نتيجة السباق أو الربح.
+    </div>
 </div>
 
-<div class="card" id="pred"><h2>🏆 ترشيح sorecturf</h2><div id="summary" class="notice">أدخل البيانات ثم اضغط «تحليل وترتيب».</div><br><div id="picks" class="grid5"></div></div>
+<div class="card">
 
-<div class="card" id="method"><h2>📊 نموذج النقاط</h2>
-<div class="metric"><span>الفورمة (آخر 5 نتائج)</span><b>30%</b></div>
-<div class="metric"><span>نسبة الحالة</span><b>20%</b></div>
-<div class="metric"><span>ملاءمة المسافة</span><b>15%</b></div>
-<div class="metric"><span>ثبات الأداء</span><b>15%</b></div>
-<div class="metric"><span>الأودز/السوق</span><b>10%</b></div>
-<div class="metric"><span>عوامل السائق والمدرب</span><b>10%</b></div>
-</div>
-</section>
+<h2>📋 معلومات السباق</h2>
 
-<aside>
-<div class="card"><h2>⭐ أفضل 5</h2><div id="side">—</div></div>
-<div class="card"><h2>🎯 أنواع الترشيح</h2>
-<p><span class="tag">القاعدة</span> أعلى مؤشر إجمالي</p>
-<p><span class="tag">آمن</span> أفضل توازن بين الفورمة والثبات</p>
-<p><span class="tag">مفاجأة</span> مؤشر جيد مع أودز أعلى</p>
+<div class="grid">
+
+<div>
+<label>اسم السباق</label>
+<input id="raceName" value="Quinté du jour">
 </div>
-<div class="card"><h2>📌 تطوير لاحق</h2><p style="font-size:12px;line-height:1.8">يمكن ربط النسخة بقاعدة بيانات حقيقية، واستيراد برنامج السباقات والنتائج، ثم تدريب نموذج إحصائي على السباقات السابقة.</p></div>
-</aside></div></main>
-<footer>© 2026 sorecturf — منصة تحليل مستقلة | لا يوجد ضمان للربح</footer>
+
+<div>
+<label>المضمار</label>
+<input id="track" value="Vincennes">
+</div>
+
+<div>
+<label>نوع السباق</label>
+<select id="raceType">
+<option>Trot</option>
+<option>Plat</option>
+<option>Obstacle</option>
+</select>
+</div>
+
+<div>
+<label>المسافة</label>
+<input id="distance" value="2700 م">
+</div>
+
+<div>
+<label>التاريخ</label>
+<input id="raceDate" type="date">
+</div>
+
+<div>
+<label>وقت السباق</label>
+<input id="raceTime" type="time" value="13:50">
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🐎 الخيول المشاركة</h2>
+
+<div class="info">
+أدخل بيانات كل حصان. كلما كانت المعلومات أدق، كان المؤشر الإحصائي أكثر فائدة.
+</div>
+
+<br>
+
+<div class="table-wrap">
+
+<table id="horsesTable">
+
+<thead>
+<tr>
+<th>رقم</th>
+<th>الحصان</th>
+<th>آخر 5 نتائج</th>
+<th>الأودز</th>
+<th>السائق %</th>
+<th>المدرب %</th>
+<th>ملاءمة المسافة %</th>
+<th>الحالة %</th>
+<th>الثبات %</th>
+</tr>
+</thead>
+
+<tbody id="horseBody"></tbody>
+
+</table>
+
+</div>
+
+<br>
+
+<button class="add" onclick="addHorse()">
+➕ إضافة حصان
+</button>
+
+<button class="analyze" onclick="analyze()">
+🔎 تحليل وترتيب
+</button>
+
+<button class="reset" onclick="resetHorses()">
+↻ إعادة ضبط
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>🏆 ترشيح Zenturfpronos</h2>
+
+<div id="result" class="result">
+
+<p>
+أدخل بيانات الخيول ثم اضغط على
+<strong>تحليل وترتيب</strong>.
+</p>
+
+</div>
+
+</div>
+
+<div class="card method">
+
+<h2>📊 طريقة الحساب</h2>
+
+<ul>
+<li>آخر 5 نتائج: <strong>30%</strong></li>
+<li>الحالة: <strong>20%</strong></li>
+<li>ملاءمة المسافة: <strong>15%</strong></li>
+<li>الثبات: <strong>15%</strong></li>
+<li>السوق والأودز: <strong>10%</strong></li>
+<li>السائق والمدرب: <strong>10%</strong></li>
+</ul>
+
+<p>
+<strong>ملاحظة:</strong>
+هذا المؤشر أداة مساعدة للتحليل وليس تنبؤًا مؤكدًا بنتيجة السباق.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 Zenturfpronos — منصة تحليل مستقلة
+<br>
+لا يوجد ضمان للربح
+</footer>
 
 <script>
-const sample=[
-[1,"Cheval 1","1-2-3-1-4",4.5,85,88,90],[2,"Cheval 2","3-1-5-2-2",6.2,80,84,86],
-[3,"Cheval 3","7-4-2-6-5",10.5,74,79,80],[4,"Cheval 4","2-2-1-3-2",5.8,89,91,92],
-[5,"Cheval 5","5-6-3-4-1",8.8,78,83,81],[6,"Cheval 6","4-8-5-2-6",12,70,75,77],
-[7,"Cheval 7","1-1-6-2-3",7.2,86,87,88],[8,"Cheval 8","9-5-7-4-8",16,65,72,68]
-];
-function add(v=[document.querySelectorAll('#rows tr').length+1,"","","",80,80,80]){
-let tr=document.createElement('tr');tr.innerHTML=`<td><input type="number" value="${v[0]}"></td>
-<td><input class="name" value="${v[1]}"></td><td><input class="form5" value="${v[2]}"></td>
-<td><input class="odds" type="number" step=".1" value="${v[3]}"></td>
-<td><input type="number" value="${v[4]}"></td><td><input type="number" value="${v[5]}"></td>
-<td><input type="number" value="${v[6]}"></td><td><input type="number" value="${v[5]}"></td>
-<td><input type="number" value="${v[6]}"></td><td class="score">—</td>`;document.getElementById('rows').appendChild(tr)}
-sample.forEach(add);
-function formScore(s){let a=(s||"").split(/[-,\s]+/).map(Number).filter(x=>x>0&&x<30);if(!a.length)return 50;let avg=a.reduce((x,y)=>x+y,0)/a.length;return Math.max(0,Math.min(100,105-avg*15))}
-function calc(){
-let d=[...document.querySelectorAll('#rows tr')].map(tr=>{let i=tr.querySelectorAll('input');let n=+i[0].value,name=i[1].value||'بدون اسم',form=formScore(i[2].value),od=+i[3].value||20,j=+i[4].value||0,t=+i[5].value||0,dist=+i[6].value||0,cond=+i[7].value||0,stable=+i[8].value||0;
-let market=Math.max(0,Math.min(100,100-(od*4)));let jt=(j+t)/2;let score=form*.30+cond*.20+dist*.15+stable*.15+market*.10+jt*.10;tr.querySelector('.score').textContent=score.toFixed(1);return{n,name,form,od,score,market}});
-d.sort((a,b)=>b.score-a.score);let top=d.slice(0,5);
-document.getElementById('summary').innerHTML=`السباق: <b>${document.getElementById('raceName').value}</b> — ${document.getElementById('track').value} — ${document.getElementById('dist').value}<br>تم ترتيب ${d.length} خيول حسب المؤشر التجريبي.`;
-document.getElementById('picks').innerHTML=top.map((x,k)=>`<div class="pick"><strong>${k+1}</strong><br><span class="title">رقم ${x.n} — ${x.name}</span><br><span class="stars">${'★'.repeat(Math.max(1,Math.min(5,Math.round(x.score/20))))}</span><br><small>مؤشر ${x.score.toFixed(1)} / 100</small></div>`).join('');
-document.getElementById('side').innerHTML=top.map((x,k)=>`<p><b>${k+1}. رقم ${x.n}</b> — ${x.name}<br><small>النقاط: ${x.score.toFixed(1)}</small></p>`).join('');
+
+let horseCount = 0;
+
+/* تاريخ اليوم */
+
+document.getElementById("raceDate").value =
+    new Date().toISOString().split("T")[0];
+
+/* إضافة حصان */
+
+function addHorse(){
+
+    horseCount++;
+
+    const tbody = document.getElementById("horseBody");
+
+    const row = document.createElement("tr");
+
+    row.innerHTML = `
+
+        <td>${horseCount}</td>
+
+        <td>
+            <input type="text"
+                   placeholder="اسم الحصان"
+                   class="name">
+        </td>
+
+        <td>
+            <input type="text"
+                   placeholder="1-3-2-5-1"
+                   class="form">
+        </td>
+
+        <td>
+            <input type="number"
+                   step="0.1"
+                   placeholder="10"
+                   class="odds">
+        </td>
+
+        <td>
+            <input type="number"
+                   min="0"
+                   max="100"
+                   value="80"
+                   class="driver">
+        </td>
+
+        <td>
+            <input type="number"
+                   min="0"
+                   max="100"
+                   value="80"
+                   class="trainer">
+        </td>
+
+        <td>
+            <input type="number"
+                   min="0"
+                   max="100"
+                   value="80"
+                   class="distanceFit">
+        </td>
+
+        <td>
+            <input type="number"
+                   min="0"
+                   max="100"
+                   value="80"
+                   class="condition">
+        </td>
+
+        <td>
+            <input type="number"
+                   min="0"
+                   max="100"
+                   value="80"
+                   class="stability">
+        </td>
+    `;
+
+    tbody.appendChild(row);
 }
-document.getElementById('date').value=new Date().toISOString().slice(0,10);
-</script></body></html>
+
+/* حساب نقاط الفورمة */
+
+function formScore(value){
+
+    if(!value || !value.trim()){
+        return 50;
+    }
+
+    const numbers = value
+        .split(/[-,.\s]+/)
+        .map(Number)
+        .filter(n => n >= 1 && n <= 15);
+
+    if(numbers.length === 0){
+        return 50;
+    }
+
+    const average =
+        numbers.reduce((a,b) => a+b,0) / numbers.length;
+
+    let score = 105 - average * 15;
+
+    return Math.max(0, Math.min(100, score));
+}
+
+/* حساب نقاط الأودز */
+
+function marketScore(odds){
+
+    const value = parseFloat(odds);
+
+    if(!value || value <= 0){
+        return 50;
+    }
+
+    let score = 100 - value * 4;
+
+    return Math.max(0, Math.min(100, score));
+}
+
+/* التحليل */
+
+function analyze(){
+
+    const rows =
+        document.querySelectorAll("#horseBody tr");
+
+    let horses = [];
+
+    rows.forEach(row => {
+
+        const name =
+            row.querySelector(".name").value.trim();
+
+        if(!name){
+            return;
+        }
+
+        const form =
+            row.querySelector(".form").value;
+
+        const odds =
+            row.querySelector(".odds").value;
+
+        const driver =
+            Number(row.querySelector(".driver").value) || 0;
+
+        const trainer =
+            Number(row.querySelector(".trainer").value) || 0;
+
+        const distanceFit =
+            Number(row.querySelector(".distanceFit").value) || 0;
+
+        const condition =
+            Number(row.querySelector(".condition").value) || 0;
+
+        const stability =
+            Number(row.querySelector(".stability").value) || 0;
+
+        const formPoints = formScore(form);
+
+        const market = marketScore(odds);
+
+        const driverTrainer =
+            (driver + trainer) / 2;
+
+        const total =
+
+            formPoints * 0.30 +
+
+            condition * 0.20 +
+
+            distanceFit * 0.15 +
+
+            stability * 0.15 +
+
+            market * 0.10 +
+
+            driverTrainer * 0.10;
+
+        horses.push({
+            name:name,
+            score:total,
+            form:formPoints,
+            odds:odds
+        });
+
+    });
+
+    if(horses.length === 0){
+
+        document.getElementById("result").innerHTML =
+            "<p>⚠️ أدخل اسم حصان واحد على الأقل.</p>";
+
+        return;
+    }
+
+    horses.sort((a,b) => b.score - a.score);
+
+    let html = "";
+
+    horses.slice(0,5).forEach((horse,index) => {
+
+        let label = "";
+
+        if(index === 0){
+            label = "⭐ المرشح الأول";
+        }
+        else if(index === 1){
+            label = "🥈 المرشح الثاني";
+        }
+        else if(index === 2){
+            label = "🥉 المرشح الثالث";
+        }
+        else if(index === 3){
+            label = "مرشح";
+        }
+        else{
+            label = "مفاجأة محتملة";
+        }
+
+        html += `
+
+        <div class="result-item">
+
+            <div>
+
+                <span class="rank">
+                    ${index + 1}
+                </span>
+
+                <strong>
+                    ${horse.name}
+                </strong>
+
+                <br>
+
+                <small>
+                    ${label}
+                </small>
+
+            </div>
+
+            <div class="score">
+                ${horse.score.toFixed(1)} / 100
+            </div>
+
+        </div>
+
+        `;
+
+    });
+
+    document.getElementById("result").innerHTML = html;
+
+}
+
+/* إعادة الضبط */
+
+function resetHorses(){
+
+    document.getElementById("horseBody").innerHTML = "";
+
+    horseCount = 0;
+
+    document.getElementById("result").innerHTML =
+        "<p>أدخل بيانات الخيول ثم اضغط على تحليل وترتيب.</p>";
+
+}
+
+/* إنشاء 10 خانات فارغة عند فتح الموقع */
+
+for(let i = 0; i < 10; i++){
+
+    addHorse();
+
+}
+
+</script>
+
+</body>
+</html>
