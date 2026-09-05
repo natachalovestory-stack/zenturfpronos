@@ -2,286 +2,1086 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zenturfpronos | تحليل وتوقعات سباقات الخيل</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#07111f">
+
+<title>zenturfpronostic — Quinté+ France</title>
+
 <style>
-*{box-sizing:border-box;}
-body{margin:0;font-family:Arial,Tahoma,sans-serif;background:#f4f6f8;color:#222;}
-header{background:#111827;color:white;padding:20px;text-align:center;}
-.logo{font-size:30px;font-weight:bold;}.logo span{color:#22c55e;}
-.sub{display:block;font-size:14px;margin-top:7px;color:#cbd5e1;}
-.container{max-width:1100px;margin:20px auto;padding:0 12px;}
-.card{background:white;border-radius:12px;padding:18px;margin-bottom:18px;box-shadow:0 2px 10px rgba(0,0,0,.07);}
-.hero{text-align:center;}.hero h1{margin-top:5px;color:#111827;}.hero p{color:#555;line-height:1.8;}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
-label{display:block;font-weight:bold;margin-bottom:6px;}
-input,select{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:7px;font-size:15px;}
-.table-wrap{overflow-x:auto;}
-table{width:100%;border-collapse:collapse;min-width:900px;}
-th{background:#111827;color:white;padding:10px;}
-td{border-bottom:1px solid #ddd;padding:7px;text-align:center;}
-td input, td select{min-width:75px;}
-button{border:0;border-radius:8px;padding:11px 16px;cursor:pointer;font-size:15px;font-weight:bold;margin:5px;}
-.add{background:#2563eb;color:white;}
-.analyze{background:#16a34a;color:white;}
-.reset{background:#6b7280;color:white;}
-.info{background:#eff6ff;border-right:4px solid #2563eb;padding:12px;line-height:1.8;}
-.result{margin-top:15px;}
-.result-section{margin-bottom:15px;}
-.result-section h3{background:#e5e7eb;padding:8px;border-radius:6px;font-size:16px;color:#1f2937;}
-.result-item{display:flex;justify-content:space-between;align-items:center;padding:12px;margin:7px 0;background:#f8fafc;border-radius:8px;border-right:5px solid #16a34a;}
-.rank{font-size:20px;font-weight:bold;}
-.score{font-weight:bold;color:#15803d;}
-.method{line-height:2;}
-footer{text-align:center;padding:25px;color:#666;font-size:13px;}
-@media(max-width:700px){.grid{grid-template-columns:1fr;}.logo{font-size:25px;}.card{padding:12px;}}
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#07111f;
+    color:#eef4ff;
+    min-height:100vh;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    padding:12px;
+}
+
+.header{
+    background:linear-gradient(135deg,#10263d,#07111f);
+    border:1px solid #24415e;
+    border-radius:18px;
+    padding:18px 14px;
+    margin-bottom:12px;
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+}
+
+.logo{
+    font-size:27px;
+    font-weight:900;
+    color:#38d9ff;
+    letter-spacing:.5px;
+}
+
+.subtitle{
+    color:#aabbd0;
+    margin-top:5px;
+    font-size:14px;
+}
+
+.live{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    margin-top:12px;
+    padding:6px 10px;
+    border-radius:20px;
+    background:#102d25;
+    color:#53e6a1;
+    font-size:12px;
+}
+
+.live-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#35e29a;
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    50%{opacity:.35}
+}
+
+.race{
+    background:#0d1c2d;
+    border:1px solid #243b54;
+    border-radius:16px;
+    padding:14px;
+    margin-bottom:12px;
+}
+
+.race-title{
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.race-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:7px;
+}
+
+.info{
+    background:#091522;
+    border-radius:10px;
+    padding:9px 5px;
+    text-align:center;
+}
+
+.info small{
+    display:block;
+    color:#91a5ba;
+    font-size:11px;
+}
+
+.info strong{
+    display:block;
+    margin-top:4px;
+    font-size:14px;
+}
+
+.refresh,
+.manual-button{
+    width:100%;
+    border:0;
+    border-radius:12px;
+    padding:12px;
+    margin-top:11px;
+    background:#159bc0;
+    color:white;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.manual-button{
+    background:#287bce;
+}
+
+.refresh:active,
+.manual-button:active{
+    transform:scale(.98);
+}
+
+.manual-panel{
+    display:none;
+    background:#0d1c2d;
+    border:1px solid #2d5975;
+    border-radius:16px;
+    padding:14px;
+    margin-bottom:12px;
+}
+
+.manual-panel.open{
+    display:block;
+}
+
+.manual-panel h3{
+    margin-bottom:8px;
+    font-size:17px;
+}
+
+.manual-panel p{
+    color:#aabbd0;
+    font-size:12px;
+    line-height:1.6;
+    margin-bottom:10px;
+}
+
+.manual-input{
+    width:100%;
+    min-height:90px;
+    resize:vertical;
+    border:1px solid #31516d;
+    border-radius:10px;
+    background:#091522;
+    color:#eef4ff;
+    padding:10px;
+    font:inherit;
+    direction:ltr;
+    text-align:left;
+}
+
+.manual-actions{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+}
+
+.manual-actions button{
+    border:0;
+    border-radius:10px;
+    padding:11px;
+    margin-top:8px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.apply-manual{
+    background:#159bc0;
+}
+
+.clear-manual{
+    background:#71313b;
+}
+
+.section-title{
+    margin:18px 3px 9px;
+    font-size:19px;
+    font-weight:bold;
+}
+
+.top5{
+    display:grid;
+    gap:8px;
+}
+
+.top-card{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:#0d1c2d;
+    border:1px solid #223a53;
+    border-radius:14px;
+    padding:10px;
+}
+
+.rank{
+    width:36px;
+    height:36px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#132a40;
+    font-weight:bold;
+    color:#42d8ff;
+}
+
+.number{
+    width:36px;
+    height:36px;
+    border-radius:10px;
+    background:#182b40;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.horse{
+    flex:1;
+    min-width:0;
+}
+
+.horse-name{
+    font-weight:bold;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.horse-meta{
+    font-size:11px;
+    color:#91a5ba;
+    margin-top:3px;
+}
+
+.strength{
+    min-width:55px;
+    text-align:center;
+    font-weight:bold;
+    color:#50e6a1;
+}
+
+.special{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:9px;
+}
+
+.special-card{
+    background:#0d1c2d;
+    border-radius:15px;
+    padding:14px 10px;
+    border:1px solid #263f59;
+    text-align:center;
+}
+
+.special-card.safe{
+    border-color:#23c995;
+}
+
+.special-card.surprise{
+    border-color:#e7a83e;
+}
+
+.special-label{
+    font-size:12px;
+    color:#9db0c4;
+}
+
+.special-number{
+    font-size:30px;
+    font-weight:900;
+    margin:6px 0;
+}
+
+.special-name{
+    font-weight:bold;
+}
+
+.combination{
+    background:linear-gradient(135deg,#102b42,#0c1c2b);
+    border:1px solid #2d5975;
+    border-radius:16px;
+    padding:15px;
+}
+
+.combination-title{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.horses{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+}
+
+.ball{
+    min-width:42px;
+    height:42px;
+    padding:0 9px;
+    border-radius:50%;
+    background:#159bc0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.note{
+    margin-top:10px;
+    font-size:12px;
+    color:#9fb2c5;
+    line-height:1.6;
+}
+
+.horse-list{
+    display:grid;
+    gap:7px;
+}
+
+.row{
+    background:#0d1c2d;
+    border:1px solid #20364d;
+    border-radius:13px;
+    padding:10px;
+}
+
+.row-top{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.badge{
+    width:35px;
+    height:35px;
+    border-radius:9px;
+    background:#172d43;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:bold;
+}
+
+.row-name{
+    flex:1;
+    font-weight:bold;
+}
+
+.percent{
+    font-weight:bold;
+    color:#45dca1;
+}
+
+.bar{
+    height:6px;
+    background:#162a3d;
+    border-radius:10px;
+    margin-top:9px;
+    overflow:hidden;
+}
+
+.bar span{
+    display:block;
+    height:100%;
+    background:linear-gradient(90deg,#159bc0,#42dca3);
+    border-radius:10px;
+}
+
+.form{
+    display:flex;
+    gap:5px;
+    margin-top:8px;
+}
+
+.form span{
+    width:25px;
+    height:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#172b3e;
+    border-radius:6px;
+    font-size:11px;
+}
+
+.analysis{
+    margin-top:9px;
+    padding-top:9px;
+    border-top:1px solid #1e3449;
+}
+
+.analysis-title{
+    font-size:12px;
+    color:#9eb2c7;
+    margin-bottom:5px;
+}
+
+.comment{
+    font-size:12px;
+    line-height:1.6;
+    color:#c8d4e1;
+}
+
+.footer{
+    text-align:center;
+    color:#6e8298;
+    font-size:11px;
+    padding:22px 5px;
+    line-height:1.7;
+}
+
+.loading{
+    text-align:center;
+    padding:25px;
+    color:#8da4bb;
+}
+
+.error{
+    background:#341b20;
+    border:1px solid #71313b;
+    color:#ffb4bd;
+    padding:12px;
+    border-radius:12px;
+    margin-bottom:12px;
+    font-size:13px;
+}
+
+@media(min-width:700px){
+    body{
+        padding-top:20px;
+    }
+
+    .container{
+        padding-bottom:30px;
+    }
+}
 </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">ZENTURF<span>PRONOS</span></div>
-    <span class="sub">منصة تحليل وتوقعات سباقات الخيل</span>
-</header>
-
 <div class="container">
-<div class="card hero">
-    <h1>🏇 تحليل سباقات الخيل بذكاء</h1>
-    <p>أدخل معطيات السباق، وسيقوم <strong>Zenturfpronos</strong> بجلب الخيول مسجلة البيانات وحساب مؤشر ترشيح إحصائي دقيق.</p>
-    <div class="info">⚠️ هذا النظام تجريبي للتحليل الإحصائي ولا يضمن نتيجة السباق أو الربح.</div>
-</div>
 
-<div class="card">
-<h2>📋 معلومات السباق</h2>
-<div class="grid">
-<div><label>اسم السباق</label><input id="raceName" value="Quinté du jour"></div>
-<div><label>المضمار</label><input id="track" value="Vincennes"></div>
-<div><label>نوع السباق</label>
-<select id="raceType">
-<option>Trot</option>
-<option>Plat</option>
-<option>Obstacle</option>
-</select>
-</div>
-<div><label>المسافة</label><input id="distance" value="2700 م"></div>
-<div><label>التاريخ</label><input id="raceDate" type="date"></div>
-<div><label>وقت السباق</label><input id="raceTime" type="time" value="13:50"></div>
-</div>
-</div>
+    <header class="header">
+        <div class="logo">zenturfpronostic</div>
 
-<div class="card">
-<h2>🐎 الخيول المشاركة</h2>
-<div class="info">يتم جلب أسماء الخيول تلقائياً من قاعدة البيانات، مع إمكانية تعديل المعطيات الإحصائية لكل حصان.</div>
-<br>
-<div class="table-wrap">
-<table id="horsesTable">
-<thead>
-<tr>
-<th>رقم</th>
-<th>الحصان</th>
-<th>آخر 5 نتائج</th>
-<th>الأودز</th>
-<th>السائق %</th>
-<th>المدرب %</th>
-<th>ملاءمة المسافة %</th>
-<th>الحالة %</th>
-<th>الثبات %</th>
-</tr>
-</thead>
-<tbody id="horseBody"></tbody>
-</table>
-</div>
-<br>
-<button class="add" onclick="addHorseRow()">➕ إضافة حصان يدوياً</button>
-<button class="analyze" onclick="analyze()">🔎 تحليل وترتيب منطقي</button>
-<button class="reset" onclick="resetHorses()">↻ إعادة ضبط</button>
-</div>
+        <div class="subtitle">
+            تحليل ذكي لسباق Quinté+ الفرنسي اليومي
+        </div>
 
-<div class="card">
-<h2>🏆 ترشيح وتوقعات Zenturfpronos المنطقية</h2>
-<div id="result" class="result">
-<p>اضغط على <strong>تحليل وترتيب منطقي</strong> لعرض التوقعات موزعة حسب حظوظ الفوز والمفاجآت.</p>
-</div>
-</div>
+        <div class="live">
+            <span class="live-dot"></span>
+            بيانات السباق
+        </div>
+    </header>
 
-<div class="card method">
-<h2>📊 طريقة الحساب</h2>
-<ul>
-<li>آخر 5 نتائج: <strong>30%</strong></li>
-<li>الحالة: <strong>20%</strong></li>
-<li>ملاءمة المسافة: <strong>15%</strong></li>
-<li>الثبات: <strong>15%</strong></li>
-<li>السوق والأودز: <strong>10%</strong></li>
-<li>السائق والمدرب: <strong>10%</strong></li>
-</ul>
-</div>
-</div>
+    <div id="errorBox"></div>
 
-<footer>
-© 2026 Zenturfpronos — منصة تحليل مستقلة<br>لا يوجد ضمان للربح
-</footer>
+    <section class="race">
+
+        <div class="race-title" id="raceName">
+            Quinté+ — France
+        </div>
+
+        <div class="race-grid">
+
+            <div class="info">
+                <small>اليوم</small>
+                <strong id="raceDate">--</strong>
+            </div>
+
+            <div class="info">
+                <small>السباق</small>
+                <strong id="raceNumber">--</strong>
+            </div>
+
+            <div class="info">
+                <small>الساعة</small>
+                <strong id="raceTime">--</strong>
+            </div>
+
+            <div class="info">
+                <small>المسافة</small>
+                <strong id="distance">--</strong>
+            </div>
+
+            <div class="info">
+                <small>نوع السباق</small>
+                <strong id="discipline">--</strong>
+            </div>
+
+            <div class="info">
+                <small>عدد الخيول</small>
+                <strong id="horseCount">--</strong>
+            </div>
+
+        </div>
+
+        <button class="refresh" onclick="loadRace()">
+            🔄 تحديث البيانات الحية
+        </button>
+
+        <button class="manual-button" onclick="toggleManualPanel()">
+            ✍️ إدخال توقعاتي يدويًا
+        </button>
+
+    </section>
+
+    <section class="manual-panel" id="manualPanel">
+
+        <h3>إدخال التوقع الخماسي</h3>
+
+        <p>
+            اكتب أرقام الخيول الخمسة بالترتيب، مفصولة بمسافة أو فاصلة.
+            مثال: 3، 7، 11، 5، 14
+        </p>
+
+        <textarea
+            id="manualPrediction"
+            class="manual-input"
+            inputmode="numeric"
+            placeholder="مثال: 3, 7, 11, 5, 14"></textarea>
+
+        <div class="manual-actions">
+            <button class="apply-manual" onclick="applyManualPrediction()">
+                حفظ التوقع
+            </button>
+
+            <button class="clear-manual" onclick="clearManualPrediction()">
+                مسح التوقع
+            </button>
+        </div>
+
+    </section>
+
+    <div class="section-title">
+        🏆 Top 5 zenturf
+    </div>
+
+    <section class="top5" id="top5">
+        <div class="loading">جاري تحميل التحليل...</div>
+    </section>
+
+    <div class="section-title">
+        🎯 الترشيحات الخاصة
+    </div>
+
+    <section class="special">
+
+        <div class="special-card safe">
+
+            <div class="special-label">
+                🛡️ الحصان الآمن
+            </div>
+
+            <div class="special-number" id="safeNumber">
+                --
+            </div>
+
+            <div class="special-name" id="safeName">
+                --
+            </div>
+
+        </div>
+
+        <div class="special-card surprise">
+
+            <div class="special-label">
+                ⚡ الحصان المفاجأة
+            </div>
+
+            <div class="special-number" id="surpriseNumber">
+                --
+            </div>
+
+            <div class="special-name" id="surpriseName">
+                --
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="section-title">
+        🎯 توقعاتي الخماسية
+    </div>
+
+    <section class="combination">
+
+        <div class="combination-title">
+            Quinté+ — التوقع اليدوي
+        </div>
+
+        <div class="horses" id="manualCombination">
+            <div class="loading">لم يتم إدخال توقع بعد</div>
+        </div>
+
+        <div class="note">
+            يمكنك إدخال أرقام خمسة خيول يدويًا، وسيتم حفظها على هذا الجهاز.
+        </div>
+
+    </section>
+
+    <div class="section-title">
+        🎯 التركيبة المقترحة
+    </div>
+
+    <section class="combination">
+
+        <div class="combination-title">
+            Quinté+ — 8 خيول
+        </div>
+
+        <div class="horses" id="combination">
+            <div class="loading">--</div>
+        </div>
+
+        <div class="note">
+            الترتيب مبني على مؤشر zenturf الذي يجمع عدة عوامل
+            من الأداء الحديث، النتائج الأخيرة، الاستقرار، والمسافة.
+        </div>
+
+    </section>
+
+    <div class="section-title">
+        🐎 جميع خيول السباق
+    </div>
+
+    <section class="horse-list" id="horseList">
+        <div class="loading">جاري تحميل الخيول...</div>
+    </section>
+
+    <footer class="footer">
+
+        zenturfpronostic<br>
+
+        تحليل آلي للمساعدة في دراسة سباقات الخيل.
+        لا يمثل ضمانًا لنتيجة السباق.
+
+        <br><br>
+
+        آخر تحديث:
+        <span id="lastUpdate">--</span>
+
+    </footer>
+
+</div>
 
 <script>
-// قاعدة بيانات تجريبية لأسماء الخيول والبيانات الأولية
-const horsesDatabase = [
-    { name: "Thunder Bolt", form: "1-2-1-3-2", odds: "4.5", driver: 85, trainer: 90, distanceFit: 88, condition: 85, stability: 80 },
-    { name: "Golden Star", form: "3-1-4-1-2", odds: "6.0", driver: 80, trainer: 82, distanceFit: 85, condition: 90, stability: 75 },
-    { name: "Royal Desert", form: "2-4-2-1-5", odds: "9.5", driver: 75, trainer: 78, distanceFit: 70, condition: 80, stability: 85 },
-    { name: "Silver Wind", form: "5-3-1-2-4", odds: "12.0", driver: 70, trainer: 75, distanceFit: 75, condition: 70, stability: 70 },
-    { name: "Dark Shadow", form: "4-5-3-3-1", odds: "15.0", driver: 65, trainer: 70, distanceFit: 65, condition: 75, stability: 65 },
-    { name: "Champion Spirit", form: "1-1-2-2-1", odds: "3.2", driver: 92, trainer: 95, distanceFit: 90, condition: 92, stability: 88 },
-    { name: "Noble Force", form: "6-2-5-4-3", odds: "22.0", driver: 60, trainer: 65, distanceFit: 60, condition: 60, stability: 60 },
-    { name: "Magic Runner", form: "3-3-3-5-2", odds: "18.5", driver: 68, trainer: 70, distanceFit: 72, condition: 68, stability: 70 }
-];
 
-document.getElementById("raceDate").value = new Date().toISOString().split("T")[0];
+const API_URL = "/api/quinte";
 
-function loadDatabaseHorses() {
-    const tbody = document.getElementById("horseBody");
-    tbody.innerHTML = "";
-    horsesDatabase.forEach((h, index) => {
-        const row = document.createElement("tr");
-        row.innerHTML = `
-            <td>${index + 1}</td>
-            <td><input type="text" value="${h.name}" class="name"></td>
-            <td><input type="text" value="${h.form}" class="form"></td>
-            <td><input type="number" step="0.1" value="${h.odds}" class="odds"></td>
-            <td><input type="number" min="0" max="100" value="${h.driver}" class="driver"></td>
-            <td><input type="number" min="0" max="100" value="${h.trainer}" class="trainer"></td>
-            <td><input type="number" min="0" max="100" value="${h.distanceFit}" class="distanceFit"></td>
-            <td><input type="number" min="0" max="100" value="${h.condition}" class="condition"></td>
-            <td><input type="number" min="0" max="100" value="${h.stability}" class="stability"></td>
-        `;
-        tbody.appendChild(row);
-    });
+const demoData = {
+
+    race:{
+        name:"Quinté+ — Prix de France",
+        date:"05/09/2026",
+        number:"R1C1",
+        time:"13:50",
+        distance:"2400 m",
+        discipline:"Trot",
+        horseCount:16
+    },
+
+    horses:[
+
+        {
+            number:3,
+            name:"CHEVAL EXEMPLE 1",
+            strength:92,
+            last5:["1","2","3","1","4"],
+            analysis:"Très régulier. Possède une excellente forme récente."
+        },
+
+        {
+            number:7,
+            name:"CHEVAL EXEMPLE 2",
+            strength:89,
+            last5:["2","1","5","2","3"],
+            analysis:"Bonne régularité et profil favorable."
+        },
+
+        {
+            number:11,
+            name:"CHEVAL EXEMPLE 3",
+            strength:86,
+            last5:["3","4","1","6","2"],
+            analysis:"Performances solides. Peut jouer les premières places."
+        },
+
+        {
+            number:5,
+            name:"CHEVAL EXEMPLE 4",
+            strength:83,
+            last5:["4","2","7","3","5"],
+            analysis:"Bonne condition générale."
+        },
+
+        {
+            number:14,
+            name:"CHEVAL EXEMPLE 5",
+            strength:80,
+            last5:["5","3","4","8","2"],
+            analysis:"Outsider intéressant."
+        },
+
+        {
+            number:9,
+            name:"CHEVAL EXEMPLE 6",
+            strength:77,
+            last5:["6","5","3","4","7"],
+            analysis:"Peut accrocher une place."
+        },
+
+        {
+            number:2,
+            name:"CHEVAL EXEMPLE 7",
+            strength:74,
+            last5:["7","4","6","2","8"],
+            analysis:"Régulier mais moins convaincant."
+        },
+
+        {
+            number:12,
+            name:"CHEVAL EXEMPLE 8",
+            strength:72,
+            last5:["8","5","4","6","3"],
+            analysis:"Profil de complément."
+        }
+
+    ]
+};
+
+function $(id){
+    return document.getElementById(id);
 }
 
-function addHorseRow() {
-    const tbody = document.getElementById("horseBody");
-    const count = tbody.rows.length + 1;
-    const row = document.createElement("tr");
-    row.innerHTML = `
-        <td>${count}</td>
-        <td><input type="text" placeholder="اسم الحصان" class="name"></td>
-        <td><input type="text" placeholder="1-3-2-5-1" class="form"></td>
-        <td><input type="number" step="0.1" value="10" class="odds"></td>
-        <td><input type="number" min="0" max="100" value="80" class="driver"></td>
-        <td><input type="number" min="0" max="100" value="80" class="trainer"></td>
-        <td><input type="number" min="0" max="100" value="80" class="distanceFit"></td>
-        <td><input type="number" min="0" max="100" value="80" class="condition"></td>
-        <td><input type="number" min="0" max="100" value="80" class="stability"></td>
-    `;
-    tbody.appendChild(row);
+function toggleManualPanel(){
+    $("manualPanel").classList.toggle("open");
 }
 
-function formScore(value) {
-    if(!value || !value.trim()) return 50;
-    const numbers = value.split(/[-,.\s]+/).map(Number).filter(n => n >= 1 && n <= 15);
-    if(numbers.length === 0) return 50;
-    const average = numbers.reduce((a,b) => a+b,0) / numbers.length;
-    let score = 105 - average * 15;
-    return Math.max(0, Math.min(100, score));
+function normalizeManualPrediction(value){
+    return value
+        .split(/[\s,،;؛\-]+/)
+        .map(item => item.trim())
+        .filter(Boolean)
+        .map(Number)
+        .filter(number => Number.isInteger(number) && number > 0);
 }
 
-function marketScore(odds) {
-    const value = parseFloat(odds);
-    if(!value || value <= 0) return 50;
-    let score = 100 - value * 4;
-    return Math.max(0, Math.min(100, score));
-}
+function applyManualPrediction(){
 
-function analyze() {
-    const rows = document.querySelectorAll("#horseBody tr");
-    let horses = [];
+    const numbers = normalizeManualPrediction(
+        $("manualPrediction").value
+    );
 
-    rows.forEach(row => {
-        const name = row.querySelector(".name").value.trim();
-        if(!name) return;
-        const form = row.querySelector(".form").value;
-        const odds = row.querySelector(".odds").value;
-        const driver = Number(row.querySelector(".driver").value) || 0;
-        const trainer = Number(row.querySelector(".trainer").value) || 0;
-        const distanceFit = Number(row.querySelector(".distanceFit").value) || 0;
-        const condition = Number(row.querySelector(".condition").value) || 0;
-        const stability = Number(row.querySelector(".stability").value) || 0;
+    const uniqueNumbers = [...new Set(numbers)];
 
-        const formPoints = formScore(form);
-        const market = marketScore(odds);
-        const driverTrainer = (driver + trainer) / 2;
+    if(uniqueNumbers.length !== 5){
 
-        const total = formPoints * 0.30 + condition * 0.20 + distanceFit * 0.15 + stability * 0.15 + market * 0.10 + driverTrainer * 0.10;
+        $("errorBox").innerHTML =
+        `<div class="error">
+        ⚠️ يجب إدخال خمسة أرقام خيول مختلفة بالضبط.
+        </div>`;
 
-        horses.push({ name: name, score: total, odds: odds });
-    });
-
-    if(horses.length === 0){
-        document.getElementById("result").innerHTML = "<p>⚠️ أدخل اسم حصان واحد على الأقل.</p>";
         return;
     }
 
-    horses.sort((a,b) => b.score - a.score);
+    localStorage.setItem(
+        "manualQuintePrediction",
+        JSON.stringify(uniqueNumbers)
+    );
 
-    // تقسيم منطقي للتوقعات بناءً على النقاط وفارق الحظوظ
-    let solidBase = []; // الخيول المرشحة بقوة (نقاط عالية جداً)
-    let outsiders = []; // مفاجآت محتملة (أودز مرتفع أو نقاط متوسطة متقاربة)
+    renderManualPrediction(uniqueNumbers);
 
-    horses.forEach((horse, index) => {
-        if (horse.score >= 70 && solidBase.length < 3) {
-            solidBase.push(horse);
-        } else if (parseFloat(horse.odds) >= 12 && outsiders.length < 2) {
-            outsiders.push(horse);
-        } else if (solidBase.length < 5) {
-            solidBase.push(horse);
-        }
-    });
+    $("errorBox").innerHTML =
+    `<div class="error" style="background:#102d25;border-color:#23c995;color:#9ff0c8">
+    ✅ تم حفظ توقعك الخماسي بنجاح.
+    </div>`;
+}
 
-    let html = `
-        <div class="result-section">
-            <h3>🔥 المرشحون الأبرز للفوز (Base Picks)</h3>
-    `;
-    
-    solidBase.forEach((horse, i) => {
-        html += `
-        <div class="result-item">
-            <div>
-                <span class="rank">#${i+1}</span>
-                <strong>${horse.name}</strong><br>
-                <small>أودز: ${horse.odds}</small>
+function clearManualPrediction(){
+
+    localStorage.removeItem("manualQuintePrediction");
+    $("manualPrediction").value = "";
+
+    $("manualCombination").innerHTML =
+        `<div class="loading">لم يتم إدخال توقع بعد</div>`;
+
+    $("errorBox").innerHTML = "";
+}
+
+function renderManualPrediction(numbers){
+
+    $("manualPrediction").value = numbers.join(", ");
+
+    $("manualCombination").innerHTML =
+        numbers.map((number,index)=>`
+
+            <div class="ball" title="المركز ${index+1}">
+                ${number}
             </div>
-            <div class="score">${horse.score.toFixed(1)} / 100</div>
-        </div>`;
-    });
 
-    html += `</div>`;
+        `).join("");
+}
 
-    if (outsiders.length > 0) {
-        html += `
-            <div class="result-section">
-                <h3>⚡ مفاجآت مدروسة (Outsiders / Value Bets)</h3>
-        `;
-        outsiders.forEach((horse) => {
-            html += `
-            <div class="result-item" style="border-right-color: #d97706;">
-                <div>
-                    <strong>${horse.name}</strong><br>
-                    <small>حصان قوي بأودز مرتفع (${horse.odds}) - يستحق المتابعة</small>
-                </div>
-                <div class="score" style="color: #b45309;">${horse.score.toFixed(1)} / 100</div>
-            </div>`;
-        });
-        html += `</div>`;
+function loadSavedManualPrediction(){
+
+    try{
+
+        const saved =
+            JSON.parse(localStorage.getItem("manualQuintePrediction"));
+
+        if(Array.isArray(saved) && saved.length === 5){
+            renderManualPrediction(saved);
+        }
+
+    }catch(error){
+
+        console.log("تعذر تحميل التوقع المحفوظ:",error);
     }
-
-    document.getElementById("result").innerHTML = html;
 }
 
-function resetHorses() {
-    document.getElementById("horseBody").innerHTML = "";
-    document.getElementById("result").innerHTML = "<p>أدخل بيانات الخيول ثم اضغط على تحليل وترتيب منطقي.</p>";
+async function loadRace(){
+
+    $("errorBox").innerHTML="";
+
+    try{
+
+        const response = await fetch(API_URL,{
+            cache:"no-store"
+        });
+
+        if(!response.ok){
+            throw new Error("API unavailable");
+        }
+
+        const data = await response.json();
+
+        renderRace(data);
+
+    }catch(error){
+
+        console.log("API non disponible:",error);
+
+        $("errorBox").innerHTML =
+        `<div class="error">
+        ⚠️ مصدر البيانات الحية غير متصل حاليًا.
+        تم تشغيل الوضع التجريبي للواجهة.
+        </div>`;
+
+        renderRace(demoData);
+    }
 }
 
-// تحميل الخيول تلقائياً من قاعدة البيانات عند فتح الصفحة
-loadDatabaseHorses();
+function renderRace(data){
+
+    const race=data.race;
+    const horses=data.horses || [];
+
+    $("raceName").textContent =
+        race.name || "Quinté+ — France";
+
+    $("raceDate").textContent =
+        race.date || "--";
+
+    $("raceNumber").textContent =
+        race.number || "--";
+
+    $("raceTime").textContent =
+        race.time || "--";
+
+    $("distance").textContent =
+        race.distance || "--";
+
+    $("discipline").textContent =
+        race.discipline || "--";
+
+    $("horseCount").textContent =
+        race.horseCount || horses.length;
+
+    $("lastUpdate").textContent =
+        new Date().toLocaleTimeString("fr-FR");
+
+    analyze(horses);
+}
+
+function analyze(horses){
+
+    if(!horses.length) return;
+
+    const sorted=[...horses]
+        .sort((a,b)=>
+            Number(b.strength||0)-Number(a.strength||0)
+        );
+
+    const top5=sorted.slice(0,5);
+
+    $("top5").innerHTML =
+        top5.map((horse,index)=>`
+
+        <div class="top-card">
+
+            <div class="rank">
+                ${index+1}
+            </div>
+
+            <div class="number">
+                ${horse.number}
+            </div>
+
+            <div class="horse">
+
+                <div class="horse-name">
+                    ${horse.name}
+                </div>
+
+                <div class="horse-meta">
+                    آخر 5 سباقات:
+                    ${(horse.last5||[]).join(" - ")}
+                </div>
+
+            </div>
+
+            <div class="strength">
+                ${horse.strength}%
+            </div>
+
+        </div>
+
+        `).join("");
+
+    const safe =
+        sorted.find(h =>
+            h.strength >= 85 &&
+            stability(h.last5)
+        ) || sorted[0];
+
+    $("safeNumber").textContent =
+        safe.number;
+
+    $("safeName").textContent =
+        safe.name;
+
+    const surprise =
+        sorted.find((h,i)=>
+            i>=4 &&
+            h.strength>=70
+        ) || sorted[sorted.length-1];
+
+    $("surpriseNumber").textContent =
+        surprise.number;
+
+    $("surpriseName").textContent =
+        surprise.name;
+
+    const combination =
+        sorted.slice(0,8);
+
+    $("combination").innerHTML =
+        combination.map(h=>`
+
+            <div class="ball">
+                ${h.number}
+            </div>
+
+        `).join("");
+
+    $("horseList").innerHTML =
+        sorted.map(horse=>`
+
+        <div class="row">
+
+            <div class="row-top">
+
+                <div class="badge">
+                    ${horse.number}
+                </div>
+
+                <div class="row-name">
+                    ${horse.name}
+                </div>
+
+                <div class="percent">
+                    ${horse.strength}%
+                </div>
+
+            </div>
+
+            <div class="bar">
+                <span style="width:${horse.strength}%"></span>
+            </div>
+
+            <div class="form">
+
+                ${(horse.last5||[])
+                    .slice(0,5)
+                    .map(x=>`<span>${x}</span>`)
+                    .join("")}
+
+            </div>
+
+            <div class="analysis">
+
+                <div class="analysis-title">
+                    Analyse des 5 dernières courses
+                </div>
+
+                <div class="comment">
+                    ${horse.analysis || "Analyse indisponible."}
+                </div>
+
+            </div>
+
+        </div>
+
+        `).join("");
+}
+
+function stability(last5){
+
+    if(!last5 || !last5.length)
+        return false;
+
+    const values =
+        last5.map(x=>{
+
+            const n=parseInt(x);
+
+            if(isNaN(n)) return 20;
+
+            if(n===1) return 100;
+            if(n===2) return 90;
+            if(n===3) return 80;
+            if(n===4) return 70;
+            if(n===5) return 60;
+            if(n<=8) return 45;
+
+            return 20;
+
+        });
+
+    const average =
+        values.reduce((a,b)=>a+b,0)/values.length;
+
+    return average>=65;
+}
+
+loadSavedManualPrediction();
+loadRace();
+
+setInterval(loadRace,5*60*1000);
+
 </script>
 
 </body>
