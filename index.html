@@ -1,62 +1,223 @@
-border-radius: 50%;
-                    <div class="card">
-            <div class="card-title">📋 قائمة الخيول والتحليلات الفرنساية</div>
-            <div class="table-responsive">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>الرقم</th>
-                            <th>اسم الحصان</th>
-                            <th>آخر 5 سباقات</th>
-                            <th>قوة الحصان</th>
-                        </tr>
-                    </thead>
-                    <tbody id="horses-table-body">
-                        <!-- البيانات ستضاف هنا ديناميكياً -->
-                    </tbody>
-                </table>
+table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 10px 5px;
+            font-size: 14px;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: #f9f9f9;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .horse-num {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            line-height: 25px;
+            font-weight: bold;
+        }
+
+        .progress-bar-container {
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100%;
+            height: 12px;
+            margin-top: 5px;
+        }
+
+        .progress-bar {
+            background-color: var(--secondary-color);
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        /* الخيول الآمنة والمفاجئة */
+        .special-horses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .box {
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        .safe-box { background-color: #2e7d32; }
+        .surprise-box { background-color: #e65100; }
+
+        .box span {
+            display: block;
+            font-size: 22px;
+            margin-top: 5px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 5px;
+            padding: 2px;
+        }
+
+        /* التركيبة المقترحة */
+        .combination-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #e0e0e0;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn.active {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+
+        .combo-display {
+            background-color: #fff9c4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border: 2px dashed var(--secondary-color);
+        }
+
+        /* روابط خارجية متخصصة */
+        .links-list a {
+            display: block;
+            padding: 12px;
+            background-color: #f9f9f9;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            color: var(--info-color);
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid #eee;
+            transition: 0.2s;
+        }
+
+        .links-list a:hover {
+            background-color: #f0f4c3;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر الرئيسي -->
+    <header>
+        <h1>Zenturfpronostics</h1>
+        <p>المنصة الاحترافية لتحليل سباقات Quinté plus اليومية</p>
+    </header>
+
+    <!-- شريط التحديث التلقائي والوقت -->
+    <div class="update-bar">
+        <div><span class="live-indicator">●</span> تحديث تلقائي نشط</div>
+        <div id="last-update">آخر تحديث: جاري التحميل...</div>
+    </div>
+
+    <div class="container">
+
+        <!-- قسم خيول Quinté plus و تحليل آخر 5 سباقات و نسب القوة -->
+        <div class="card">
+            <div class="card-title">قائمة خيول Quinté+ اليومية ونسبة القوة</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>الرقم</th>
+                        <th>اسم الحصان</th>
+                        <th>آخر 5 سباقات</th>
+                        <th>قوة الحصان</th>
+                    </tr>
+                </thead>
+                <tbody id="horses-table-body">
+                    <!-- سيتم توليد البيانات ديناميكياً هنا عبر الجافاسكريبت وبثها تلقائياً -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- قسم الحصان الآمن والحصان المفاجأة -->
+        <div class="card">
+            <div class="card-title">Top 5 zenturf - الخيول المفاتيح</div>
+            <div class="special-horses">
+                <div class="box safe-box">
+                    الحصان الآمن (Base)
+                    <span id="safe-horse">--</span>
+                </div>
+                <div class="box surprise-box">
+                    حصان المفاجأة (Tocard)
+                    <span id="surprise-horse">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- قسم التركيبة المقترحة 5 أو 8 خيول -->
+        <div class="card">
+            <div class="card-title">التركيبة المقترحة لليوم</div>
+            <div class="combination-buttons">
+                <button class="btn active" onclick="switchCombo(5)">تركيبة 5 خيول</button>
+                <button class="btn" onclick="switchCombo(8)">تركيبة 8 خيول</button>
+            </div>
+            <div class="combo-display" id="combo-output">
+                جاري تجهيز التركيبة المضمونة...
+            </div>
+        </div>
+
+        <!-- روابط متصلة بالإنترنت لصفحات سباقات الخيول المتخصصة -->
+        <div class="card">
+            <div class="card-title">روابط التحليل الرسمية والمتخصصة</div>
+            <div class="links-list">
+                <a href="https://zeturf.fr" target="_blank">🌐 توقعات ZEturf الرسمية المباشرة</a>
+                <a href="https://zone-turf.fr" target="_blank">📊 تحليل سباقات Quinté+ على Zone-Turf</a>
+                <a href="https://pmu.fr" target="_blank">🐎 منصة PMU الرسمية للنتائج والاحتمالات</a>
             </div>
         </div>
 
     </div>
 
     <script>
-        // محاكاة قاعدة بيانات مرتبطة بالمصادر الفرنسية للسباقات الشهيرة
-        const mockFrenchData = {
-            "R1C1": {
-                safe: 4,
-                surprise: 12,
-                top5:,
-                combo8:,
-                horses: [
-                    { id: 1, name: "Face Time", music: "1a 2a 4a 1a 3a", power: 88 },
-                    { id: 2, name: "Etonnant", music: "Da 5a 2a Da 1a", power: 65 },
-                    { id: 3, name: "Idao de Tillard", music: "3a 1a 1a 2a 4a", power: 78 },
-                    { id: 4, name: "San Moteur", music: "1a 1a 2a 1a 1a", power: 96 },
-                    { id: 5, name: "Hohneck", music: "4a 3a 5a 2a 1a", power: 82 },
-                    { id: 7, name: "Go On Boy", music: "2a 2a 1a 4a 3a", power: 90 },
-                    { id: 8, name: "Ampia Mede Sm", music: "5a 4a 3a 6a 2a", power: 70 },
-                    { id: 9, name: "Hooker Berry", music: "2a 6a 4a 1a 5a", power: 85 },
-                    { id: 12, name: "Galius (Toquard)", music: "Da 7a 9a 3a Da", power: 55 }
-                ]
-            },
-            "R1C2": {
-                safe: 3,
-                surprise: 9,
-                top5:,
-                combo8:,
-                horses: [
-                    { id: 1, name: "Jushua Tree", music: "1a 1a Da 1a 1a", power: 89 },
-                    { id: 2, name: "Just A Gigolo", music: "3a 4a 2a 5a 1a", power: 80 },
-                    { id: 3, name: "Horsy Dream", music: "1a 2a 1a 1a 3a", power: 95 },
-                    { id: 5, name: "Gu d'Heripre", music: "2a 5a 1a 3a 4a", power: 84 },
-                    { id: 6, name: "Emeraude de Bais", music: "4a 3a 6a 2a 5a", power: 75 },
-                    { id: 8, name: "Inmarosa", music: "2a 4a 5a 3a 2a", power: 81 },
-                    { id: 9, name: "Ganay de Banville", music: "6a 7a 3a 5a 4a", power: 62 },
-                    { id: 11, name: "Hussard du Landret", music: "5a 1a 7a 8a 2a", power: 79 }
-                ]
-            }
-        };
+        // محاكاة بيانات متغيرة قادمة من السيرفر لتطبيق التحديث التلقائي
+        function generateLiveData() {
+            // قائمة خيول وهمية كمثال يتم تحديثها تلقائياً
+            const horsesData = [
+                { num: 4, name: "Bold Eagle", past: "1p-2p-4p-1p-3p", power: 95 },
+                { num: 7, name: "Face Time", past: "2p-1p-1p-5p-2p", power: 92 },
+                { num: 12, name: "Davidson du Pont", past: "3p-4p-2p-Dis-1p", power: 88 },
+                { num: 2, name: "Idao de Tillard", past: "1p-1p-3p-2p-4p", power: 85 },
+                { num: 9, name: "Ampia Mede Sm", past: "5p-3p-2p-1p-6p", power: 79 },
+                { num: 14, name: "Granvillaise", past: "4p-5p-6p-2p-3p", power: 74 },
+            ];
 
-        function loadRaceData() {
-Utilisez le 
+            // تحديث الجدول
+            const tbody = document.getElementById('horses-table-body');
+            tbody.innerHTML = '';
+            horsesData.forEach(horse => {
+                tbody.innerHTML += `
+                    <tr>
+                        <td><span class="horse-num">${horse.num}</span></td>
+                        <td style="font-weight:bold;">${horse.name}</td>
+                        <td style="color:#666; font-size:12px; direction:ltr;">${horse.past}</td>
+                        <td>
+Utilisez le code avec précaution.${horse.power}%`;});// تحديث الحصان الامن والمفاجأة ديناميكياًdocument.getElementById('safe-horse').innerText = "4";document.getElementById('surprise-horse').innerText = "14";// تحديث الوقت لبيان أن التحديث التلقائي يعملconst now = new Date();document.getElementById('last-update').innerText = آخر تحديث: ${now.toLocaleTimeString('ar-EG')};// تحديث التركيبة الظاهرة بناء على الاختيار الحاليupdateComboDisplay();}let currentComboSize = 5;const combos = {5: "4 - 7 - 12 - 2 - 9",8: "4 - 7 - 12 - 2 - 9 - 14 - 5 - 11"};function switchCombo(size) {currentComboSize = size;const buttons = document.querySelectorAll('.combination-buttons .btn');buttons.forEach(btn => btn.classList.remove('active'));if(size === 5) buttons[0].classList.add('active');else buttons[1].classList.add('active');updateComboDisplay();}function updateComboDisplay() {document.getElementById('combo-output').innerText = combos[currentComboSize];}// تشغيل الدالة فور تحميل الصفحةgenerateLiveData();// خاصية التحديث التلقائي (تحديث البيانات كل 30 ثانية تلقائياً)setInterval(generateLiveData, 30000);
