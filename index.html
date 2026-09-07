@@ -1,134 +1,720 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen Turf Pronostics - بيانات Quinté+ الحية</title>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; text-align: center; }
-        .container { max-width: 900px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #d32f2f; }
-        .race-info { background: #e3f2fd; padding: 15px; border-radius: 5px; margin-bottom: 20px; font-weight: bold; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
-        th { background-color: #333; color: white; }
-        tr:nth-child(even) { background-color: #f9f9f9; }
-        .odds { font-weight: bold; color: #2e7d32; }
-        .loading { font-size: 18px; color: #666; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZENTURFPRONOSTIC - Quinté+ Prix V And B</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f4f7;
+    color:#17202a;
+}
+
+.container{
+    width:100%;
+    max-width:650px;
+    margin:auto;
+    padding:10px;
+}
+
+/* HEADER */
+
+.header{
+    background:linear-gradient(135deg,#101820,#263746);
+    color:white;
+    border-radius:18px;
+    padding:18px 12px;
+    text-align:center;
+    box-shadow:0 5px 18px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:27px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#f4c542;
+}
+
+.subtitle{
+    margin-top:7px;
+    font-size:14px;
+    color:#dfe6e9;
+}
+
+/* RACE */
+
+.race{
+    margin-top:12px;
+    background:white;
+    border-radius:16px;
+    padding:15px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.race-title{
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    color:#17202a;
+}
+
+.race-info{
+    text-align:center;
+    margin-top:8px;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.badge{
+    display:inline-block;
+    background:#e63946;
+    color:white;
+    padding:5px 10px;
+    border-radius:20px;
+    font-weight:bold;
+    margin:3px;
+}
+
+/* SECTIONS */
+
+.section{
+    margin-top:14px;
+    background:white;
+    border-radius:16px;
+    padding:14px;
+    box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.section h2{
+    margin:0 0 12px;
+    font-size:19px;
+    border-right:5px solid #f4c542;
+    padding-right:9px;
+}
+
+/* TOP 5 */
+
+.top-card{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:10px;
+    margin:7px 0;
+    border-radius:12px;
+    background:#f7f8fa;
+}
+
+.rank{
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#17202a;
+    color:white;
+    font-weight:bold;
+}
+
+.top-number{
+    font-size:20px;
+    font-weight:bold;
+    min-width:30px;
+}
+
+.top-name{
+    flex:1;
+    font-weight:bold;
+}
+
+.score{
+    font-weight:bold;
+    color:#087f5b;
+}
+
+/* SAFE / SURPRISE */
+
+.highlight{
+    padding:15px;
+    border-radius:14px;
+    margin-bottom:10px;
+}
+
+.safe{
+    background:#e7f7ef;
+    border:2px solid #20a36a;
+}
+
+.surprise{
+    background:#fff4d6;
+    border:2px solid #f4b400;
+}
+
+.highlight-title{
+    font-size:14px;
+    font-weight:bold;
+}
+
+.highlight-horse{
+    font-size:22px;
+    font-weight:900;
+    margin:5px 0;
+}
+
+.highlight-text{
+    font-size:13px;
+    line-height:1.6;
+}
+
+/* COMBINATION */
+
+.combination{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    justify-content:center;
+}
+
+.ball{
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:#17202a;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    font-weight:bold;
+    box-shadow:0 3px 6px rgba(0,0,0,.2);
+}
+
+.ball.gold{
+    background:#d39e00;
+}
+
+.ball.green{
+    background:#087f5b;
+}
+
+/* HORSES */
+
+.horse{
+    background:#fafafa;
+    border:1px solid #e1e5e8;
+    border-radius:13px;
+    padding:11px;
+    margin:8px 0;
+}
+
+.horse-header{
+    display:flex;
+    align-items:center;
+    gap:9px;
+}
+
+.number{
+    min-width:36px;
+    height:36px;
+    background:#17202a;
+    color:white;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.horse-name{
+    flex:1;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.percent{
+    font-size:17px;
+    font-weight:bold;
+    color:#087f5b;
+}
+
+.form{
+    margin-top:7px;
+    font-size:13px;
+    color:#555;
+}
+
+.bar{
+    height:9px;
+    background:#e5e7eb;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top:8px;
+}
+
+.bar-fill{
+    height:100%;
+    background:linear-gradient(90deg,#087f5b,#f4c542);
+    border-radius:10px;
+}
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    font-size:12px;
+    color:#777;
+    padding:18px 5px;
+    line-height:1.6;
+}
+
+/* MOBILE */
+
+@media(max-width:420px){
+
+    .container{
+        padding:7px;
+    }
+
+    .logo{
+        font-size:23px;
+    }
+
+    .race-title{
+        font-size:18px;
+    }
+
+    .section h2{
+        font-size:17px;
+    }
+
+    .horse-name{
+        font-size:14px;
+    }
+
+    .percent{
+        font-size:15px;
+    }
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
-    <h1>Zen Turf Pronostics - سباق Quinté+ اليوم</h1>
-    <div id="race-details" class="race-info">جاري تحميل معلومات السباق...</div>
-    
-    <div id="loading-text" class="loading">جاري جلب قائمة الخيول والبيانات الحية من PMU...</div>
-    
-    <table id="horses-table" style="display: none;">
-        <thead>
-            <tr>
-                <th>الرقم (N°)</th>
-                <th>اسم الحصان (Cheval)</th>
-                <th>الراكب/الفارس (Jockey)</th>
-                <th>الاحتمال الحي (Odds)</th>
-            </tr>
-        </thead>
-        <tbody id="horses-list">
-            <!-- سيتم إدراج الخيول هنا أوتوماتيكياً -->
-        </tbody>
-    </table>
+
+<!-- HEADER -->
+
+<div class="header">
+
+    <div class="logo">
+        ZENTURF<span>PRONOSTIC</span>
+    </div>
+
+    <div class="subtitle">
+        Analyse intelligente des courses hippiques
+    </div>
+
 </div>
 
-<script>
-// تحديد تاريخ اليوم بصيغة (DDMMYYYY) لطلبات الـ API
-const today = new Date();
-const dd = String(today.getDate()).padStart(2, '0');
-const mm = String(today.getMonth() + 1).padStart(2, '0');
-const yyyy = today.getFullYear();
-const formattedDate = `${dd}${mm}${yyyy}`;
 
-// روابط الـ API المباشرة والمفتوحة من موقع PMU للسباقات والـ Odds
-const pmuRacesUrl = `https://pmu.fr{formattedDate}`;
+<!-- COURSE -->
 
-async function fetchQuinteData() {
-    try {
-        // 1. جلب برنامج السباقات اليومي بالكامل
-        const response = await fetch(pmuRacesUrl);
-        const data = await response.json();
-        
-        // 2. البحث عن السباق المخصص لـ Quinté+ (غالباً يُرمز له بـ eQuintePlus أو يكون متضمناً للخاصية)
-        let quinteRace = null;
-        let reunionNum = null;
-        let raceNum = null;
+<div class="race">
 
-        for (const reunion of data.reunions) {
-            for (const race of reunion.courses) {
-                // الفلترة بناءً على نوع الرهان المتاح للسباق وهو Quinté+
-                if (race.paris && race.paris.includes('E_QUINTE_PLUS')) {
-                    quinteRace = race;
-                    reunionNum = reunion.numOfficiel;
-                    raceNum = race.numOfficiel;
-                    break;
-                }
-            }
-            if (quinteRace) break;
-        }
+    <div class="race-title">
+        🏆 QUINTÉ+ — PRIX V AND B
+    </div>
 
-        // إذا لم يبدأ تصنيف رهان الكوينتي لليوم بعد، نأخذ أول سباق رئيسي كمثال
-        if (!quinteRace) {
-            quinteRace = data.reunions[0].courses[0];
-            reunionNum = data.reunions[0].numOfficiel;
-            raceNum = quinteRace.numOfficiel;
-        }
+    <div class="race-info">
 
-        // عرض تفاصيل السباق الرئيسي
-        document.getElementById('race-details').innerHTML = `
-            المضمار (Réunion): R${reunionNum} | السباق (Course): C${raceNum} <br>
-            اسم الجائزة: ${quinteRace.libelle} | المسافة: ${quinteRace.distance} متر
-        `;
+        <span class="badge">R1C1</span>
+        <span class="badge">80 000 €</span>
+        <span class="badge">13h55</span>
 
-        // 3. جلب الاحتمالات الحية (Live Odds) الخاصة بهذا السباق بالتحديد
-        const oddsUrl = `https://pmu.fr{formattedDate}/R${reunionNum}/C${raceNum}/rapports-probables/direct?combinaison=1`;
-        const oddsResponse = await fetch(oddsUrl);
-        const oddsData = await oddsResponse.json();
-        
-        // ربط قائمة الخيول (Participants) مع احتمالاتها الحية
-        const participants = quinteRace.participants;
-        const liveOddsList = oddsData.rapportsProbables || [];
+        <br>
 
-        const tableBody = document.getElementById('horses-list');
-        tableBody.html = ""; // تنظيف الجدول
+        Attelé • Corde à droite<br>
+        Tous chevaux • 6 à 11 ans<br>
+        Distance : <b>2775 mètres</b><br>
+        Hippodrome : <b>Craon</b>
 
-        participants.forEach(horse => {
-            // البحث عن الاحتمال الحي المقابل لرقم الحصان
-            const horseOddsObj = liveOddsList.find(o => o.numNouveauParticipant === horse.numPmu);
-            const liveOdds = horseOddsObj ? horseOddsObj.rapport : '-';
+    </div>
 
-            const row = `<tr>
-                <td><strong>${horse.numPmu}</strong></td>
-                <td>${horse.nom}</td>
-                <td>${horse.driver}</td>
-                <td class="odds">${liveOdds}</td>
-            </tr>`;
-            tableBody.innerHTML += row;
-        });
+</div>
 
-        // إخفاء رسالة التحميل وعرض الجدول
-        document.getElementById('loading-text').style.display = 'none';
-        document.getElementById('horses-table').style.display = 'table';
 
-    } catch (error) {
-        console.error("خطأ في جلب البيانات:", error);
-        document.getElementById('loading-text').innerText = "فشل في تحديث البيانات الحية تلقائياً. تأكد من توفر السباقات الحالية.";
-    }
-}
+<!-- TOP 5 -->
 
-// تشغيل الدالة فور تحميل الصفحة
-fetchQuinteData();
+<div class="section">
 
-// تحديث تلقائي للبيانات كل 60 ثانية (لجلب التغيرات في الـ Odds)
-setInterval(fetchQuinteData, 60000);
-</script>
+<h2>🏆 TOP 5 ZENTURFPRONOSTIC</h2>
+
+<div class="top-card">
+    <div class="rank">1</div>
+    <div class="top-number">14</div>
+    <div class="top-name">King Opera</div>
+    <div class="score">91%</div>
+</div>
+
+<div class="top-card">
+    <div class="rank">2</div>
+    <div class="top-number">13</div>
+    <div class="top-name">Just de l'Oison</div>
+    <div class="score">89%</div>
+</div>
+
+<div class="top-card">
+    <div class="rank">3</div>
+    <div class="top-number">3</div>
+    <div class="top-name">King de l'Ouest</div>
+    <div class="score">82%</div>
+</div>
+
+<div class="top-card">
+    <div class="rank">4</div>
+    <div class="top-number">12</div>
+    <div class="top-name">Idole Of Love</div>
+    <div class="score">76%</div>
+</div>
+
+<div class="top-card">
+    <div class="rank">5</div>
+    <div class="top-number">16</div>
+    <div class="top-name">Ideal du Roc</div>
+    <div class="score">73%</div>
+</div>
+
+</div>
+
+
+<!-- SAFE -->
+
+<div class="section">
+
+<div class="highlight safe">
+
+    <div class="highlight-title">
+        🛡️ CHEVAL LE PLUS SÛR
+    </div>
+
+    <div class="highlight-horse">
+        N°14 — King Opera
+    </div>
+
+    <div class="highlight-text">
+        Très bonne forme récente : 2a - 1a - 1a - 3a - 2a.
+        Grande régularité et excellente vitesse de référence.
+        C'est la base prioritaire de ZENTURFPRONOSTIC.
+    </div>
+
+</div>
+
+
+<div class="highlight surprise">
+
+    <div class="highlight-title">
+        ⚡ CHEVAL SURPRISE
+    </div>
+
+    <div class="highlight-horse">
+        N°10 — Joyce Delto
+    </div>
+
+    <div class="highlight-text">
+        Capable de refaire surface malgré une dernière sortie
+        moyenne. Sa série récente comporte plusieurs performances
+        intéressantes et elle peut intégrer la combinaison.
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- COMBINATION 5 -->
+
+<div class="section">
+
+<h2>🎯 COMBINAISON ZENTURF — 5 CHEVAUX</h2>
+
+<div class="combination">
+
+    <div class="ball gold">14</div>
+    <div class="ball gold">13</div>
+    <div class="ball green">3</div>
+    <div class="ball">12</div>
+    <div class="ball">16</div>
+
+</div>
+
+<p style="text-align:center;font-size:13px;">
+Base : <b>14 - 13</b><br>
+Associés : <b>3 - 12 - 16</b>
+</p>
+
+</div>
+
+
+<!-- COMBINATION 8 -->
+
+<div class="section">
+
+<h2>🔐 COMBINAISON ÉLARGIE — 8 CHEVAUX</h2>
+
+<div class="combination">
+
+    <div class="ball gold">14</div>
+    <div class="ball gold">13</div>
+    <div class="ball green">3</div>
+    <div class="ball green">12</div>
+    <div class="ball">16</div>
+    <div class="ball">10</div>
+    <div class="ball">6</div>
+    <div class="ball">9</div>
+
+</div>
+
+<p style="text-align:center;font-size:13px;">
+<b>14 - 13 - 3 - 12 - 16 - 10 - 6 - 9</b>
+</p>
+
+</div>
+
+
+<!-- ANALYSIS -->
+
+<div class="section">
+
+<h2>📊 ANALYSE DES 16 PARTANTS</h2>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">1</div>
+<div class="horse-name">Jambier d'Ourville</div>
+<div class="percent">45%</div>
+</div>
+<div class="form">4a - 0a - 4a - 0a - 4a</div>
+<div class="bar"><div class="bar-fill" style="width:45%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">2</div>
+<div class="horse-name">Ideal de Sassy</div>
+<div class="percent">49%</div>
+</div>
+<div class="form">3a - 5a - 7a - 0a - 9a</div>
+<div class="bar"><div class="bar-fill" style="width:49%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">3</div>
+<div class="horse-name">King de l'Ouest</div>
+<div class="percent">82%</div>
+</div>
+<div class="form">2a - 1a - 7a - 5a - 3a</div>
+<div class="bar"><div class="bar-fill" style="width:82%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">4</div>
+<div class="horse-name">General du Nord</div>
+<div class="percent">38%</div>
+</div>
+<div class="form">7a - 6a - 2a - 0a - 0a</div>
+<div class="bar"><div class="bar-fill" style="width:38%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">5</div>
+<div class="horse-name">Gump du Poncelet</div>
+<div class="percent">51%</div>
+</div>
+<div class="form">2a - 0a - Da - 8a - 1a</div>
+<div class="bar"><div class="bar-fill" style="width:51%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">6</div>
+<div class="horse-name">Ileo Pierji</div>
+<div class="percent">55%</div>
+</div>
+<div class="form">6a - 4a - 5a - 5a - Da</div>
+<div class="bar"><div class="bar-fill" style="width:55%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">7</div>
+<div class="horse-name">Hector de Bassi</div>
+<div class="percent">47%</div>
+</div>
+<div class="form">7a - 3a - 6a - 0a - 6a</div>
+<div class="bar"><div class="bar-fill" style="width:47%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">8</div>
+<div class="horse-name">Inherit</div>
+<div class="percent">52%</div>
+</div>
+<div class="form">3a - 5a - Aa - 7a - 0a</div>
+<div class="bar"><div class="bar-fill" style="width:52%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">9</div>
+<div class="horse-name">Iris From</div>
+<div class="percent">57%</div>
+</div>
+<div class="form">2a - 0a - 0a - 7a - 4a</div>
+<div class="bar"><div class="bar-fill" style="width:57%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">10</div>
+<div class="horse-name">Joyce Delto</div>
+<div class="percent">63%</div>
+</div>
+<div class="form">6a - 3a - 8a - 1a - 5a</div>
+<div class="bar"><div class="bar-fill" style="width:63%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">11</div>
+<div class="horse-name">Hold Up du Dige</div>
+<div class="percent">35%</div>
+</div>
+<div class="form">8a - 8a - 0a - 0a - 6a</div>
+<div class="bar"><div class="bar-fill" style="width:35%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">12</div>
+<div class="horse-name">Idole Of Love</div>
+<div class="percent">76%</div>
+</div>
+<div class="form">4a - 4a - 3a - 4a - Da</div>
+<div class="bar"><div class="bar-fill" style="width:76%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">13</div>
+<div class="horse-name">Just de l'Oison</div>
+<div class="percent">89%</div>
+</div>
+<div class="form">1a - 1a - 2a - Da - 2a</div>
+<div class="bar"><div class="bar-fill" style="width:89%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">14</div>
+<div class="horse-name">King Opera</div>
+<div class="percent">91%</div>
+</div>
+<div class="form">2a - 1a - 1a - 3a - 2a</div>
+<div class="bar"><div class="bar-fill" style="width:91%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">15</div>
+<div class="horse-name">Hidalgo des Noe</div>
+<div class="percent">43%</div>
+</div>
+<div class="form">4a - 8a - 6a - 4a - 8a</div>
+<div class="bar"><div class="bar-fill" style="width:43%"></div></div>
+</div>
+
+
+<div class="horse">
+<div class="horse-header">
+<div class="number">16</div>
+<div class="horse-name">Ideal du Roc</div>
+<div class="percent">73%</div>
+</div>
+<div class="form">1a - 5a - 0a - 3a - 3a</div>
+<div class="bar"><div class="bar-fill" style="width:73%"></div></div>
+</div>
+
+</div>
+
+
+<!-- FINAL -->
+
+<div class="section">
+
+<h2>🧠 SYNTHÈSE ZENTURFPRONOSTIC</h2>
+
+<p style="line-height:1.8;font-size:14px;">
+
+<b>Base :</b> 14 - King Opera<br>
+
+<b>Très forte chance :</b> 13 - Just de l'Oison<br>
+
+<b>Priorité :</b> 3 - King de l'Ouest<br>
+
+<b>Bon complément :</b> 12 - Idole Of Love<br>
+
+<b>À garder :</b> 16 - Ideal du Roc<br>
+
+<b>Outsider :</b> 10 - Joyce Delto<br>
+
+<b>Regret :</b> 6 - Ileo Pierji<br>
+
+<b>Complément élargi :</b> 9 - Iris From
+
+</p>
+
+</div>
+
+
+<div class="footer">
+
+ZENTURFPRONOSTIC © 2026<br>
+Analyse statistique — aucune garantie de résultat.<br>
+Les pourcentages sont des indices internes de sélection.
+
+</div>
+
+</div>
 
 </body>
+</html>
