@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://natachalovestory-stack.github.io/zenturfpronos/sitemap.xml
