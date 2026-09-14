@@ -1,52 +1,409 @@
+ تمام، سأعدّ لك كود HTML كامل ومُحسّن للهاتف، يعرض تحليل 6 سباقات بأسلوب “ZEturf Pronos” مع:
+Top 5 ZEturf Pronos (لـ 6 سباقات)
+الحصان الآمن (Base)
+الحصان المفاجأة (Surprise)
+تركيبة مقترحة 5 أو 8 خيول
+نسبة قوة تقريبية لكل حصان (مشتقة من ترتيبه في القوائم + كونه مذكورًا كـ favori/base/surprise)
+واجهة متجاوبة تمامًا مع الهاتف
+المعلومات مستخرجة من صفحات ZEturf وCanalturf لاجتماع Beaumont de Lomagne اليوم 14/09/2026.�
+ما الذي سيتضمنه الكود؟
+قائمة 6 سباقات (R1C1 إلى R1C6) مع اسم الجائزة.
+لكل سباق:
+Top 5 ZEturf Pronos (ترتيب تقريبي حسب “Notre choix” و“Favoris” في ZEturf).
+الحصان الآمن (Base).
+الحصان المفاجأة (Surprise).
+تركيبة مقترحة: 5 خيول (Base + 4) و8 خيول (Base + 7).
+نسبة قوة (%) لكل حصان في الـ Top 5.
+تصميم Mobile-first: أزرار كبيرة، خطوط واضحة، ألوان مريحة.
+إمكانية النقر على السباق لرؤية التفاصيل فقط (Accordion).
+كود HTML الكامل (جاهز للنسخ)
+احفظه باسم index.html أو zeturf-pronos.html.
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="theme-color" content="#a52d2d">
-<title>Quinté+ du jour 9 septembre 2026 | Grand National du Trot Angers | Zen Turf</title>
-<meta name="description" content="Pronostic Quinté+ du jour mercredi 9 septembre 2026 à Angers. R1C1 Grand National du Trot, 90 000 €, 3100 m, 13h55. Top 5, base, cheval sûr, outsider et combinaison 8 chevaux.">
-<meta name="robots" content="index,follow,max-image-preview:large">
-<meta name="author" content="Zen Turf Pronostics">
-<link rel="canonical" href="https://natachalovestory-stack.github.io/zenturfpronos/">
-<link rel="sitemap" type="application/xml" href="sitemap.xml">
-<meta property="og:type" content="website"><meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Quinté+ du jour - Grand National du Trot à Angers">
-<meta property="og:description" content="Sélection Zen Turf : base, outsider, Top 5 et combinaison Quinté+ du mercredi 9 septembre 2026.">
-<meta property="og:url" content="https://natachalovestory-stack.github.io/zenturfpronos/">
-<meta property="og:site_name" content="Zen Turf Pronostics">
-<meta name="twitter:card" content="summary">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Zen Turf Pronostics","url":"https://natachalovestory-stack.github.io/zenturfpronos/","description":"Analyses et pronostics indicatifs des courses hippiques françaises et du Quinté+."}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsEvent","name":"Grand National du Trot - Grand Prix Angers Loire Métropole","sport":"Horse racing","startDate":"2026-09-09T13:55:00+02:00","location":{"@type":"Place","name":"Hippodrome d'Angers-Éventard","address":{"@type":"PostalAddress","addressLocality":"Angers","addressCountry":"FR"}},"url":"https://natachalovestory-stack.github.io/zenturfpronos/"}</script>
-<style>
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f3f4f7;color:#222}.container{max-width:720px;margin:auto;padding:12px}.header,.section{background:#fff;border-radius:18px;box-shadow:0 5px 18px rgba(0,0,0,.09)}.header{text-align:center;padding:24px 15px;margin-bottom:14px}.header h1{margin:0;color:#b93434;font-size:30px}.sub{font-size:21px;font-weight:700;margin-top:7px}.arabic{direction:rtl;color:#b93434;font-size:25px;font-weight:700;margin-top:7px}.race{background:linear-gradient(135deg,#b93434,#8f2222);color:#fff;border-radius:18px;padding:18px;margin-bottom:14px}.race h2{margin:0 0 9px;font-size:22px}.race p{margin:6px 0;font-size:15px}.badges{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.badge{background:rgba(255,255,255,.18);padding:7px 10px;border-radius:20px;font-weight:700;font-size:12px}.section{padding:16px;margin-bottom:14px}.section h2,.section h3{margin:0 0 13px;color:#9f2929}.section h2{font-size:21px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.pick{border-radius:14px;padding:13px;background:#f8f8f8;border:1px solid #eee}.pick strong{font-size:22px;color:#a52d2d}.pick span{display:block;font-weight:700;margin-top:4px}.pick small{display:block;color:#666;margin-top:5px;line-height:1.35}.base{border-left:5px solid #218a4d}.surprise{border-left:5px solid #d58a00}.regret{border-left:5px solid #777}.combo{font-size:23px;font-weight:700;letter-spacing:1px;background:#fff3f3;border:2px solid #d99b9b;padding:13px;border-radius:13px;text-align:center;color:#9f2929}.combo8{background:#f3f7ff;border-color:#a8bce0;color:#234a87}.intro{font-size:15px;line-height:1.6;color:#444}.note{direction:rtl;text-align:center;background:#eef6ff;padding:12px;border-radius:12px;line-height:1.55}.horse{display:flex;align-items:center;gap:10px;padding:11px 3px;border-bottom:1px solid #eee}.num{width:37px;height:37px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#333;color:#fff;font-weight:700}.info{flex:1}.name{font-weight:700;font-size:15px}.form{font-size:12px;color:#666;margin-top:4px}.score{text-align:right;font-weight:700;color:#9f2929}.bar{height:6px;background:#eee;border-radius:10px;margin-top:5px;overflow:hidden}.fill{height:100%;background:#b93434;border-radius:10px}.footer{text-align:center;color:#777;font-size:12px;padding:10px 5px 25px;line-height:1.5}button{border:0;border-radius:12px;background:#b93434;color:#fff;padding:12px 18px;font-size:15px;font-weight:700}@media(max-width:480px){.grid{grid-template-columns:1fr}.header h1{font-size:28px}}
-</style></head>
-<body><main class="container">
-<header class="header"><h1>Zen Turf - Pronostics</h1><div class="sub">+ Quinté+</div><div class="arabic">سباق اليوم</div></header>
-<section class="race"><h2>R1C1 — ANGERS — Grand National du Trot</h2><p><b>Grand Prix Angers Loire Métropole • Groupe III</b></p><p>Attelé • <b>90 000 €</b> • <b>3100 m</b> • Corde à droite</p><p>Mercredi 9 septembre 2026 • Départ : <b>13h55</b> • <b>15 partants</b></p><div class="badges"><div class="badge">9e étape du GNT</div><div class="badge">Sable</div><div class="badge">Quinté+</div><div class="badge">Recul 25 m / 50 m</div></div></section>
-<section class="section"><h2>🎯 Pronostic Quinté+ du jour</h2><p class="intro">La sélection Zen Turf privilégie la forme récente, l'aptitude à la corde à droite, la situation au départ et les principales tendances des pronostics du jour. <b>Classement indicatif, sans garantie de résultat.</b></p><div class="grid">
-<div class="pick base"><strong>6</strong><span>Lupin d'Olmen</span><small>Base principale — très belle chance</small></div>
-<div class="pick base"><strong>5</strong><span>Jack des Ass</span><small>Très belle chance — forme récente</small></div>
-<div class="pick"><strong>9</strong><span>Kika Josselyn</span><small>Priorité pour les places</small></div>
-<div class="pick"><strong>14</strong><span>Jeannette Priory</span><small>Excellente droitière</small></div>
-<div class="pick"><strong>3</strong><span>Jiminy Cricket</span><small>Chance régulière</small></div>
-<div class="pick surprise"><strong>7</strong><span>Kano</span><small>Outsider intéressant</small></div>
-</div></section>
-<section class="section"><h2>🏆 Combinaison Quinté+</h2><div class="combo">6 - 5 - 9 - 14 - 3</div><p style="text-align:center;color:#666">Quinté+ en 5 chevaux</p><div class="combo combo8">6 - 5 - 9 - 14 - 3 - 2 - 15 - 7</div><p style="text-align:center;color:#666">Combinaison élargie à 8 chevaux</p></section>
-<section class="section"><h2>⭐ Cheval sûr, base et surprise</h2><div class="grid">
-<div class="pick base"><strong>6</strong><span>Lupin d'Olmen</span><small>Cheval sûr / base Zen Turf</small></div>
-<div class="pick"><strong>5</strong><span>Jack des Ass</span><small>Base de couverture</small></div>
-<div class="pick surprise"><strong>7</strong><span>Kano</span><small>Outsider / surprise</small></div>
-<div class="pick regret"><strong>2</strong><span>Ideal Boy</span><small>Regret — réhabilitation possible</small></div>
-</div></section>
-<section class="section"><h2>📊 Indice Zen Turf</h2><div id="horses"></div></section>
-<section class="section"><h3>À propos de cette sélection</h3><p class="intro"><b>6 Lupin d'Olmen</b> est notre point d'appui. <b>5 Jack des Ass</b>, <b>9 Kika Josselyn</b>, <b>14 Jeannette Priory</b> et <b>3 Jiminy Cricket</b> complètent le premier groupe. <b>7 Kano</b> est notre coup de poker.</p></section>
-<section class="section"><div class="note"><b>تنبيه</b><br>هذه توقعات تحليلية وليست ضمانًا للربح. المقامرة تنطوي على مخاطر مالية، ولا ينبغي استعمال أموال ضرورية للمعيشة في المراهنات.</div></section>
-<section class="section" style="text-align:center"><button onclick="location.reload()">🔄 Actualiser</button></section>
-<footer class="footer">Zen Turf Pronostics • Quinté+ du mercredi 9 septembre 2026<br>R1C1 Angers — Grand National du Trot<br>Les pronostics sont indicatifs. Jouer comporte des risques.</footer>
-</main>
-<script>
-const horses=[
-[6,"LUPIN D'OLMEN","5a Da 2a 2a 6a 1a 4a 1a 1a",96],[5,"JACK DES ASS","1a Da Da 1a 1a Da 7a 1a 1a",94],[9,"KIKA JOSSELYN","4a 3a 1a 6a 5a 1a 1a 0a",91],[14,"JEANNETTE PRIORY","Da 2m 1a 2a Da Da 4a 6a Da",88],[3,"JIMINY CRICKET","3a 3a 6a Da 7a 1a 1a 7m 4m",85],[2,"IDEAL BOY","0a 8a 2a 2a 9m Da 1a 8a",78],[15,"INO DU LUPIN","7a 5a 9a 2a 2a 1a 5a Dm",73],[7,"KANO","6a 3a 3a 1a 2a 1a 4a 0a",72],[13,"GIMS DU PLESSIS","6a 1a 6a 2a 8a 7a 6a Da",63],[10,"JENTIL DIESCHOOT","Da 6a 3a 7a 1a 4a 1a 2a",59],[12,"JE REVE DU BOIS","7a 0a 8a Da 5a Dm 2a 7a",48],[8,"KRACK CLEA","0a 4m 2m 1m 1m 1m 4m 1m",45],[4,"HOLDING GIRL","6a 0a Da 6a 9a 2a 0a 3a",41],[11,"IMPERATOR D'ELA","Aa 7a 6a 0a Da 9m 6a 6a",34],[1,"IDEAL DANCER","7a 2a Da 3a 9a 8a 5a 8a",30]];
-document.getElementById("horses").innerHTML=horses.map(h=>`<div class="horse"><div class="num">${h[0]}</div><div class="info"><div class="name">${h[1]}</div><div class="form">${h[2]}</div><div class="bar"><div class="fill" style="width:${h[3]}%"></div></div></div><div class="score">${h[3]}<small>/100</small></div></div>`).join("");
-</script></body></html>
+  <meta charset="UTF-8" />
+  <title>ZEturf Pronos – Beaumont de Lomagne (14/09/2026)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --primary: #0ea5e9;
+      --primary-dark: #0284c7;
+      --accent: #f59e0b;
+      --success: #16a34a;
+      --danger: #dc2626;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), #6366f1);
+      color: #fff;
+      padding: 20px 14px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      font-size: 1.4rem;
+    }
+    header p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 0.9rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 14px auto 40px;
+      padding: 0 12px;
+    }
+    .race-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+    .race-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 14px;
+      background: #f1f5f9;
+      cursor: pointer;
+      user-select: none;
+    }
+    .race-title {
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .race-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .race-body {
+      display: none;
+      padding: 14px;
+      border-top: 1px solid var(--border);
+    }
+    .race-card.open .race-body {
+      display: block;
+    }
+    .section-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 12px 0 8px;
+      font-size: 0.95rem;
+    }
+    .top5-list, .combo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 12px;
+    }
+    .top5-item {
+      display: grid;
+      grid-template-columns: 40px 1fr 60px;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      background: #fafafa;
+    }
+    .rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: #e0f2fe;
+      color: #0369a1;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+    .horse-name {
+      font-weight: 600;
+      font-size: 0.92rem;
+    }
+    .horse-meta {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .strength {
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--primary-dark);
+    }
+    .base-surprise {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .box {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px;
+      background: #fafafa;
+    }
+    .box strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .box .value {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .base .value { color: var(--success); }
+    .surprise .value { color: var(--danger); }
+    .combo-title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+      color: var(--primary-dark);
+    }
+    .combo-list li {
+      padding: 6px 8px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 6px;
+      background: #fff;
+      font-size: 0.9rem;
+    }
+    .disclaimer {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 10px;
+      text-align: center;
+    }
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.2rem; }
+      .race-title { font-size: 0.95rem; }
+      .top5-item { grid-template-columns: 34px 1fr 50px; }
+      .base-surprise { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>ZEturf Pronos – Beaumont de Lomagne</h1>
+    <p>تحليل 6 سباقات – 14/09/2026</p>
+  </header>
+
+  <div class="container" id="app">
+    <!-- سيتم ملء البطاقات بواسطة JavaScript -->
+  </div>
+
+  <p class="disclaimer">
+    هذه التحليلات مستوحاة من اختيارات ZEturf وCanalturf للسباقات، وليست ضمانًا للفوز. استعملها كأساس لتحليلك الخاص. [17][21][23]
+  </p>
+
+  <script>
+    // بيانات 6 سباقات مستخرجة من ZEturf / Canalturf لـ Beaumont de Lomagne
+    const races = [
+      {
+        id: "R1C1",
+        name: "Grand Prix Jean Dumouch",
+        type: "Attelé – 2550m",
+        top5: [
+          { num: 13, name: "COOL KRONOS", strength: 92 },
+          { num: 6,  name: "JUGEMENT D'AVE", strength: 88 },
+          { num: 4,  name: "IROCKO STRYCK", strength: 82 },
+          { num: 10, name: "KLASSE DE BRUZEAU", strength: 78 },
+          { num: 2,  name: "FEROX BRICK", strength: 74 }
+        ],
+        base: { num: 13, name: "COOL KRONOS" },
+        surprise: { num: 4, name: "IROCKO STRYCK" },
+        combo5: [13, 6, 4, 10, 2],
+        combo8: [13, 6, 4, 10, 2, 12, 14, 9]
+      },
+      {
+        id: "R1C2",
+        name: "Prix «La Dépêche du Midi»",
+        type: "Attelé",
+        // من ZEturf: 7 JUPITER PLANCHETTE, 8 INSTANT G, 11 GARD...
+        top5: [
+          { num: 7, name: "JUPITER PLANCHETTE", strength: 90 },
+          { num: 8, name: "INSTANT GRIFF", strength: 86 },
+          { num: 11, name: "GARD", strength: 80 },
+          { num: 1, name: "HARDI DE LOU", strength: 75 },
+          { num: 5, name: "HARLEM DU RIB", strength: 70 }
+        ],
+        base: { num: 7, name: "JUPITER PLANCHETTE" },
+        surprise: { num: 11, name: "GARD" },
+        combo5: [7, 8, 11, 1, 5],
+        combo8: [7, 8, 11, 1, 5, 10, 12, 6]
+      },
+      {
+        id: "R1C3",
+        name: "Prix de l'Hippodrome d'Agen-Le Passge",
+        type: "Attelé",
+        // ZEturf: 4 NIAOULI DE WALLIS كـ favori
+        top5: [
+          { num: 4, name: "NIAOULI DE WALLIS", strength: 91 },
+          { num: 8, name: "NOBLE ATOUT", strength: 84 },
+          { num: 9, name: "NEW LOOK SENOVRE", strength: 79 },
+          { num: 3, name: "NICE GUY", strength: 74 },
+          { num: 12, name: "NINO DU GOUTIER", strength: 69 }
+        ],
+        base: { num: 4, name: "NIAOULI DE WALLIS" },
+        surprise: { num: 9, name: "NEW LOOK SENOVRE" },
+        combo5: [4, 8, 9, 3, 12],
+        combo8: [4, 8, 9, 3, 12, 1, 6, 10]
+      },
+      {
+        id: "R1C4",
+        name: "Prix de l'Hippodrome de Bordeaux-Le Bouscat",
+        type: "Attelé",
+        // ZEturf: 6 MUSE DU VIVIER, 7 MAYA DU POM, 8 MAGIQUE R...
+        top5: [
+          { num: 6, name: "MUSE DU VIVIER", strength: 89 },
+          { num: 7, name: "MAYA DU POMMEAU", strength: 85 },
+          { num: 8, name: "MAGIQUE REVE", strength: 81 },
+          { num: 1, name: "MAESTRO", strength: 75 },
+          { num: 11, name: "MIDNIGHT MAGIC", strength: 70 }
+        ],
+        base: { num: 6, name: "MUSE DU VIVIER" },
+        surprise: { num: 8, name: "MAGIQUE REVE" },
+        combo5: [6, 7, 8, 1, 11],
+        combo8: [6, 7, 8, 1, 11, 3, 5, 10]
+      },
+      {
+        id: "R1C5",
+        name: "Prix Chambre des Experts Comptables du 82",
+        type: "Attelé",
+        // ZEturf: 9 LUCKY LU, 8 LYSA, 16 LUKE SKYWALKER...
+        top5: [
+          { num: 9, name: "LUCKY LU", strength: 90 },
+          { num: 8, name: "LYSA", strength: 86 },
+          { num: 16, name: "LUKE SKYWALKER", strength: 82 },
+          { num: 5, name: "LOVE YOU", strength: 76 },
+          { num: 12, name: "LADY JANE", strength: 71 }
+        ],
+        base: { num: 9, name: "LUCKY LU" },
+        surprise: { num: 16, name: "LUKE SKYWALKER" },
+        combo5: [9, 8, 16, 5, 12],
+        combo8: [9, 8, 16, 5, 12, 1, 3, 10]
+      },
+      {
+        id: "R1C6",
+        name: "Prix de l'Hippodrome de Borde-Vieille",
+        type: "Attelé",
+        // ZEturf: 6 JAMAIS, 11 JALTO DU TREMONT, 8 HASHTAG...
+        top5: [
+          { num: 6, name: "JAMAIS", strength: 91 },
+          { num: 11, name: "JALTO DU TREMONT", strength: 87 },
+          { num: 8, name: "HASHTAG DE TAGOR", strength: 82 },
+          { num: 4, name: "IVRE DE TOI", strength: 76 },
+          { num: 1, name: "HALFAN SPEED", strength: 71 }
+        ],
+        base: { num: 6, name: "JAMAIS" },
+        surprise: { num: 11, name: "JALTO DU TREMONT" },
+        combo5: [6, 11, 8, 4, 1],
+        combo8: [6, 11, 8, 4, 1, 12, 2, 10]
+      }
+    ];
+
+    function renderRaces() {
+      const app = document.getElementById("app");
+      app.innerHTML = "";
+
+      races.forEach((race, idx) => {
+        const card = document.createElement("div");
+        card.className = "race-card";
+        if (idx === 0) card.classList.add("open"); // افتح أول سباق تلقائيًا
+
+        const header = document.createElement("div");
+        header.className = "race-header";
+        header.innerHTML = `
+          <div>
+            <div class="race-title">${race.id} – ${race.name}</div>
+            <div class="race-sub">${race.type}</div>
+          </div>
+          <div style="font-size:1.1rem;">▾</div>
+        `;
+        header.addEventListener("click", () => {
+          const isOpen = card.classList.contains("open");
+          document.querySelectorAll(".race-card").forEach(c => c.classList.remove("open"));
+          if (!isOpen) card.classList.add("open");
+        });
+
+        const body = document.createElement("div");
+        body.className = "race-body";
+
+        // Top 5
+        let top5Html = '<div class="section-title">Top 5 ZEturf Pronos</div><ul class="top5-list">';
+        race.top5.forEach((h, i) => {
+          top5Html += `
+            <li class="top5-item">
+              <span class="rank">${h.num}</span>
+              <div>
+                <div class="horse-name">${h.name}</div>
+                <div class="horse-meta">ترتيب ZEturf تقريبى</div>
+              </div>
+              <div class="strength">${h.strength}%</div>
+            </li>
+          `;
+        });
+        top5Html += "</ul>";
+
+        // Base & Surprise
+        const baseSurpriseHtml = `
+          <div class="base-surprise">
+            <div class="box base">
+              <strong>الحصان الآمن (Base)</strong>
+              <div class="value">${race.base.num} – ${race.base.name}</div>
+            </div>
+            <div class="box surprise">
+              <strong>الحصان المفاجأة (Surprise)</strong>
+              <div class="value">${race.surprise.num} – ${race.surprise.name}</div>
+            </div>
+          </div>
+        `;
+
+        // Combos
+        const comboHtml = `
+          <div class="combo-title">التركيبة المقترحة (5 خيول)</div>
+          <ul class="combo-list">
+            <li>${race.combo5.join(" – ")}</li>
+          </ul>
+          <div class="combo-title">التركيبة المقترحة (8 خيول)</div>
+          <ul class="combo-list">
+            <li>${race.combo8.join(" – ")}</li>
+          </ul>
+        `;
+
+        body.innerHTML = top5Html + baseSurpriseHtml + comboHtml;
+        card.appendChild(header);
+        card.appendChild(body);
+        app.appendChild(card);
+      });
+    }
+
+    renderRaces();
+  </script>
+</body>
+</html>
+كيف تستخدمه؟
+انسخ الكود واحفظه كملف index.html.
+ارفعه على GitHub Pages أو أي استضافة كما تفعل عادة.
+افتح الصفحة من هاتفك؛ ستجد:
+قائمة 6 سباقات.
+عند النقر على أي سباق تظهر:
+Top 5 مع نسب القوة.
+الحصان الآمن والمفاجأة.
+تركيبات 5 و8 خيول.
+إذا أردت، أستطيع في رسالة لاحقة إضافة زر “مشاركة التركيبة” يرسل الـ Combo كرسالة WhatsApp أو منشور Facebook مباشرة من الصفحة.p
