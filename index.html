@@ -1,380 +1,823 @@
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <title>zenturf pronos  – Beaumont de Lomagne (14/09/2026)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #0f172a;
-      --muted: #64748b;
-      --primary: #0ea5e9;
-      --primary-dark: #0284c7;
-      --accent: #f59e0b;
-      --success: #16a34a;
-      --danger: #dc2626;
-      --border: #e2e8f0;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-    }
-    header {
-      background: linear-gradient(135deg, var(--primary), #6366f1);
-      color: #fff;
-      padding: 20px 14px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0 0 6px;
-      font-size: 1.4rem;
-    }
-    header p {
-      margin: 0;
-      opacity: 0.95;
-      font-size: 0.9rem;
-    }
-    .container {
-      max-width: 900px;
-      margin: 14px auto 40px;
-      padding: 0 12px;
-    }
-    .race-card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      margin-bottom: 14px;
-      overflow: hidden;
-    }
-    .race-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 14px;
-      background: #f1f5f9;
-      cursor: pointer;
-      user-select: none;
-    }
-    .race-title {
-      font-weight: 700;
-      font-size: 1rem;
-    }
-    .race-sub {
-      font-size: 0.8rem;
-      color: var(--muted);
-    }
-    .race-body {
-      display: none;
-      padding: 14px;
-      border-top: 1px solid var(--border);
-    }
-    .race-card.open .race-body {
-      display: block;
-    }
-    .section-title {
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin: 12px 0 8px;
-      font-size: 0.95rem;
-    }
-    .top5-list, .combo-list {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 12px;
-    }
-    .top5-item {
-      display: grid;
-      grid-template-columns: 40px 1fr 60px;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 6px;
-      background: #fafafa;
-    }
-    .rank {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 999px;
-      background: #e0f2fe;
-      color: #0369a1;
-      font-weight: 700;
-      font-size: 0.8rem;
-    }
-    .horse-name {
-      font-weight: 600;
-      font-size: 0.92rem;
-    }
-    .horse-meta {
-      font-size: 0.75rem;
-      color: var(--muted);
-    }
-    .strength {
-      text-align: right;
-      font-weight: 700;
-      font-size: 0.85rem;
-      color: var(--primary-dark);
-    }
-    .base-surprise {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-    .box {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 10px;
-      background: #fafafa;
-    }
-    .box strong {
-      display: block;
-      margin-bottom: 4px;
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-    .box .value {
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-    .base .value { color: var(--success); }
-    .surprise .value { color: var(--danger); }
-    .combo-title {
-      font-weight: 700;
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-      color: var(--primary-dark);
-    }
-    .combo-list li {
-      padding: 6px 8px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      margin-bottom: 6px;
-      background: #fff;
-      font-size: 0.9rem;
-    }
-    .disclaimer {
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-top: 10px;
-      text-align: center;
-    }
-    @media (max-width: 480px) {
-      header h1 { font-size: 1.2rem; }
-      .race-title { font-size: 0.95rem; }
-      .top5-item { grid-template-columns: 34px 1fr 50px; }
-      .base-surprise { grid-template-columns: 1fr; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ZenTurfPronos - Quinté+ et Courses R1 Compiègne 15 septembre 2026</title>
+
+<meta name="description"
+content="ZenTurfPronos : analyse des 6 premières courses de la Réunion 1 à Compiègne mardi 15 septembre 2026. Top 5, cheval sûr, surprise, combinaisons et indice de force.">
+
+<meta name="robots" content="index,follow">
+<meta name="author" content="ZenTurfPronos">
+<meta name="theme-color" content="#8e2020">
+
+<link rel="canonical"
+href="https://natachalovestory-stack.github.io/zenturfpronos/">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:#f2f3f6;
+  color:#222;
+  font-family:Arial,Helvetica,sans-serif;
+}
+
+.container{
+  width:100%;
+  max-width:720px;
+  margin:auto;
+  padding:10px;
+}
+
+.header{
+  background:linear-gradient(135deg,#9d2020,#651313);
+  color:white;
+  border-radius:18px;
+  padding:22px 14px;
+  text-align:center;
+  margin-bottom:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.header h1{
+  margin:0;
+  font-size:29px;
+}
+
+.header .date{
+  margin-top:7px;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.header .arabic{
+  margin-top:8px;
+  direction:rtl;
+  font-size:21px;
+}
+
+.race{
+  background:white;
+  border-radius:17px;
+  margin-bottom:14px;
+  padding:15px;
+  box-shadow:0 4px 13px rgba(0,0,0,.08);
+}
+
+.race-title{
+  background:#9d2020;
+  color:white;
+  margin:-15px -15px 13px;
+  padding:13px;
+  border-radius:17px 17px 0 0;
+}
+
+.race-title h2{
+  margin:0;
+  font-size:20px;
+}
+
+.info{
+  color:#555;
+  line-height:1.5;
+  font-size:14px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:9px;
+}
+
+.tag{
+  background:#f0e5e5;
+  color:#801919;
+  border-radius:20px;
+  padding:6px 9px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.box{
+  margin-top:12px;
+  padding:12px;
+  border-radius:13px;
+  background:#fafafa;
+  border:1px solid #eee;
+}
+
+.box h3{
+  margin:0 0 9px;
+  color:#8e2020;
+  font-size:18px;
+}
+
+.top{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:8px;
+}
+
+.horse{
+  background:white;
+  border:1px solid #e5e5e5;
+  border-radius:12px;
+  padding:10px;
+}
+
+.number{
+  display:inline-flex;
+  width:32px;
+  height:32px;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#333;
+  color:white;
+  font-weight:bold;
+  margin-right:5px;
+}
+
+.horse-name{
+  font-weight:bold;
+  font-size:14px;
+}
+
+.strength{
+  margin-top:7px;
+  font-size:12px;
+  color:#666;
+}
+
+.bar{
+  height:7px;
+  background:#ddd;
+  border-radius:10px;
+  margin-top:5px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:#a52323;
+}
+
+.safe{
+  background:#e7f6eb;
+  border-left:5px solid #198754;
+}
+
+.surprise{
+  background:#fff5d8;
+  border-left:5px solid #d38b00;
+}
+
+.combo{
+  text-align:center;
+  background:#fff0f0;
+  color:#8e2020;
+  border:2px solid #d99a9a;
+  padding:12px;
+  border-radius:12px;
+  font-size:21px;
+  font-weight:bold;
+  letter-spacing:1px;
+  margin-top:8px;
+}
+
+.combo.eight{
+  background:#eef4ff;
+  border-color:#9db4df;
+  color:#234c8b;
+}
+
+.verdict{
+  background:#eef6ff;
+  border-radius:13px;
+  padding:12px;
+  margin-top:10px;
+  line-height:1.55;
+  font-size:14px;
+}
+
+.notice{
+  direction:rtl;
+  text-align:center;
+  background:#fff8e8;
+  border-radius:13px;
+  padding:13px;
+  line-height:1.6;
+  margin-bottom:14px;
+  font-size:13px;
+}
+
+.footer{
+  text-align:center;
+  color:#777;
+  font-size:12px;
+  padding:15px 5px 30px;
+}
+
+@media(max-width:480px){
+
+  .container{
+    padding:7px;
+  }
+
+  .header h1{
+    font-size:26px;
+  }
+
+  .top{
+    grid-template-columns:1fr;
+  }
+
+  .race-title h2{
+    font-size:18px;
+  }
+
+  .combo{
+    font-size:19px;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Zenturf Pronos – Beaumont de Lomagne</h1>
-    <p>تحليل 6 سباقات – 14/09/2026</p>
-  </header>
 
-  <div class="container" id="app">
-    <!-- سيتم ملء البطاقات بواسطة JavaScript -->
-  </div>
+<main class="container">
 
-  <p class="disclaimer">
-    هذه التحليلات مستوحاة من اختيارات Zenturf وCanalturf للسباقات، وليست ضمانًا للفوز. استعملها كأساس لتحليلك الخاص. [17][21][23]
-  </p>
+<header class="header">
 
-  <script>
-    // بيانات 6 سباقات مستخرجة من Zenturf / Canalturf لـ Beaumont de Lomagne
-    const races = [
-      {
-        id: "R1C1",
-        name: "Grand Prix Jean Dumouch",
-        type: "Attelé – 2550m",
-        top5: [
-          { num: 13, name: "COOL KRONOS", strength: 92 },
-          { num: 6,  name: "JUGEMENT D'AVE", strength: 88 },
-          { num: 4,  name: "IROCKO STRYCK", strength: 82 },
-          { num: 10, name: "KLASSE DE BRUZEAU", strength: 78 },
-          { num: 2,  name: "FEROX BRICK", strength: 74 }
-        ],
-        base: { num: 13, name: "COOL KRONOS" },
-        surprise: { num: 4, name: "IROCKO STRYCK" },
-        combo5: [13, 6, 4, 10, 2],
-        combo8: [13, 6, 4, 10, 2, 12, 14, 9]
-      },
-      {
-        id: "R1C2",
-        name: "Prix «La Dépêche du Midi»",
-        type: "Attelé",
-        // من Zenturf: 7 JUPITER PLANCHETTE, 8 INSTANT G, 11 GARD...
-        top5: [
-          { num: 7, name: "JUPITER PLANCHETTE", strength: 90 },
-          { num: 8, name: "INSTANT GRIFF", strength: 86 },
-          { num: 11, name: "GARD", strength: 80 },
-          { num: 1, name: "HARDI DE LOU", strength: 75 },
-          { num: 5, name: "HARLEM DU RIB", strength: 70 }
-        ],
-        base: { num: 7, name: "JUPITER PLANCHETTE" },
-        surprise: { num: 11, name: "GARD" },
-        combo5: [7, 8, 11, 1, 5],
-        combo8: [7, 8, 11, 1, 5, 10, 12, 6]
-      },
-      {
-        id: "R1C3",
-        name: "Prix de l'Hippodrome d'Agen-Le Passge",
-        type: "Attelé",
-        // Zenturf: 4 NIAOULI DE WALLIS كـ favori
-        top5: [
-          { num: 4, name: "NIAOULI DE WALLIS", strength: 91 },
-          { num: 8, name: "NOBLE ATOUT", strength: 84 },
-          { num: 9, name: "NEW LOOK SENOVRE", strength: 79 },
-          { num: 3, name: "NICE GUY", strength: 74 },
-          { num: 12, name: "NINO DU GOUTIER", strength: 69 }
-        ],
-        base: { num: 4, name: "NIAOULI DE WALLIS" },
-        surprise: { num: 9, name: "NEW LOOK SENOVRE" },
-        combo5: [4, 8, 9, 3, 12],
-        combo8: [4, 8, 9, 3, 12, 1, 6, 10]
-      },
-      {
-        id: "R1C4",
-        name: "Prix de l'Hippodrome de Bordeaux-Le Bouscat",
-        type: "Attelé",
-        // Zenturf: 6 MUSE DU VIVIER, 7 MAYA DU POM, 8 MAGIQUE R...
-        top5: [
-          { num: 6, name: "MUSE DU VIVIER", strength: 89 },
-          { num: 7, name: "MAYA DU POMMEAU", strength: 85 },
-          { num: 8, name: "MAGIQUE REVE", strength: 81 },
-          { num: 1, name: "MAESTRO", strength: 75 },
-          { num: 11, name: "MIDNIGHT MAGIC", strength: 70 }
-        ],
-        base: { num: 6, name: "MUSE DU VIVIER" },
-        surprise: { num: 8, name: "MAGIQUE REVE" },
-        combo5: [6, 7, 8, 1, 11],
-        combo8: [6, 7, 8, 1, 11, 3, 5, 10]
-      },
-      {
-        id: "R1C5",
-        name: "Prix Chambre des Experts Comptables du 82",
-        type: "Attelé",
-        // Zenturf: 9 LUCKY LU, 8 LYSA, 16 LUKE SKYWALKER...
-        top5: [
-          { num: 9, name: "LUCKY LU", strength: 90 },
-          { num: 8, name: "LYSA", strength: 86 },
-          { num: 16, name: "LUKE SKYWALKER", strength: 82 },
-          { num: 5, name: "LOVE YOU", strength: 76 },
-          { num: 12, name: "LADY JANE", strength: 71 }
-        ],
-        base: { num: 9, name: "LUCKY LU" },
-        surprise: { num: 16, name: "LUKE SKYWALKER" },
-        combo5: [9, 8, 16, 5, 12],
-        combo8: [9, 8, 16, 5, 12, 1, 3, 10]
-      },
-      {
-        id: "R1C6",
-        name: "Prix de l'Hippodrome de Borde-Vieille",
-        type: "Attelé",
-        // Zenturf: 6 JAMAIS, 11 JALTO DU TREMONT, 8 HASHTAG...
-        top5: [
-          { num: 6, name: "JAMAIS", strength: 91 },
-          { num: 11, name: "JALTO DU TREMONT", strength: 87 },
-          { num: 8, name: "HASHTAG DE TAGOR", strength: 82 },
-          { num: 4, name: "IVRE DE TOI", strength: 76 },
-          { num: 1, name: "HALFAN SPEED", strength: 71 }
-        ],
-        base: { num: 6, name: "JAMAIS" },
-        surprise: { num: 11, name: "JALTO DU TREMONT" },
-        combo5: [6, 11, 8, 4, 1],
-        combo8: [6, 11, 8, 4, 1, 12, 2, 10]
-      }
-    ];
+<h1>🏇 ZenTurfPronos</h1>
 
-    function renderRaces() {
-      const app = document.getElementById("app");
-      app.innerHTML = "";
+<div class="date">
+Quinté+ & Réunion 1
+</div>
 
-      races.forEach((race, idx) => {
-        const card = document.createElement("div");
-        card.className = "race-card";
-        if (idx === 0) card.classList.add("open"); // افتح أول سباق تلقائيًا
+<div class="date">
+Mardi 15 septembre 2026
+</div>
 
-        const header = document.createElement("div");
-        header.className = "race-header";
-        header.innerHTML = `
-          <div>
-            <div class="race-title">${race.id} – ${race.name}</div>
-            <div class="race-sub">${race.type}</div>
-          </div>
-          <div style="font-size:1.1rem;">▾</div>
-        `;
-        header.addEventListener("click", () => {
-          const isOpen = card.classList.contains("open");
-          document.querySelectorAll(".race-card").forEach(c => c.classList.remove("open"));
-          if (!isOpen) card.classList.add("open");
-        });
+<div class="arabic">
+تحليل سباقات اليوم — كومبيين
+</div>
 
-        const body = document.createElement("div");
-        body.className = "race-body";
+</header>
 
-        // Top 5
-        let top5Html = '<div class="section-title">Top 5 Zenturf Pronos</div><ul class="top5-list">';
-        race.top5.forEach((h, i) => {
-          top5Html += `
-            <li class="top5-item">
-              <span class="rank">${h.num}</span>
-              <div>
-                <div class="horse-name">${h.name}</div>
-                <div class="horse-meta">ترتيب Zenturf تقريبى</div>
-              </div>
-              <div class="strength">${h.strength}%</div>
-            </li>
-          `;
-        });
-        top5Html += "</ul>";
+<div class="notice">
+⚠️ التوقعات تحليلية وليست ضمانًا للنتيجة. نسب القوة هي مؤشرات تقديرية للمقارنة بين الخيول.
+</div>
 
-        // Base & Surprise
-        const baseSurpriseHtml = `
-          <div class="base-surprise">
-            <div class="box base">
-              <strong>الحصان الآمن (Base)</strong>
-              <div class="value">${race.base.num} – ${race.base.name}</div>
-            </div>
-            <div class="box surprise">
-              <strong>الحصان المفاجأة (Surprise)</strong>
-              <div class="value">${race.surprise.num} – ${race.surprise.name}</div>
-            </div>
-          </div>
-        `;
 
-        // Combos
-        const comboHtml = `
-          <div class="combo-title">التركيبة المقترحة (5 خيول)</div>
-          <ul class="combo-list">
-            <li>${race.combo5.join(" – ")}</li>
-          </ul>
-          <div class="combo-title">التركيبة المقترحة (8 خيول)</div>
-          <ul class="combo-list">
-            <li>${race.combo8.join(" – ")}</li>
-          </ul>
-        `;
+<!-- ================= C1 ================= -->
 
-        body.innerHTML = top5Html + baseSurpriseHtml + comboHtml;
-        card.appendChild(header);
-        card.appendChild(body);
-        app.appendChild(card);
-      });
-    }
+<section class="race">
 
-    renderRaces();
-  </script>
-</body>
-</
+<div class="race-title">
+<h2>R1C1 — Prix des Bords de l'Oise ⭐ QUINTÉ+</h2>
+</div>
+
+<div class="info">
+
+<b>13h55 — Compiègne</b><br>
+
+Handicap Divisé — Course 2<br>
+Plat — 50 900 € — 2800 m<br>
+Corde à gauche — 4 ans et Plus<br>
+16 partants
+
+</div>
+
+<div class="tags">
+<span class="tag">QUINTÉ+</span>
+<span class="tag">2800 m</span>
+<span class="tag">16 partants</span>
+<span class="tag">Compiègne</span>
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">4</span>
+<span class="horse-name">Maia Star</span>
+<div class="strength">Force : 94%</div>
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">6</span>
+<span class="horse-name">Mighty Boy</span>
+<div class="strength">Force : 92%</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">8</span>
+<span class="horse-name">Dempy</span>
+<div class="strength">Force : 88%</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">15</span>
+<span class="horse-name">Lorenzo de Medici</span>
+<div class="strength">Force : 84%</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">Chess</span>
+<div class="strength">Force : 82%</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+</div>
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°4 — Maia Star</b><br>
+Très bonne régularité et deuxième récemment.
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°8 — Dempy</b><br>
+Profil spéculatif intéressant.
+</div>
+
+<div class="box">
+
+<h3>🎯 Combinaison proposée</h3>
+
+<div class="combo">
+4 - 6 - 8 - 15 - 1
+</div>
+
+<div class="combo eight">
+4 - 6 - 8 - 15 - 1 - 7 - 12 - 9
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= C2 ================= -->
+
+<section class="race">
+
+<div class="race-title">
+<h2>R1C2 — Prix des Vineux</h2>
+</div>
+
+<div class="info">
+<b>14h30 — Compiègne</b><br>
+Plat — 21 000 € — 2400 m<br>
+6 partants
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">3</span>
+<span class="horse-name">Paiute</span>
+<div class="strength">Force : 94%</div>
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">5</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 88%</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 84%</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">2</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 79%</div>
+<div class="bar"><div class="fill" style="width:79%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">6</span>
+<span class="horse-name">Outsider</span>
+<div class="strength">Force : 68%</div>
+<div class="bar"><div class="fill" style="width:68%"></div></div>
+</div>
+
+</div>
+
+<div class="verdict">
+Zone-Turf place le n°3 Paiute en Top Chance. Course courte à 6 partants : privilégier la régularité plutôt qu'une combinaison trop large.
+</div>
+
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°3 — Paiute</b>
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°6</b>
+</div>
+
+<div class="combo">
+3 - 5 - 1 - 2 - 6
+</div>
+
+</section>
+
+
+<!-- ================= C3 ================= -->
+
+<section class="race">
+
+<div class="race-title">
+<h2>R1C3 — Prix de l'Abbaye Saint-Corneille</h2>
+</div>
+
+<div class="info">
+<b>15h05 — Compiègne</b><br>
+Plat — 20 100 € — 2000 m<br>
+3 ans — Corde à gauche — 10 partants
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">5</span>
+<span class="horse-name">Eunice</span>
+<div class="strength">Force : 94%</div>
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">3</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 89%</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">Billion Gold</span>
+<div class="strength">Force : 86%</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">4</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 82%</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">8</span>
+<span class="horse-name">À suivre</span>
+<div class="strength">Force : 76%</div>
+<div class="bar"><div class="fill" style="width:76%"></div></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°5 — Eunice</b>
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°8</b>
+</div>
+
+<div class="combo">
+5 - 3 - 1 - 4 - 8
+</div>
+
+<div class="combo eight">
+5 - 3 - 1 - 4 - 8 - 2 - 6 - 10
+</div>
+
+</section>
+
+
+<!-- ================= C4 ================= -->
+
+<section class="race">
+
+<div class="race-title">
+<h2>R1C4 — Prix de Carlepont</h2>
+</div>
+
+<div class="info">
+<b>15h40 — Compiègne</b><br>
+Plat — 18 300 € — 1800 m<br>
+14 partants
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">2</span>
+<span class="horse-name">N°2</span>
+<div class="strength">Force : 91%</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">N°1</span>
+<div class="strength">Force : 88%</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">4</span>
+<span class="horse-name">N°4</span>
+<div class="strength">Force : 84%</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">6</span>
+<span class="horse-name">N°6</span>
+<div class="strength">Force : 79%</div>
+<div class="bar"><div class="fill" style="width:79%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">12</span>
+<span class="horse-name">N°12</span>
+<div class="strength">Force : 74%</div>
+<div class="bar"><div class="fill" style="width:74%"></div></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°2</b>
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°12</b>
+</div>
+
+<div class="combo">
+2 - 1 - 4 - 6 - 12
+</div>
+
+<div class="combo eight">
+2 - 1 - 4 - 6 - 12 - 11 - 13 - 8
+</div>
+
+</section>
+
+
+<!-- ================= C5 ================= -->
+
+<section class="race">
+
+<div class="race-title">
+<h2>R1C5 — Prix de Verberie</h2>
+</div>
+
+<div class="info">
+<b>16h15 — Compiègne</b><br>
+Plat — 18 300 € — 1800 m<br>
+Corde à gauche — 13 partants
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">Marasi Drive</span>
+<div class="strength">Force : 86%</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">2</span>
+<span class="horse-name">Piyango</span>
+<div class="strength">Force : 84%</div>
+<div class="bar"><div class="fill" style="width:84%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">11</span>
+<span class="horse-name">Blanquette</span>
+<div class="strength">Force : 80%</div>
+<div class="bar"><div class="fill" style="width:80%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">9</span>
+<span class="horse-name">Marycha</span>
+<div class="strength">Force : 77%</div>
+<div class="bar"><div class="fill" style="width:77%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">12</span>
+<span class="horse-name">Zeudi</span>
+<div class="strength">Force : 73%</div>
+<div class="bar"><div class="fill" style="width:73%"></div></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°1 — Marasi Drive</b>
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°11 — Blanquette</b>
+</div>
+
+<div class="combo">
+1 - 2 - 11 - 9 - 12
+</div>
+
+<div class="combo eight">
+1 - 2 - 11 - 9 - 12 - 3 - 4 - 7
+</div>
+
+</section>
+
+
+<!-- ================= C6 ================= -->
+
+<section class="race">
+
+<div class="race-title">
+<h2>R1C6 — Prix de Pont-Saint-Maxence</h2>
+</div>
+
+<div class="info">
+<b>16h50 — Compiègne</b><br>
+Plat — 20 100 € — 2800 m<br>
+10 partants
+</div>
+
+<div class="box">
+
+<h3>🏆 TOP 5 ZenTurfPronos</h3>
+
+<div class="top">
+
+<div class="horse">
+<span class="number">1</span>
+<span class="horse-name">Allez Frères</span>
+<div class="strength">Force : 92%</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">3</span>
+<span class="horse-name">Neptune du Hutrel</span>
+<div class="strength">Force : 86%</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">5</span>
+<span class="horse-name">Good Timing</span>
+<div class="strength">Force : 82%</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">8</span>
+<span class="horse-name">Story Way</span>
+<div class="strength">Force : 78%</div>
+<div class="bar"><div class="fill" style="width:78%"></div></div>
+</div>
+
+<div class="horse">
+<span class="number">6</span>
+<span class="horse-name">Jannet</span>
+<div class="strength">Force : 74%</div>
+<div class="bar"><div class="fill" style="width:74%"></div></div>
+</div>
+
+</div>
+
+</div>
+
+<div class="box safe">
+<h3>⭐ Cheval sûr</h3>
+<b>N°1 — Allez Frères</b><br>
+Sa forme récente est intéressante : 2p-3p-7p-3p-6p-7p.
+</div>
+
+<div class="box surprise">
+<h3>💥 Cheval surprise</h3>
+<b>N°8 — Story Way</b>
+</div>
+
+<div class="combo">
+1 - 3 - 5 - 8 - 6
+</div>
+
+<div class="combo eight">
+1 - 3 - 5 - 8 - 6 - 2 - 7 - 9
+</div>
+
+</section>
+
+
+<section class="race">
+
+<div class="race-title">
+<h2>📊 Synthèse ZenTurfPronos</h2>
+</div>
+
+<div class="box safe">
+<h3>⭐ Base principale du jour</h3>
+<b>R1C1 — N°4 Maia Star</b>
+</div>
+
+<div class="box surprise">
+<h3>💥 Surprise Quinté+</h3>
+<b>R1C1 — N°8 Dempy</b>
+</div>
+
+<div class="box">
+<h3>🎯 Sélection Quinté+ principale</h3>
+
+<div class="combo">
+4 - 6 - 8 - 15 - 1
+</div>
+
+<div class="combo eight">
+4 - 6 - 8 - 15 - 1 - 7 - 12 - 9
+</div>
+
+</div>
+
+<div class="verdict">
+<b>Analyse :</b> le Quinté+ du jour est le Prix des Bords de l'Oise à Compiègne. Les sources consultées convergent notamment autour de Maia Star, Mighty Boy, Dempy, Lorenzo de Medici et Chess, même si l'ordre des préférences varie selon les pronostiqueurs.
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<b>ZenTurfPronos</b><br>
+Pronostics hippiques français — Mardi 15 septembre 2026<br>
+R1 Compiègne — C1 à C6<br><br>
+
