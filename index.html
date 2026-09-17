@@ -1,303 +1,321 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZenTurfPronos - Quinté+ Feurs 16 Septembre 2026</title>
+<title>ZenTurfPronos - R1 Vincennes - 17 Septembre 2026</title>
 
 <meta name="description"
-content="ZenTurfPronos - تحليل سباقات R1 Feurs الأربعاء 16 سبتمبر 2026. Quinté+, TOP 5، الحصان الآمن، المفاجأة، التركيبات ونسبة قوة كل حصان.">
+content="ZenTurfPronos - تحليل R1 Vincennes الخميس 17 سبتمبر 2026. Quinté+, TOP 5، الحصان الآمن، الحصان المفاجأة، التركيبات ونسبة قوة الخيول.">
 
 <meta name="robots" content="index, follow">
+
 <link rel="canonical"
 href="https://natachalovestory-stack.github.io/zenturfpronos/">
 
 <style>
+
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 body{
-    font-family:Arial,"Tahoma",sans-serif;
-    background:#f2f4f7;
-    color:#202124;
-    line-height:1.6;
+font-family:Arial,Tahoma,sans-serif;
+background:#f1f3f6;
+color:#222;
+line-height:1.6;
 }
 
 .container{
-    width:100%;
-    max-width:760px;
-    margin:auto;
-    padding:10px;
+width:100%;
+max-width:760px;
+margin:auto;
+padding:8px;
 }
 
+/* HEADER */
+
 header{
-    background:linear-gradient(135deg,#8b0000,#d71920);
-    color:white;
-    border-radius:0 0 22px 22px;
-    padding:22px 15px;
-    text-align:center;
-    box-shadow:0 4px 14px rgba(0,0,0,.18);
+background:linear-gradient(135deg,#760000,#d71920);
+color:#fff;
+text-align:center;
+padding:22px 12px;
+border-radius:0 0 22px 22px;
+box-shadow:0 4px 15px rgba(0,0,0,.2);
 }
 
 .logo{
-    font-size:30px;
-    font-weight:bold;
-    letter-spacing:.5px;
+font-size:29px;
+font-weight:bold;
 }
 
 .subtitle{
-    margin-top:5px;
-    font-size:15px;
+font-size:15px;
+margin-top:4px;
 }
 
 .date{
-    display:inline-block;
-    margin-top:12px;
-    background:rgba(255,255,255,.18);
-    padding:6px 13px;
-    border-radius:20px;
-    font-size:14px;
+display:inline-block;
+margin-top:10px;
+padding:6px 14px;
+border-radius:20px;
+background:rgba(255,255,255,.18);
+font-size:14px;
 }
+
+/* NOTICE */
 
 .notice{
-    background:#fff8df;
-    border-right:5px solid #e0a800;
-    margin:12px 0;
-    padding:12px;
-    border-radius:12px;
-    font-size:13px;
+background:#fff7df;
+border-right:5px solid #e0a000;
+padding:12px;
+margin:12px 0;
+border-radius:12px;
+font-size:13px;
 }
 
+/* SUMMARY */
+
 .summary{
-    background:white;
-    padding:15px;
-    border-radius:16px;
-    margin-bottom:15px;
-    box-shadow:0 2px 9px rgba(0,0,0,.08);
+background:#fff;
+border-radius:17px;
+padding:14px;
+margin-bottom:16px;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
 }
 
 .summary h2{
-    color:#8b0000;
-    font-size:20px;
-    margin-bottom:10px;
+color:#8b0000;
+font-size:19px;
+margin-bottom:10px;
 }
 
 .info-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:8px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
 }
 
 .info{
-    background:#f6f6f6;
-    padding:9px;
-    border-radius:10px;
-    text-align:center;
-    font-size:13px;
+background:#f5f5f5;
+border-radius:10px;
+padding:9px;
+text-align:center;
+font-size:13px;
 }
 
+/* RACE */
+
 .race{
-    background:white;
-    margin-bottom:18px;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 3px 12px rgba(0,0,0,.09);
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+margin-bottom:18px;
+box-shadow:0 3px 12px rgba(0,0,0,.09);
 }
 
 .race-head{
-    background:linear-gradient(135deg,#303030,#555);
-    color:white;
-    padding:15px;
+background:linear-gradient(135deg,#333,#555);
+color:#fff;
+padding:14px;
 }
 
 .race-head.quinte{
-    background:linear-gradient(135deg,#750000,#c40000);
+background:linear-gradient(135deg,#700000,#c40000);
 }
 
 .race-number{
-    font-size:13px;
-    opacity:.9;
+font-size:12px;
+opacity:.9;
 }
 
 .race-title{
-    font-size:19px;
-    font-weight:bold;
-    margin:2px 0 5px;
+font-size:19px;
+font-weight:bold;
 }
 
 .race-info{
-    font-size:12px;
-    opacity:.95;
+font-size:12px;
+margin-top:3px;
 }
 
 .content{
-    padding:13px;
+padding:12px;
 }
+
+/* SECTION */
 
 .section-title{
-    color:#8b0000;
-    font-size:17px;
-    font-weight:bold;
-    margin:5px 0 10px;
-    border-bottom:2px solid #eee;
-    padding-bottom:5px;
+font-size:17px;
+font-weight:bold;
+color:#8b0000;
+border-bottom:2px solid #eee;
+padding-bottom:5px;
+margin-bottom:10px;
 }
 
+/* HORSE */
+
 .horse{
-    background:#fafafa;
-    border:1px solid #e5e5e5;
-    border-radius:12px;
-    padding:10px;
-    margin-bottom:9px;
+background:#fafafa;
+border:1px solid #e5e5e5;
+border-radius:12px;
+padding:9px;
+margin-bottom:9px;
 }
 
 .horse-top{
-    display:flex;
-    align-items:center;
-    gap:9px;
+display:flex;
+align-items:center;
+gap:8px;
 }
 
 .number{
-    min-width:39px;
-    height:39px;
-    background:#8b0000;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-    font-size:16px;
+min-width:39px;
+height:39px;
+border-radius:50%;
+background:#8b0000;
+color:#fff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:16px;
+font-weight:bold;
 }
 
 .horse-name{
-    flex:1;
-    font-weight:bold;
-    font-size:14px;
+flex:1;
+font-weight:bold;
+font-size:14px;
 }
 
 .percent{
-    font-weight:bold;
-    color:#8b0000;
-    font-size:15px;
-}
-
-.bar{
-    width:100%;
-    height:7px;
-    background:#e7e7e7;
-    border-radius:10px;
-    overflow:hidden;
-    margin-top:7px;
-}
-
-.fill{
-    height:100%;
-    background:linear-gradient(90deg,#c40000,#ef7d00);
-    border-radius:10px;
+color:#8b0000;
+font-weight:bold;
+font-size:15px;
 }
 
 .form{
-    color:#777;
-    font-size:11px;
-    margin-top:4px;
+font-size:11px;
+color:#777;
+margin-top:4px;
 }
 
+.bar{
+height:7px;
+background:#e5e5e5;
+border-radius:10px;
+overflow:hidden;
+margin-top:6px;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,#c40000,#ef8500);
+border-radius:10px;
+}
+
+/* SAFE / SURPRISE */
+
 .badges{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:9px;
-    margin:13px 0;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+margin:13px 0;
 }
 
 .badge{
-    padding:12px;
-    border-radius:12px;
-    text-align:center;
-    font-size:13px;
-}
-
-.safe{
-    background:#e8f7ed;
-    border:1px solid #58a76b;
-}
-
-.surprise{
-    background:#fff2dc;
-    border:1px solid #e3a83b;
+padding:11px 7px;
+border-radius:12px;
+text-align:center;
+font-size:13px;
 }
 
 .badge strong{
-    display:block;
-    font-size:17px;
-    margin-top:3px;
+display:block;
+font-size:16px;
+margin-top:3px;
 }
 
+.safe{
+background:#e7f7ec;
+border:1px solid #58a76b;
+}
+
+.surprise{
+background:#fff1d8;
+border:1px solid #e0a239;
+}
+
+/* COMBINATION */
+
 .combo{
-    background:#f4f0ff;
-    border-right:5px solid #673ab7;
-    padding:12px;
-    border-radius:12px;
-    margin-top:10px;
+background:#f2edff;
+border-right:5px solid #673ab7;
+border-radius:11px;
+padding:11px;
+margin-top:9px;
+font-size:14px;
 }
 
 .combo strong{
-    color:#4d2992;
+color:#4d2992;
 }
+
+/* ANALYSIS */
 
 .analysis{
-    background:#f8f8f8;
-    border-radius:11px;
-    padding:10px;
-    font-size:13px;
-    margin-top:10px;
+background:#f7f7f7;
+border-radius:11px;
+padding:10px;
+margin-top:10px;
+font-size:13px;
 }
 
+/* FOOTER */
+
 .footer{
-    text-align:center;
-    color:#777;
-    font-size:12px;
-    padding:20px 8px 30px;
+text-align:center;
+color:#777;
+font-size:12px;
+padding:20px 5px 30px;
 }
+
+/* MOBILE */
 
 @media(max-width:480px){
 
-    .container{
-        padding:7px;
-    }
+.container{
+padding:6px;
+}
 
-    header{
-        padding:18px 10px;
-    }
+header{
+padding:18px 9px;
+}
 
-    .logo{
-        font-size:26px;
-    }
+.logo{
+font-size:26px;
+}
 
-    .race-title{
-        font-size:17px;
-    }
+.race-title{
+font-size:17px;
+}
 
-    .info-grid{
-        grid-template-columns:1fr 1fr;
-    }
+.content{
+padding:10px;
+}
 
-    .badges{
-        grid-template-columns:1fr 1fr;
-    }
+.horse-name{
+font-size:13px;
+}
 
-    .horse-name{
-        font-size:13px;
-    }
+.badges{
+grid-template-columns:1fr 1fr;
+}
 
-    .content{
-        padding:10px;
-    }
 }
 </style>
 </head>
@@ -305,576 +323,1028 @@ header{
 <body>
 
 <header>
-    <div class="logo">🏇 ZenTurfPronos</div>
-    <div class="subtitle">تحليل سباقات الخيل بذكاء</div>
-    <div class="date">الأربعاء 16 سبتمبر 2026</div>
+
+<div class="logo">🏇 ZenTurfPronos</div>
+
+<div class="subtitle">
+تحليل سباقات الخيل بذكاء
+</div>
+
+<div class="date">
+الخميس 17 سبتمبر 2026
+</div>
+
 </header>
 
 <div class="container">
 
 <div class="notice">
-    <strong>📌 اجتماع R1 — FEURS</strong><br>
-    اليوم توجد 8 سباقات في R1. الـ Quinté+ هو السباق الأول R1C1.
-    نسب القوة في ZenTurfPronos هي مؤشرات تحليلية وليست ضمانًا للنتيجة.
+
+<strong>📍 R1 VINCENNES</strong><br>
+
+8 سباقات اليوم — Quinté+ في R1C1.
+<br>
+الترشيحات والنسب المعروضة هي مؤشرات تحليلية خاصة بـ ZenTurfPronos وليست ضمانًا للنتيجة.
+
 </div>
+
 
 <div class="summary">
-    <h2>📊 نظرة سريعة على R1</h2>
 
-    <div class="info-grid">
-        <div class="info">🏇 المضمار<br><strong>Feurs</strong></div>
-        <div class="info">🏆 السباق الرئيسي<br><strong>Quinté+ R1C1</strong></div>
-        <div class="info">⏰ البداية<br><strong>13:55</strong></div>
-        <div class="info">🏁 عدد السباقات<br><strong>8</strong></div>
-    </div>
+<h2>📊 برنامج R1 Vincennes</h2>
+
+<div class="info-grid">
+
+<div class="info">
+🏇 المضمار<br>
+<strong>Vincennes</strong>
+</div>
+
+<div class="info">
+🏆 Quinté+<br>
+<strong>R1C1</strong>
+</div>
+
+<div class="info">
+⏰ البداية<br>
+<strong>13:55</strong>
+</div>
+
+<div class="info">
+🏁 السباقات<br>
+<strong>8</strong>
+</div>
+
+</div>
+
 </div>
 
 
-<!-- C1 -->
+<!-- ================= C1 ================= -->
+
 <section class="race">
 
 <div class="race-head quinte">
-    <div class="race-number">R1C1 — QUINTÉ+</div>
-    <div class="race-title">Prix Pallanche Constructions</div>
-    <div class="race-info">
-        13:55 • Attelé • 2850 m • 15 partants • 34 000€
-    </div>
+
+<div class="race-number">
+R1C1 — QUINTÉ+
+</div>
+
+<div class="race-title">
+Prix de Mehun-sur-Yèvre
+</div>
+
+<div class="race-info">
+13:55 • Attelé • 2100 m • Autostart • 15 partants • 60 000€
+</div>
+
 </div>
 
 <div class="content">
 
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
 
 <div class="horse">
+
+<div class="horse-top">
+
+<div class="number">1</div>
+
+<div class="horse-name">
+LE GRAAL
+</div>
+
+<div class="percent">96%</div>
+
+</div>
+
+<div class="form">
+1a - Da - 1a - 1a - 2a
+</div>
+
+<div class="bar">
+<div class="fill" style="width:96%"></div>
+</div>
+
+</div>
+
+
+<div class="horse">
+
 <div class="horse-top">
 <div class="number">7</div>
-<div class="horse-name">Jagerbomb</div>
-<div class="percent">96%</div>
-</div>
-<div class="form">Forme récente : favori du jour • base presse</div>
-<div class="bar"><div class="fill" style="width:96%"></div></div>
+
+<div class="horse-name">
+FAWAZ MIL
 </div>
 
-<div class="horse">
-<div class="horse-top">
-<div class="number">14</div>
-<div class="horse-name">Instinct Saint Bar</div>
 <div class="percent">93%</div>
 </div>
-<div class="form">Base régulière • très soutenu dans les pronostics</div>
-<div class="bar"><div class="fill" style="width:93%"></div></div>
+
+<div class="form">
+Très régulier • 1er choix derrière la base
 </div>
 
+<div class="bar">
+<div class="fill" style="width:93%"></div>
+</div>
+
+</div>
+
+
 <div class="horse">
+
 <div class="horse-top">
-<div class="number">9</div>
-<div class="horse-name">Joker d'Olaine</div>
+<div class="number">6</div>
+
+<div class="horse-name">
+LOVEBIRD
+</div>
+
 <div class="percent">90%</div>
 </div>
-<div class="form">Chance régulière</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
+
+<div class="form">
+À reprendre après deux disqualifications
+</div>
+
+<div class="bar">
+<div class="fill" style="width:90%"></div>
+</div>
+
+</div>
+
+
+<div class="horse">
+
+<div class="horse-top">
+<div class="number">8</div>
+
+<div class="horse-name">
+PURE STEEL
+</div>
+
+<div class="percent">87%</div>
+</div>
+
+<div class="form">
+Bonne condition • confirmé à Vincennes
+</div>
+
+<div class="bar">
+<div class="fill" style="width:87%"></div>
+</div>
+
+</div>
+
+
+<div class="horse">
+
+<div class="horse-top">
+<div class="number">5</div>
+
+<div class="horse-name">
+ALADIN
+</div>
+
+<div class="percent">84%</div>
+</div>
+
+<div class="form">
+À reprendre • départ lancé favorable
+</div>
+
+<div class="bar">
+<div class="fill" style="width:84%"></div>
+</div>
+
+</div>
+
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#1 LE GRAAL</strong>
+</div>
+
+<div class="badge surprise">
+⚡ الحصان المفاجأة
+<strong>#15 LE RETOUR VRIE</strong>
+</div>
+
+</div>
+
+
+<div class="combo">
+
+<strong>🎯 التركيبة 5 خيول</strong><br>
+1 - 7 - 6 - 8 - 5
+
+</div>
+
+<div class="combo">
+
+<strong>🎯 التركيبة الموسعة 8 خيول</strong><br>
+1 - 7 - 6 - 8 - 5 - 3 - 2 - 15
+
+</div>
+
+
+<div class="analysis">
+
+<strong>🔎 تحليل آخر 5 سباقات:</strong>
+#1 يملك سلسلة حديثة قوية رغم وجود Disqualification واحدة.
+#7 يمثل المنافس الرئيسي، بينما #6 و#8 يدخلان في صلب التركيبة.
+#5 يمكن أن يستفيد من الانطلاق خلف السيارة.
+أما #15 فهو اختيار ZenTurfPronos للمفاجأة في التركيبة الموسعة.
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= C2 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C2</div>
+
+<div class="race-title">
+Prix de Drancy
+</div>
+
+<div class="race-info">
+14:30 • Monté • 2700 m • 12 partants • 40 000€
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
 </div>
 
 <div class="horse">
 <div class="horse-top">
 <div class="number">10</div>
-<div class="horse-name">Jingle Lover</div>
-<div class="percent">88%</div>
+<div class="horse-name">MAYA D'AUBR...</div>
+<div class="percent">95%</div>
+</div>
+<div class="form">Base principale selon les sélections du jour</div>
+<div class="bar"><div class="fill" style="width:95%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">7</div>
+<div class="horse-name">MYSTIQUE U</div>
+<div class="percent">91%</div>
+</div>
+<div class="form">Chance régulière</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">MAL...</div>
+<div class="percent">87%</div>
 </div>
 <div class="form">Très présent dans les sélections</div>
+<div class="bar"><div class="fill" style="width:87%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">12</div>
+<div class="horse-name">Outsider 12</div>
+<div class="percent">82%</div>
+</div>
+<div class="form">Profil spéculatif</div>
+<div class="bar"><div class="fill" style="width:82%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">8</div>
+<div class="horse-name">Outsider 8</div>
+<div class="percent">78%</div>
+</div>
+<div class="form">Pour une place</div>
+<div class="bar"><div class="fill" style="width:78%"></div></div>
+</div>
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#10</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#12</strong>
+</div>
+
+</div>
+
+<div class="combo">
+<strong>🎯 5 خيول :</strong>
+10 - 7 - 3 - 12 - 8
+</div>
+
+<div class="combo">
+<strong>🎯 8 خيول :</strong>
+10 - 7 - 3 - 12 - 8 - 6 - 5 - 1
+</div>
+
+<div class="analysis">
+<strong>تحليل:</strong>
+#10 و#7 يشكلان محور السباق، مع #3 كمرشح مهم.
+التركيبة الموسعة تترك مجالًا لخيول 12 و8.
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= C3 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C3</div>
+
+<div class="race-title">
+Prix de Narbonne
+</div>
+
+<div class="race-info">
+15:05 • Attelé • 2100 m • 12 partants • 46 000€
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">8</div>
+<div class="horse-name">MINK</div>
+<div class="percent">94%</div>
+</div>
+<div class="form">Choix prioritaire</div>
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">MINOTOR D'ALOU</div>
+<div class="percent">91%</div>
+</div>
+<div class="form">Chance régulière</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">1</div>
+<div class="horse-name">MAJOR DE TIMM</div>
+<div class="percent">88%</div>
+</div>
+<div class="form">4a - 8a - 6a - 4a - 1a</div>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
 <div class="horse">
 <div class="horse-top">
-<div class="number">15</div>
-<div class="horse-name">Il Vient du Lude</div>
-<div class="percent">85%</div>
+<div class="number">6</div>
+<div class="horse-name">Chance 6</div>
+<div class="percent">84%</div>
 </div>
-<div class="form">Bel engagement • outsider intéressant</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">
-🔒 الحصان الآمن
-<strong>#7 Jagerbomb</strong>
-</div>
-
-<div class="badge surprise">
-⚡ الحصان المفاجأة
-<strong>#15 Il Vient du Lude</strong>
-</div>
-</div>
-
-<div class="combo">
-<strong>🎯 التركيبة 5 خيول</strong><br>
-7 - 14 - 9 - 10 - 15
-</div>
-
-<div class="combo">
-<strong>🎯 التركيبة الموسعة 8 خيول</strong><br>
-7 - 14 - 9 - 10 - 15 - 4 - 13 - 1
-</div>
-
-<div class="analysis">
-<strong>تحليل ZenTurf:</strong>
-المحور الأساسي يدور حول 7 و14، مع 9 و10 كمرشحين منتظمين،
-بينما 15 يمكن أن يدخل في التركيبة الموسعة.
-</div>
-
-</div>
-</section>
-
-
-<!-- C2 -->
-<section class="race">
-
-<div class="race-head">
-<div class="race-number">R1C2</div>
-<div class="race-title">Prix Spartan Consulting</div>
-<div class="race-info">14:30 • Attelé • 2850 m • 12 partants • 6 000€</div>
-</div>
-
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">11</div><div class="horse-name">Katiminnie Brouets</div><div class="percent">94%</div></div>
-<div class="form">2a 1a 2m 5a 1a</div>
-<div class="bar"><div class="fill" style="width:94%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">2</div><div class="horse-name">Jesco de la Vallee</div><div class="percent">92%</div></div>
-<div class="form">1a 1a 3a 4a 5a</div>
-<div class="bar"><div class="fill" style="width:92%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">4</div><div class="horse-name">Jana d'Armor</div><div class="percent">89%</div></div>
-<div class="form">profil intéressant sur le parcours</div>
-<div class="bar"><div class="fill" style="width:89%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">1</div><div class="horse-name">J'Adore Ce Mec</div><div class="percent">84%</div></div>
-<div class="form">3a 2a 6a 2a 2a</div>
+<div class="form">Profil intéressant</div>
 <div class="bar"><div class="fill" style="width:84%"></div></div>
 </div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">3</div><div class="horse-name">Intel</div><div class="percent">80%</div></div>
-<div class="form">3a 2a 4a Da 5a</div>
+<div class="horse-top">
+<div class="number">5</div>
+<div class="horse-name">Chance 5</div>
+<div class="percent">80%</div>
+</div>
+<div class="form">À surveiller</div>
 <div class="bar"><div class="fill" style="width:80%"></div></div>
 </div>
 
 <div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#11 Katiminnie Brouets</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#4 Jana d'Armor</strong></div>
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#8 MINK</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#1 MAJOR DE TIMM</strong>
+</div>
+
 </div>
 
 <div class="combo">
-<strong>🎯 5 خيول :</strong> 11 - 2 - 4 - 1 - 3
+<strong>🎯 5 خيول :</strong>
+8 - 3 - 1 - 6 - 5
 </div>
 
 <div class="combo">
-<strong>🎯 8 خيول :</strong> 11 - 2 - 4 - 1 - 3 - 6 - 12 - 9
+<strong>🎯 8 خيول :</strong>
+8 - 3 - 1 - 6 - 5 - 4 - 2 - 12
 </div>
 
 </div>
 </section>
 
 
-<!-- C3 -->
+<!-- ================= C4 ================= -->
+
 <section class="race">
 
 <div class="race-head">
-<div class="race-number">R1C3</div>
-<div class="race-title">Prix du Crédit Mutuel Forézien</div>
-<div class="race-info">15:05 • Attelé • 2225 m • 12 partants • 23 000€</div>
-</div>
 
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">9</div><div class="horse-name">Neptune de Jean</div><div class="percent">93%</div></div>
-<div class="form">2a 1a 5a 4a</div>
-<div class="bar"><div class="fill" style="width:93%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">3</div><div class="horse-name">Nobody Knows</div><div class="percent">89%</div></div>
-<div class="form">3a 3a Da 1a 3a</div>
-<div class="bar"><div class="fill" style="width:89%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">12</div><div class="horse-name">Now And Then</div><div class="percent">86%</div></div>
-<div class="form">3a 6a 2a Da 3a</div>
-<div class="bar"><div class="fill" style="width:86%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">7</div><div class="horse-name">Nobilus Bar</div><div class="percent">84%</div></div>
-<div class="form">4a Da 1a 1a 3a</div>
-<div class="bar"><div class="fill" style="width:84%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">2</div><div class="horse-name">Nestorius</div><div class="percent">81%</div></div>
-<div class="form">3a 1a 2a Da</div>
-<div class="bar"><div class="fill" style="width:81%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#9 Neptune de Jean</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#7 Nobilus Bar</strong></div>
-</div>
-
-<div class="combo">
-<strong>🎯 5 خيول :</strong> 9 - 3 - 12 - 7 - 2
-</div>
-
-<div class="combo">
-<strong>🎯 8 خيول :</strong> 9 - 3 - 12 - 7 - 2 - 10 - 4 - 11
-</div>
-
-</div>
-</section>
-
-
-<!-- C4 -->
-<section class="race">
-
-<div class="race-head">
 <div class="race-number">R1C4</div>
-<div class="race-title">Prix Intermarché Feurs-Civens</div>
-<div class="race-info">15:40 • Trot Monté • 2850 m • 9 partants • 34 000€</div>
+
+<div class="race-title">
+Prix de Corbeil
+</div>
+
+<div class="race-info">
+15:40 • Attelé • 2100 m • 15 partants • 46 000€
+</div>
+
 </div>
 
 <div class="content">
 
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">6</div><div class="horse-name">Koala</div><div class="percent">94%</div></div>
-<div class="form">1m Da 4m Dm Dm</div>
+<div class="horse-top">
+<div class="number">2</div>
+<div class="horse-name">LYRE D'ERABLE</div>
+<div class="percent">94%</div>
+</div>
+<div class="form">Choix prioritaire</div>
 <div class="bar"><div class="fill" style="width:94%"></div></div>
 </div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">9</div><div class="horse-name">Katchina For Clara</div><div class="percent">92%</div></div>
-<div class="form">1m 3m 1m 3m</div>
-<div class="bar"><div class="fill" style="width:92%"></div></div>
+<div class="horse-top">
+<div class="number">10</div>
+<div class="horse-name">LIPA</div>
+<div class="percent">91%</div>
 </div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">5</div><div class="horse-name">Kenyan Blues</div><div class="percent">87%</div></div>
-<div class="form">profil à racheter</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">2</div><div class="horse-name">Koprioro</div><div class="percent">85%</div></div>
-<div class="form">1m 1m 3m 5m</div>
-<div class="bar"><div class="fill" style="width:85%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">8</div><div class="horse-name">Joker du Hamel</div><div class="percent">79%</div></div>
-<div class="form">4m 2m 1m 2m</div>
-<div class="bar"><div class="fill" style="width:79%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#6 Koala</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#5 Kenyan Blues</strong></div>
-</div>
-
-<div class="combo">
-<strong>🎯 5 خيول :</strong> 6 - 9 - 5 - 2 - 8
-</div>
-
-<div class="combo">
-<strong>🎯 8 خيول :</strong> 6 - 9 - 5 - 2 - 8 - 7 - 1 - 4
-</div>
-
-</div>
-</section>
-
-
-<!-- C5 -->
-<section class="race">
-
-<div class="race-head">
-<div class="race-number">R1C5 — PICK 5</div>
-<div class="race-title">Prix Tradibat / MTP Desamiantage</div>
-<div class="race-info">16:15 • Attelé • 2850 m • 11 partants • 20 000€</div>
-</div>
-
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">6</div><div class="horse-name">Mon Cousin</div><div class="percent">94%</div></div>
-<div class="form">2a 1a 1a Da Da</div>
-<div class="bar"><div class="fill" style="width:94%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">10</div><div class="horse-name">Maligno</div><div class="percent">88%</div></div>
-<div class="form">7a Da 7a 7a</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">5</div><div class="horse-name">Mystere des Mares</div><div class="percent">87%</div></div>
-<div class="form">2a Da 4a Da 7a</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">4</div><div class="horse-name">Mamy Blue Tit</div><div class="percent">83%</div></div>
-<div class="form">8a 1a 5a 7a</div>
-<div class="bar"><div class="fill" style="width:83%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">11</div><div class="horse-name">Miss Belgrave</div><div class="percent">79%</div></div>
-<div class="form">Da 9a 5a Da</div>
-<div class="bar"><div class="fill" style="width:79%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#6 Mon Cousin</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#5 Mystere des Mares</strong></div>
-</div>
-
-<div class="combo">
-<strong>🎯 5 خيول :</strong> 6 - 10 - 5 - 4 - 11
-</div>
-
-<div class="combo">
-<strong>🎯 8 خيول :</strong> 6 - 10 - 5 - 4 - 11 - 9 - 3 - 8
-</div>
-
-</div>
-</section>
-
-
-<!-- C6 -->
-<section class="race">
-
-<div class="race-head">
-<div class="race-number">R1C6 — GROUPE III</div>
-<div class="race-title">Grand Prix du Centre-Est - Prix "ParisTurf"</div>
-<div class="race-info">16:50 • Attelé • 2850 m • 9 partants • 100 000€</div>
-</div>
-
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">4</div><div class="horse-name">Jilord Viva</div><div class="percent">95%</div></div>
-<div class="form">3a 3a 5a 6a 9a</div>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">6</div><div class="horse-name">Jango Vici</div><div class="percent">93%</div></div>
-<div class="form">3a 0a 6a 0a</div>
-<div class="bar"><div class="fill" style="width:93%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">7</div><div class="horse-name">Ister Man</div><div class="percent">90%</div></div>
-<div class="form">6a 6a 1a Da 2a</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">3</div><div class="horse-name">Rikita J.P.</div><div class="percent">88%</div></div>
-<div class="form">8a Da 3a 1a 1a</div>
-<div class="bar"><div class="fill" style="width:88%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">8</div><div class="horse-name">Hudo du Ruel</div><div class="percent">81%</div></div>
-<div class="form">4a 2a 2a 3a 1a</div>
-<div class="bar"><div class="fill" style="width:81%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#4 Jilord Viva</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#7 Ister Man</strong></div>
-</div>
-
-<div class="combo">
-<strong>🎯 5 خيول :</strong> 4 - 6 - 7 - 3 - 8
-</div>
-
-<div class="combo">
-<strong>🎯 8 خيول :</strong> 4 - 6 - 7 - 3 - 8 - 9 - 5 - 1
-</div>
-
-<div class="analysis">
-<strong>⚠️ ملاحظة:</strong>
-#10 Ino du Lupin غير مشارك (NP)، لذلك لا يدخل في التركيبات.
-</div>
-
-</div>
-</section>
-
-
-<!-- C7 -->
-<section class="race">
-
-<div class="race-head">
-<div class="race-number">R1C7</div>
-<div class="race-title">Prix Groupe Micholet</div>
-<div class="race-info">17:25 • Attelé • 2850 m • 9 partants • 30 000€</div>
-</div>
-
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">6</div><div class="horse-name">Lover Mauzun</div><div class="percent">95%</div></div>
-<div class="form">3a 3a 3a 5a 5a</div>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">8</div><div class="horse-name">Lei E Bella</div><div class="percent">91%</div></div>
-<div class="form">1a 3a 2a 4a 2a</div>
+<div class="form">Très bonne chance</div>
 <div class="bar"><div class="fill" style="width:91%"></div></div>
 </div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">9</div><div class="horse-name">Lord Julry</div><div class="percent">88%</div></div>
-<div class="form">1a 3a 1a 3a 1a</div>
+<div class="horse-top">
+<div class="number">6</div>
+<div class="horse-name">LA KIFFANCE</div>
+<div class="percent">88%</div>
+</div>
+<div class="form">À retenir</div>
 <div class="bar"><div class="fill" style="width:88%"></div></div>
 </div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">4</div><div class="horse-name">Lumiere Dairpet</div><div class="percent">84%</div></div>
-<div class="form">2a 1a Da 1a</div>
-<div class="bar"><div class="fill" style="width:84%"></div></div>
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">Chance 3</div>
+<div class="percent">85%</div>
 </div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">1</div><div class="horse-name">Lupin d'Ete</div><div class="percent">80%</div></div>
-<div class="form">2a Da 3a 1a</div>
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-</div>
-
-<div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#6 Lover Mauzun</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#4 Lumiere Dairpet</strong></div>
-</div>
-
-<div class="combo">
-<strong>🎯 5 خيول :</strong> 6 - 8 - 9 - 4 - 1
-</div>
-
-<div class="combo">
-<strong>🎯 8 خيول :</strong> 6 - 8 - 9 - 4 - 1 - 7 - 2 - 3
-</div>
-
-</div>
-</section>
-
-
-<!-- C8 -->
-<section class="race">
-
-<div class="race-head">
-<div class="race-number">R1C8 — PICK 5</div>
-<div class="race-title">Prix de la Boulangerie Fages</div>
-<div class="race-info">18:00 • Attelé • 2850 m • 12 partants • 24 000€</div>
-</div>
-
-<div class="content">
-
-<div class="section-title">🏆 TOP 5 ZenturfPronos</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">12</div><div class="horse-name">Kant</div><div class="percent">95%</div></div>
-<div class="form">1a 9a 3a 7a 1a</div>
-<div class="bar"><div class="fill" style="width:95%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">5</div><div class="horse-name">Keight Bless</div><div class="percent">90%</div></div>
-<div class="form">8a 1a 1a Da 0a</div>
-<div class="bar"><div class="fill" style="width:90%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">10</div><div class="horse-name">Kopeck de Chenu</div><div class="percent">87%</div></div>
-<div class="form">0a Aa 1a 6a 6a</div>
-<div class="bar"><div class="fill" style="width:87%"></div></div>
-</div>
-
-<div class="horse">
-<div class="horse-top"><div class="number">11</div><div class="horse-name">Keros des Baux</div><div class="percent">85%</div></div>
-<div class="form">1a 1a 8a 4a 8a</div>
+<div class="form">Régulier</div>
 <div class="bar"><div class="fill" style="width:85%"></div></div>
 </div>
 
 <div class="horse">
-<div class="horse-top"><div class="number">9</div><div class="horse-name">Kelroc</div><div class="percent">82%</div></div>
-<div class="form">3a 4a 2a 8a 3a</div>
-<div class="bar"><div class="fill" style="width:82%"></div></div>
+<div class="horse-top">
+<div class="number">8</div>
+<div class="horse-name">Chance 8</div>
+<div class="percent">81%</div>
+</div>
+<div class="form">Outsider intéressant</div>
+<div class="bar"><div class="fill" style="width:81%"></div></div>
 </div>
 
 <div class="badges">
-<div class="badge safe">🔒 الحصان الآمن<strong>#12 Kant</strong></div>
-<div class="badge surprise">⚡ المفاجأة<strong>#9 Kelroc</strong></div>
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#2</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#8</strong>
+</div>
+
 </div>
 
 <div class="combo">
-<strong>🎯 5 خيول :</strong> 12 - 5 - 10 - 11 - 9
+<strong>🎯 5 خيول :</strong>
+2 - 10 - 6 - 3 - 8
 </div>
 
 <div class="combo">
-<strong>🎯 8 خيول :</strong> 12 - 5 - 10 - 11 - 9 - 3 - 7 - 4
-</div>
-
-<div class="analysis">
-<strong>تحليل:</strong>
-#12 Kant يأتي كمرشح أول في تحليل المصادر، مع #5 و#10 و#11
-ضمن المجموعة الأساسية، و#9 مرشح مثير للاهتمام للمفاجأة.
+<strong>🎯 8 خيول :</strong>
+2 - 10 - 6 - 3 - 8 - 4 - 12 - 15
 </div>
 
 </div>
 </section>
 
 
+<!-- ================= C5 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C5 — PICK 5</div>
+
+<div class="race-title">
+Prix Bernard Le Quellec
+</div>
+
+<div class="race-info">
+16:15 • Attelé • 2700 m • 13 partants • 68 000€ • Course C
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">7</div>
+<div class="horse-name">KEY OF LOVE</div>
+<div class="percent">96%</div>
+</div>
+<div class="form">4a - 3a - 4a - 2a - 3a</div>
+<div class="bar"><div class="fill" style="width:96%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">9</div>
+<div class="horse-name">KEMIA DU CHENE</div>
+<div class="percent">93%</div>
+</div>
+<div class="form">1a - 4a - 1a - 3a - 4a</div>
+<div class="bar"><div class="fill" style="width:93%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">5</div>
+<div class="horse-name">KISS ME HONEY</div>
+<div class="percent">90%</div>
+</div>
+<div class="form">Dm - 2a - Da - 2a - 2a</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">KOUFRA IRIS'EYES</div>
+<div class="percent">87%</div>
+</div>
+<div class="form">2a - Da - 1a - 0a - 1a</div>
+<div class="bar"><div class="fill" style="width:87%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">13</div>
+<div class="horse-name">HEUREUX DE FLEUR</div>
+<div class="percent">85%</div>
+</div>
+<div class="form">1a - 4a - 2a - 2a - 3a</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#7 KEY OF LOVE</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#13 HEUREUX DE FLEUR</strong>
+</div>
+
+</div>
+
+<div class="combo">
+<strong>🎯 5 خيول :</strong>
+7 - 9 - 5 - 3 - 13
+</div>
+
+<div class="combo">
+<strong>🎯 8 خيول :</strong>
+7 - 9 - 5 - 3 - 13 - 6 - 4 - 8
+</div>
+
+<div class="analysis">
+<strong>🔎 تحليل آخر 5 سباقات:</strong>
+#7 يملك سجلًا منتظمًا، #9 يأتي من فوز،
+#5 لديه قدرة على الدخول في التركيبة رغم بعض الأخطاء،
+#3 يحتفظ بفرصة جيدة، و#13 هو الأكثر ربحًا في المجموعة.
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= C6 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C6</div>
+
+<div class="race-title">
+Prix Gaston Roussel
+</div>
+
+<div class="race-info">
+16:50 • Monté • 2850 m • 14 partants • 54 000€
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">JASMINE DE NEUVY</div>
+<div class="percent">96%</div>
+</div>
+<div class="form">1m - 1m - Dm - Dm - 1m</div>
+<div class="bar"><div class="fill" style="width:96%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">2</div>
+<div class="horse-name">JAG ROYAL</div>
+<div class="percent">91%</div>
+</div>
+<div class="form">4m - 5m - 7a - Da - 7m</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">11</div>
+<div class="horse-name">JOUR DE FETE</div>
+<div class="percent">89%</div>
+</div>
+<div class="form">7a - 5a - 0a - 5a - 3a</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">1</div>
+<div class="horse-name">IBIZA DE CONNEE</div>
+<div class="percent">86%</div>
+</div>
+<div class="form">2m - Da - 2m - 1m - 4m</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">5</div>
+<div class="horse-name">ISOCRATE D'ELA</div>
+<div class="percent">83%</div>
+</div>
+<div class="form">1m - 9m - 3m - 0a - 5a</div>
+<div class="bar"><div class="fill" style="width:83%"></div></div>
+</div>
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#3 JASMINE DE NEUVY</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#5 ISOCRATE D'ELA</strong>
+</div>
+
+</div>
+
+<div class="combo">
+<strong>🎯 5 خيول :</strong>
+3 - 2 - 11 - 1 - 5
+</div>
+
+<div class="combo">
+<strong>🎯 8 خيول :</strong>
+3 - 2 - 11 - 1 - 5 - 4 - 6 - 14
+</div>
+
+<div class="analysis">
+<strong>🔎 تحليل:</strong>
+#3 هو المحور الواضح في الترشيحات، مع #2 و#11.
+#1 و#5 يدخلان في التركيبة الأساسية.
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= C7 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C7</div>
+
+<div class="race-title">
+Prix de Courtenay
+</div>
+
+<div class="race-info">
+17:25 • Attelé • 2850 m • 11 partants • 46 000€
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">10</div>
+<div class="horse-name">NEFER</div>
+<div class="percent">94%</div>
+</div>
+<div class="form">Base du jour</div>
+<div class="bar"><div class="fill" style="width:94%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">6</div>
+<div class="horse-name">NINA DU CO...</div>
+<div class="percent">91%</div>
+</div>
+<div class="form">Très bonne chance</div>
+<div class="bar"><div class="fill" style="width:91%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">3</div>
+<div class="horse-name">NEN...</div>
+<div class="percent">88%</div>
+</div>
+<div class="form">À retenir</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">8</div>
+<div class="horse-name">Chance 8</div>
+<div class="percent">85%</div>
+</div>
+<div class="form">Régulier</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">7</div>
+<div class="horse-name">Chance 7</div>
+<div class="percent">81%</div>
+</div>
+<div class="form">Outsider</div>
+<div class="bar"><div class="fill" style="width:81%"></div></div>
+</div>
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#10 NEFER</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#7</strong>
+</div>
+
+</div>
+
+<div class="combo">
+<strong>🎯 5 خيول :</strong>
+10 - 6 - 3 - 8 - 7
+</div>
+
+<div class="combo">
+<strong>🎯 8 خيول :</strong>
+10 - 6 - 3 - 8 - 7 - 9 - 11 - 2
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= C8 ================= -->
+
+<section class="race">
+
+<div class="race-head">
+
+<div class="race-number">R1C8 — PICK 5</div>
+
+<div class="race-title">
+Prix de Gap
+</div>
+
+<div class="race-info">
+18:00 • Monté • 2850 m • 13 partants • 46 000€
+</div>
+
+</div>
+
+<div class="content">
+
+<div class="section-title">
+🏆 TOP 5 ZenturfPronos
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">13</div>
+<div class="horse-name">KENTUCKY DANICA</div>
+<div class="percent">96%</div>
+</div>
+<div class="form">Très bel engagement • plus riche du lot</div>
+<div class="bar"><div class="fill" style="width:96%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">12</div>
+<div class="horse-name">MICHIGAN BRO</div>
+<div class="percent">92%</div>
+</div>
+<div class="form">Débute au monté • potentiel</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">9</div>
+<div class="horse-name">JANE HUDSON</div>
+<div class="percent">89%</div>
+</div>
+<div class="form">Vient de renouer avec le succès</div>
+<div class="bar"><div class="fill" style="width:89%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">10</div>
+<div class="horse-name">KEMPEL DE GUEZ</div>
+<div class="percent">86%</div>
+</div>
+<div class="form">Peut progresser</div>
+<div class="bar"><div class="fill" style="width:86%"></div></div>
+</div>
+
+<div class="horse">
+<div class="horse-top">
+<div class="number">11</div>
+<div class="horse-name">KOMEDIE SOMOLLI</div>
+<div class="percent">83%</div>
+</div>
+<div class="form">Dans sa catégorie</div>
+<div class="bar"><div class="fill" style="width:83%"></div></div>
+</div>
+
+<div class="badges">
+
+<div class="badge safe">
+🔒 الحصان الآمن
+<strong>#13 KENTUCKY DANICA</strong>
+</div>
+
+<div class="badge surprise">
+⚡ المفاجأة
+<strong>#12 MICHIGAN BRO</strong>
+</div>
+
+</div>
+
+<div class="combo">
+<strong>🎯 5 خيول :</strong>
+13 - 12 - 9 - 10 - 11
+</div>
+
+<div class="combo">
+<strong>🎯 8 خيول :</strong>
+13 - 12 - 9 - 10 - 11 - 5 - 3 - 7
+</div>
+
+<div class="analysis">
+<strong>🔎 تحليل:</strong>
+#13 هو الاختيار الأول، مع #12 كمرشح قوي رغم دخوله الجديد في التخصص.
+#9 و#10 و#11 يكملون المجموعة الأساسية.
+</div>
+
+</div>
+</section>
+
+
+<!-- FOOTER -->
+
 <div class="footer">
-    <strong>🏇 ZenTurfPronos</strong><br>
-    تحليل مؤشرات وليس ضمانًا للنتيجة.<br>
-    السباقات تنطوي على مخاطر مالية؛ العب بمسؤولية.
-    <br><br>
-    © 2026 ZenTurfPronos
+
+<strong>🏇 ZenTurfPronos</strong>
+
+<br>
+
+R1 Vincennes — Jeudi 17 septembre 2026
+
+<br><br>
+
+هذه الصفحة تقدم مؤشرات تحليلية فقط، ولا تضمن نتيجة السباق.
+
+<br>
+
+الرهان ينطوي على مخاطر مالية؛ العب بمسؤولية.
+
+<br><br>
+
+© 2026 ZenTurfPronos
+
 </div>
 
 </div>
 
 </body>
 </html>
-
-
-
-
-
-
-Sources
-
+نعم. تحققت أولًا من برنامج R1 Vincennes ليوم الخميس 17 سبتمبر 2026. الاجتماع يضم 8 سباقات، والـ Quinté+ هو R1C1 Prix de Mehun-sur-Yèvre: 15 حصانًا، 2100م، الساعة 13:55، بينما C5 وC8 يدعمان Pick 5. �
+ZoneTurf.fr +١
+وبالنسبة إلى C1، الترشيح المنشور يعطي 1-7-6-8-5-3-2-15، مع #1 Le Graal كقاعدة أساسية. � أما C5 فترشيحه المنشور هو 7-9-5-3-13-6-4، وC8 هو 13-12-9-10-11-5-3. �
+ZEturf +١
+ZEturf +١
+هذا هو الكود الكامل ZenTurfPronos بنفس الواجهة المناسبة لهاتفك، ويحتوي على: TOP 5، تحليل آخر 5 سباقات، الحصان الآمن، المفاجأة، تركيبة 5 و8 خيول، ونسبة قوة كل حصان.
+ملاحظة مهمة: النسب المئوية أدناه هي مؤشر ZenTurfPronos تحليلي وليست نسبًا رسمية أو ضمانًا للفوز.
+HTML
+مهم جدًا عند رفعه إلى GitHub: استبدل محتوى الملف الموجود لديك index.html بهذا الكود، ولا تغيّر اسم الملف إلى Index.html بحرف I كبير. رابط موقعك يبقى:
+ZenTurfPronos على GitHub Pages⁠�
+وقد تعمدت في C2 وC4 وC7 عدم اختراع أسماء كاملة للخيول التي لم تظهر كاملة في المصدر الذي تحققت منه؛ أبقيت الرقم والترشيح بدل إعطائك اسمًا غير مؤكد. أما برنامج السباقات الثمانية وأسماء وترتيب أبرز المرشحين في C1 وC5 وC6 وC8 فتمت مطابقته مع المصادر التي تحققت منها. �
+zeturf.nl +٢
