@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZenTurfPronos – R1 Chantilly 29 septembre 2026 | Pronostics et analyses</title>
+<title>ZenTurfPronos – R1 Laval 30 septembre 2026 | Pronostic algorithmique IA</title>
 
-<meta name="description" content="ZenTurfPronos présente les pronostics et analyses de la Réunion 1 à Chantilly du mardi 29 septembre 2026 : 9 courses, Quinté+ Prix de la Chambre du Duc, Top 5, cheval sûr, cheval surprise et combinaisons.">
+<meta name="description" content="ZenTurfPronos – R1 Laval du mercredi 30 septembre 2026. Pronostic algorithmique IA, estimation indicative du modèle Plackett-Luce, Quinté+ Grand Prix Anjou-Maine, Top 5, cheval sûr, surprise et combinaisons.">
 
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="googlebot" content="index,follow,max-image-preview:large">
@@ -15,14 +15,14 @@
 <link rel="sitemap" type="application/xml" title="Sitemap" href="https://natachalovostory-stack.github.io/zenturfpronos/sitemap.xml">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="ZenTurfPronos – R1 Chantilly 29 septembre 2026">
-<meta property="og:description" content="Pronostics et analyses des 9 courses de la Réunion 1 à Chantilly du mardi 29 septembre 2026.">
+<meta property="og:title" content="ZenTurfPronos – R1 Laval 30 septembre 2026">
+<meta property="og:description" content="Pronostic algorithmique IA et analyses de la Réunion 1 Laval du mercredi 30 septembre 2026.">
 <meta property="og:url" content="https://natachalovostory-stack.github.io/zenturfpronos/">
 <meta property="og:site_name" content="ZenTurfPronos">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZenTurfPronos – R1 Chantilly 29 septembre 2026">
-<meta name="twitter:description" content="Pronostics et analyses des courses hippiques françaises à Chantilly.">
+<meta name="twitter:title" content="ZenTurfPronos – R1 Laval 30 septembre 2026">
+<meta name="twitter:description" content="Pronostic algorithmique IA et analyses hippiques françaises.">
 
 <script type="application/ld+json">
 {
@@ -30,7 +30,7 @@
   "@type": "WebSite",
   "name": "ZenTurfPronos",
   "url": "https://natachalovostory-stack.github.io/zenturfpronos/",
-  "description": "Pronostics et analyses des courses hippiques françaises.",
+  "description": "Pronostics et analyses algorithmiques des courses hippiques françaises.",
   "inLanguage": "fr-FR"
 }
 </script>
@@ -39,7 +39,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "ZenTurfPronos – R1 Chantilly du mardi 29 septembre 2026",
+  "name": "ZenTurfPronos – R1 Laval du mercredi 30 septembre 2026",
   "url": "https://natachalovostory-stack.github.io/zenturfpronos/",
   "inLanguage": "fr-FR",
   "isPartOf": {
@@ -127,7 +127,8 @@ nav a {
     padding: 10px;
 }
 
-.intro {
+.intro,
+.algorithm {
     background: white;
     border-radius: 14px;
     padding: 20px;
@@ -135,9 +136,38 @@ nav a {
     box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
-.intro h2 {
+.intro h2,
+.algorithm h2 {
     color: #8b0000;
     margin-top: 0;
+}
+
+.algorithm {
+    border-left: 5px solid #8b0000;
+}
+
+.algorithm-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #8b0000;
+}
+
+.pl-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.pl-table th,
+.pl-table td {
+    border: 1px solid #ddd;
+    padding: 9px;
+    text-align: center;
+}
+
+.pl-table th {
+    background: #8b0000;
+    color: white;
 }
 
 .race {
@@ -260,6 +290,7 @@ footer {
 }
 
 @media (max-width: 650px) {
+
     header h1 {
         font-size: 22px;
     }
@@ -276,6 +307,15 @@ footer {
         font-size: 13px;
         padding: 7px 10px;
     }
+
+    .pl-table {
+        font-size: 13px;
+    }
+
+    .pl-table th,
+    .pl-table td {
+        padding: 6px;
+    }
 }
 </style>
 </head>
@@ -284,7 +324,7 @@ footer {
 
 <header>
     <h1>ZenTurfPronos</h1>
-    <p>R1 Chantilly – Mardi 29 septembre 2026</p>
+    <p>R1 Laval – Mercredi 30 septembre 2026</p>
 </header>
 
 <div class="follow">
@@ -303,40 +343,137 @@ footer {
     <a href="#c6">C6</a>
     <a href="#c7">C7</a>
     <a href="#c8">C8</a>
-    <a href="#c9">C9</a>
 </nav>
 
 <div class="container">
 
 <div class="intro">
-    <h2>R1 Chantilly – Mardi 29 septembre 2026</h2>
 
-    <p>
-        Retrouvez sur ZenTurfPronos les analyses des 9 courses de la
-        Réunion 1 à Chantilly.
-    </p>
+<h2>R1 Laval – Mercredi 30 septembre 2026</h2>
 
-    <p>
-        La réunion débute à <strong>13h55</strong> et se termine à
-        <strong>18h35</strong>.
-    </p>
+<p>
+Bienvenue sur <strong>ZenTurfPronos</strong>, votre page consacrée
+aux analyses des courses hippiques françaises.
+</p>
 
-    <p>
-        <strong>Quinté+ du jour :</strong>
-        C1 – Prix de la Chambre du Duc – Plat – 1 900 mètres –
-        Piste en sable fibré – 50 900 € – 16 partants.
-    </p>
+<p>
+La Réunion 1 de Laval comporte <strong>8 courses</strong>,
+de 13h55 à 18h00.
+</p>
 
-    <p>
-        <strong>Pick 5 :</strong> C7 – Prix du Salon Violet et
-        C9 – Prix de Bonneval.
-    </p>
+<p>
+<strong>Quinté+ du jour :</strong>
+C1 – Grand Prix Anjou-Maine – Attelé – 2 850 mètres –
+100 000 € – 15 partants.
+</p>
 
-    <p>
-        Les indices ZenTurf sont des estimations analytiques indicatives.
-        Ils ne constituent pas des probabilités officielles et ne garantissent
-        pas le résultat d'une course.
-    </p>
+<p>
+<strong>Pick5 :</strong> C5 – Prix Viking de Val.
+</p>
+
+<p>
+<strong>ZE5 :</strong> C8 – Prix Gala Téjy.
+</p>
+
+</div>
+
+
+<!-- ALGORITHME -->
+
+<div class="algorithm">
+
+<div class="algorithm-title">
+Pronostic algorithmique IA
+</div>
+
+<p>
+<strong>Estimation des probabilités – modèle Plackett-Luce</strong>
+</p>
+
+<p>
+Pour le Quinté+ du jour, l'algorithme ZenTurfPronos fournit le classement
+suivant :
+</p>
+
+<p style="font-size:20px;text-align:center;">
+<strong>7 – 5 – 3 – 13 – 14 – 9 – 15 – 8</strong>
+</p>
+
+<table class="pl-table">
+
+<tr>
+<th>Rang</th>
+<th>N°</th>
+<th>Indice modèle</th>
+<th>Lecture</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td><strong>7</strong></td>
+<td>19%</td>
+<td>Priorité IA</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td><strong>5</strong></td>
+<td>16%</td>
+<td>Très belle chance</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td><strong>3</strong></td>
+<td>14%</td>
+<td>Chance régulière</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td><strong>13</strong></td>
+<td>12%</td>
+<td>À retenir</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td><strong>14</strong></td>
+<td>11%</td>
+<td>Possibilité podium</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td><strong>9</strong></td>
+<td>10%</td>
+<td>Chance pour les places</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td><strong>15</strong></td>
+<td>9%</td>
+<td>Outsider</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td><strong>8</strong></td>
+<td>8%</td>
+<td>Outsider élargi</td>
+</tr>
+
+</table>
+
+<div class="note">
+<strong>Important :</strong> les pourcentages ci-dessus sont une
+estimation indicative et non calibrée construite à partir du classement
+algorithmique. Ils ne constituent ni des probabilités officielles PMU,
+ni une garantie de résultat. Le modèle Plackett-Luce est utilisé ici
+comme cadre de classement probabiliste.
+</div>
+
 </div>
 
 
@@ -344,69 +481,94 @@ footer {
 
 <section class="race" id="c1">
 
-<h2>C1 – Prix de la Chambre du Duc – Quinté+</h2>
+<h2>C1 – Grand Prix Anjou-Maine – Quinté+</h2>
 
 <div class="info">
-    <strong>13h55</strong> – Plat – 1 900 m – PSF –
-    Corde à droite – Handicap divisé – Classe 2 –
-    50 900 € – 16 partants
+<strong>13h55</strong> – Attelé – 2 850 m – Corde à gauche –
+Groupe 3 – 100 000 € – 15 partants
 </div>
 
-<h3 class="section-title">Analyse des 5 dernières courses</h3>
+<h3 class="section-title">
+Analyse des 5 dernières courses
+</h3>
 
 <div class="horse">
-<strong>2 – ZELORO</strong>
-<div class="form">2p – 6p – 1p – 4p – 4p</div>
+<strong>7 – L'AS DESBOIS</strong>
+<div class="form">3a – 3a – 0a – 2a – 3a</div>
 <div class="progress"><span style="width:96%"></span></div>
 </div>
 
 <div class="horse">
-<strong>9 – PRESA DIRETTA</strong>
-<div class="form">3p – 3p – 4p – 3p – 0p</div>
-<div class="progress"><span style="width:94%"></span></div>
-</div>
-
-<div class="horse">
-<strong>12 – TRUE TEDESCO</strong>
-<div class="form">Forme récente intéressante – tenant du titre</div>
+<strong>5 – JILORD VIVA</strong>
+<div class="form">1a – 9a – 3a – 3a – 5a</div>
 <div class="progress"><span style="width:92%"></span></div>
 </div>
 
 <div class="horse">
-<strong>1 – ANSSIO</strong>
-<div class="form">2p – 2p – 3p – 5p – 1p</div>
-<div class="progress"><span style="width:90%"></span></div>
+<strong>3 – RIKITA JP</strong>
+<div class="form">Da – 8a – Da – 3a – 1a</div>
+<div class="progress"><span style="width:88%"></span></div>
 </div>
 
 <div class="horse">
-<strong>7 – BOTICELLI</strong>
-<div class="form">Profil compétitif – spécialiste de la PSF</div>
-<div class="progress"><span style="width:87%"></span></div>
+<strong>13</strong>
+<div class="form">Priorité du modèle algorithmique</div>
+<div class="progress"><span style="width:84%"></span></div>
 </div>
 
-<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
+<div class="horse">
+<strong>14</strong>
+<div class="form">Chance régulière selon le modèle</div>
+<div class="progress"><span style="width:81%"></span></div>
+</div>
 
-<p><strong>2 – 9 – 12 – 1 – 7</strong></p>
+<div class="horse">
+<strong>9</strong>
+<div class="form">Possibilité pour une place</div>
+<div class="progress"><span style="width:78%"></span></div>
+</div>
+
+<div class="horse">
+<strong>15</strong>
+<div class="form">Outsider intéressant</div>
+<div class="progress"><span style="width:75%"></span></div>
+</div>
+
+<div class="horse">
+<strong>8</strong>
+<div class="form">Outsider élargi</div>
+<div class="progress"><span style="width:71%"></span></div>
+</div>
+
+<h3 class="section-title">
+TOP 5 ZenTurfPronos
+</h3>
+
+<p>
+<strong>7 – 5 – 3 – 13 – 14</strong>
+</p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 2 – ZELORO
+<strong>Cheval sûr :</strong>
+7 – L'AS DESBOIS
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 10 – FEVE
+<strong>Cheval surprise :</strong>
+15
 </div>
 
 <div class="combo">
-<strong>Combinaison 5 chevaux :</strong>
-2 – 9 – 12 – 1 – 7
+<strong>Combinaison 5 :</strong>
+7 – 5 – 3 – 13 – 14
 <br><br>
-<strong>Combinaison 8 chevaux :</strong>
-2 – 9 – 12 – 1 – 7 – 10 – 14 – 3
+<strong>Combinaison 8 :</strong>
+7 – 5 – 3 – 13 – 14 – 9 – 15 – 8
 </div>
 
 <div class="note">
-ZELORO, PRESA DIRETTA et TRUE TEDESCO figurent parmi les chevaux
-les plus cités dans les analyses publiées avant la course.
+Le classement algorithmique fourni pour cette course est :
+<strong>7 – 5 – 3 – 13 – 14 – 9 – 15 – 8</strong>.
 </div>
 
 </section>
@@ -416,69 +578,65 @@ les plus cités dans les analyses publiées avant la course.
 
 <section class="race" id="c2">
 
-<h2>C2 – Prix de Villebon</h2>
+<h2>C2 – Prix Patapain</h2>
 
 <div class="info">
-    <strong>14h30</strong> – Plat – 1 600 m – Corde à droite –
-    Mâles et hongres de 2 ans – Course à conditions –
-    45 700 € – 13 partants
+<strong>14h30</strong> – Attelé – 2 850 m – Corde à gauche –
+23 000 € – 18 partants – Pouliches de 3 ans
 </div>
 
-<h3 class="section-title">Analyse ZenTurf</h3>
-
-<p>
-Course réservée aux poulains de 2 ans n'ayant jamais couru.
-L'absence de performances antérieures rend l'analyse plus délicate.
-La sélection privilégie donc les numéros issus de la synthèse actuelle
-des pronostics.
-</p>
-
-<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
-
-<p><strong>13 – 6 – 11 – 5 – 12</strong></p>
+<h3 class="section-title">
+Analyse des 5 dernières courses
+</h3>
 
 <div class="horse">
-<strong>13</strong>
-<div class="form">Indice ZenTurf indicatif : 91%</div>
+<strong>2 – NEIGE DU KASTEL</strong>
+<div class="form">3a – 2a – 2a – 4a – Da</div>
 <div class="progress"><span style="width:91%"></span></div>
 </div>
 
 <div class="horse">
-<strong>6</strong>
-<div class="form">Indice ZenTurf indicatif : 87%</div>
+<strong>3 – NAYAJACQ</strong>
+<div class="form">8m – 4a – 2a – 4a – 4a</div>
 <div class="progress"><span style="width:87%"></span></div>
 </div>
 
 <div class="horse">
-<strong>11</strong>
-<div class="form">Indice ZenTurf indicatif : 83%</div>
-<div class="progress"><span style="width:83%"></span></div>
+<strong>1 – NIGHT SESSION</strong>
+<div class="form">3a – Da – 1a</div>
+<div class="progress"><span style="width:84%"></span></div>
 </div>
 
 <div class="horse">
-<strong>5</strong>
-<div class="form">Indice ZenTurf indicatif : 79%</div>
+<strong>8</strong>
+<div class="form">Chance à retenir dans une combinaison élargie</div>
 <div class="progress"><span style="width:79%"></span></div>
 </div>
 
 <div class="horse">
 <strong>12</strong>
-<div class="form">Indice ZenTurf indicatif : 76%</div>
-<div class="progress"><span style="width:76%"></span></div>
+<div class="form">Outsider à surveiller</div>
+<div class="progress"><span style="width:75%"></span></div>
 </div>
 
+<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
+
+<p><strong>2 – 3 – 1 – 8 – 12</strong></p>
+
 <div class="safe">
-<strong>Cheval sûr :</strong> 13
+<strong>Cheval sûr :</strong> 2 – NEIGE DU KASTEL
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 5
+<strong>Cheval surprise :</strong> 8
 </div>
 
 <div class="combo">
-<strong>Combinaison 5 :</strong> 13 – 6 – 11 – 5 – 12
+<strong>Combinaison 5 :</strong>
+2 – 3 – 1 – 8 – 12
 <br><br>
-<strong>Combinaison 8 :</strong> 13 – 6 – 11 – 5 – 12 – 2 – 8 – 9
+<strong>Combinaison 8 :</strong>
+2 – 3 – 1 – 8 – 12 – 5 – 10 – 14
 </div>
 
 </section>
@@ -488,64 +646,65 @@ des pronostics.
 
 <section class="race" id="c3">
 
-<h2>C3 – Prix du Salon des Condé</h2>
+<h2>C3 – Prix Tiégo d'Etang</h2>
 
 <div class="info">
-    <strong>15h05</strong> – Plat – 1 900 m – PSF –
-    Corde à droite – Handicap divisé – Classe 3 –
-    19 200 € – 15 partants
+<strong>15h05</strong> – Trot monté – 2 850 m –
+27 000 € – 13 partants
 </div>
 
-<h3 class="section-title">Analyse des 5 dernières courses</h3>
+<h3 class="section-title">
+Analyse des 5 dernières courses
+</h3>
 
 <div class="horse">
-<strong>7 – DARIYANGEL</strong>
-<div class="form">Top chance signalée dans la synthèse actuelle</div>
-<div class="progress"><span style="width:94%"></span></div>
-</div>
-
-<div class="horse">
-<strong>2</strong>
-<div class="form">Profil à retenir dans la combinaison</div>
-<div class="progress"><span style="width:88%"></span></div>
+<strong>8 – KAMIKAZE</strong>
+<div class="form">1m – 8a – 1m – 1m – 2m</div>
+<div class="progress"><span style="width:97%"></span></div>
 </div>
 
 <div class="horse">
-<strong>1</strong>
-<div class="form">Possibilité pour les premières places</div>
-<div class="progress"><span style="width:84%"></span></div>
+<strong>3 – LOOPING DU PERRE</strong>
+<div class="form">2m – 1m – 1m – 2m – 1m</div>
+<div class="progress"><span style="width:93%"></span></div>
 </div>
 
 <div class="horse">
-<strong>11</strong>
-<div class="form">Chance régulière</div>
+<strong>12 – LION DES ISLES</strong>
+<div class="form">2m – 2m – 6a – 1m – 2m</div>
+<div class="progress"><span style="width:89%"></span></div>
+</div>
+
+<div class="horse">
+<strong>7 – KOREA</strong>
+<div class="form">Dm – 0a – Da – 9m – 3m</div>
 <div class="progress"><span style="width:81%"></span></div>
 </div>
 
 <div class="horse">
-<strong>4</strong>
-<div class="form">Outsider intéressant</div>
-<div class="progress"><span style="width:77%"></span></div>
+<strong>10 – KAIROUAN GLAM</strong>
+<div class="form">4a – Da – Da – Dm – 3a</div>
+<div class="progress"><span style="width:78%"></span></div>
 </div>
 
 <h3 class="section-title">TOP 5 ZenTurfPronos</h3>
 
-<p><strong>7 – 2 – 1 – 11 – 4</strong></p>
+<p><strong>8 – 3 – 12 – 7 – 10</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 7 – DARIYANGEL
+<strong>Cheval sûr :</strong> 8 – KAMIKAZE
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 13
+<strong>Cheval surprise :</strong> 7 – KOREA
 </div>
 
 <div class="combo">
 <strong>Combinaison 5 :</strong>
-7 – 2 – 1 – 11 – 4
+8 – 3 – 12 – 7 – 10
 <br><br>
 <strong>Combinaison 8 :</strong>
-7 – 2 – 1 – 11 – 4 – 9 – 13 – 6
+8 – 3 – 12 – 7 – 10 – 6 – 9 – 11
 </div>
 
 </section>
@@ -555,70 +714,63 @@ des pronostics.
 
 <section class="race" id="c4">
 
-<h2>C4 – Prix de Toutevoie</h2>
+<h2>C4 – Prix Bleublanc</h2>
 
 <div class="info">
-    <strong>15h40</strong> – Plat – 1 600 m – Corde à droite –
-    Pouliches de 2 ans – Course à conditions –
-    45 700 € – 13 partants
+<strong>15h40</strong> – Attelé – 2 850 m – Corde à gauche –
+30 000 € – 18 partants
 </div>
 
-<h3 class="section-title">Analyse ZenTurf</h3>
+<h3 class="section-title">Analyse des 5 dernières courses</h3>
 
-<p>
-Course réservée aux pouliches de 2 ans n'ayant jamais couru.
-L'analyse repose principalement sur la synthèse des numéros et sur
-les conditions de la course.
-</p>
+<div class="horse">
+<strong>13 – MISTER LOVE JULMA</strong>
+<div class="form">1a – 2a – 1a – 4a – 2a</div>
+<div class="progress"><span style="width:95%"></span></div>
+</div>
+
+<div class="horse">
+<strong>16 – MALIUM</strong>
+<div class="form">5a – 8a – 8a – 1a – 3a</div>
+<div class="progress"><span style="width:89%"></span></div>
+</div>
+
+<div class="horse">
+<strong>10 – MILAN DU BOSQUET</strong>
+<div class="form">2a – 9a – 0a – 1a – 1a</div>
+<div class="progress"><span style="width:86%"></span></div>
+</div>
+
+<div class="horse">
+<strong>8 – MEDICI DE BUSSET</strong>
+<div class="form">0a – 4a – 1a – 1a – 5a</div>
+<div class="progress"><span style="width:82%"></span></div>
+</div>
+
+<div class="horse">
+<strong>12 – MELCHIOR JAMES</strong>
+<div class="form">8a – 9a – 5a – 2a – 2a</div>
+<div class="progress"><span style="width:77%"></span></div>
+</div>
 
 <h3 class="section-title">TOP 5 ZenTurfPronos</h3>
 
-<p><strong>1 – 6 – 13 – 7 – 2</strong></p>
-
-<div class="horse">
-<strong>1</strong>
-<div class="form">Indice ZenTurf indicatif : 91%</div>
-<div class="progress"><span style="width:91%"></span></div>
-</div>
-
-<div class="horse">
-<strong>6</strong>
-<div class="form">Indice ZenTurf indicatif : 87%</div>
-<div class="progress"><span style="width:87%"></span></div>
-</div>
-
-<div class="horse">
-<strong>13</strong>
-<div class="form">Indice ZenTurf indicatif : 84%</div>
-<div class="progress"><span style="width:84%"></span></div>
-</div>
-
-<div class="horse">
-<strong>7</strong>
-<div class="form">Indice ZenTurf indicatif : 80%</div>
-<div class="progress"><span style="width:80%"></span></div>
-</div>
-
-<div class="horse">
-<strong>2</strong>
-<div class="form">Indice ZenTurf indicatif : 76%</div>
-<div class="progress"><span style="width:76%"></span></div>
-</div>
+<p><strong>13 – 16 – 10 – 8 – 12</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 1
+<strong>Cheval sûr :</strong> 13 – MISTER LOVE JULMA
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 13
+<strong>Cheval surprise :</strong> 8 – MEDICI DE BUSSET
 </div>
 
 <div class="combo">
 <strong>Combinaison 5 :</strong>
-1 – 6 – 13 – 7 – 2
+13 – 16 – 10 – 8 – 12
 <br><br>
 <strong>Combinaison 8 :</strong>
-1 – 6 – 13 – 7 – 2 – 4 – 8 – 10
+13 – 16 – 10 – 8 – 12 – 11 – 7 – 1
 </div>
 
 </section>
@@ -628,64 +780,63 @@ les conditions de la course.
 
 <section class="race" id="c5">
 
-<h2>C5 – Prix du Salon de Guise</h2>
+<h2>C5 – Prix Viking de Val – Pick5</h2>
 
 <div class="info">
-    <strong>16h15</strong> – Plat – 1 900 m – PSF –
-    Corde à droite – Handicap divisé – Classe 3 –
-    21 100 € – 15 partants
+<strong>16h15</strong> – Attelé – 2 850 m – Corde à gauche –
+30 000 € – 14 partants – 7 à 11 ans
 </div>
 
 <h3 class="section-title">Analyse des 5 dernières courses</h3>
 
 <div class="horse">
-<strong>5</strong>
-<div class="form">Première base de la synthèse actuelle</div>
-<div class="progress"><span style="width:93%"></span></div>
+<strong>3 – J'ADORE CELESTE</strong>
+<div class="form">3a – 4a – 1a – 1a – Da</div>
+<div class="progress"><span style="width:95%"></span></div>
 </div>
 
 <div class="horse">
-<strong>2</strong>
-<div class="form">Chance régulière pour les premières places</div>
-<div class="progress"><span style="width:88%"></span></div>
+<strong>6 – JACKSON D'ECAJEUL</strong>
+<div class="form">Da – 1a – 1a – Da – 1a</div>
+<div class="progress"><span style="width:92%"></span></div>
 </div>
 
 <div class="horse">
-<strong>13</strong>
-<div class="form">Profil intéressant pour la combinaison</div>
+<strong>7 – JOKER GES</strong>
+<div class="form">1a – 3a – 2a – 2a – 5a</div>
+<div class="progress"><span style="width:90%"></span></div>
+</div>
+
+<div class="horse">
+<strong>12 – JOYEUX NONNA</strong>
+<div class="form">1a – 1a – 2a – Da – 6a</div>
+<div class="progress"><span style="width:86%"></span></div>
+</div>
+
+<div class="horse">
+<strong>14 – JEWEL DE LA COTE</strong>
+<div class="form">9a – 1a – 1a – 1a – 3a</div>
 <div class="progress"><span style="width:84%"></span></div>
-</div>
-
-<div class="horse">
-<strong>8</strong>
-<div class="form">Outsider à surveiller</div>
-<div class="progress"><span style="width:80%"></span></div>
-</div>
-
-<div class="horse">
-<strong>10</strong>
-<div class="form">Possibilité pour une place</div>
-<div class="progress"><span style="width:77%"></span></div>
 </div>
 
 <h3 class="section-title">TOP 5 ZenTurfPronos</h3>
 
-<p><strong>5 – 2 – 13 – 8 – 10</strong></p>
+<p><strong>3 – 6 – 7 – 12 – 14</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 5
+<strong>Cheval sûr :</strong> 3 – J'ADORE CELESTE
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 7
+<strong>Cheval surprise :</strong> 12 – JOYEUX NONNA
 </div>
 
 <div class="combo">
-<strong>Combinaison 5 :</strong>
-5 – 2 – 13 – 8 – 10
+<strong>Combinaison Pick5 :</strong>
+3 – 6 – 7 – 12 – 14
 <br><br>
-<strong>Combinaison 8 :</strong>
-5 – 2 – 13 – 8 – 10 – 4 – 7 – 15
+<strong>Combinaison élargie :</strong>
+3 – 6 – 7 – 12 – 14 – 10 – 5 – 11
 </div>
 
 </section>
@@ -695,64 +846,63 @@ les conditions de la course.
 
 <section class="race" id="c6">
 
-<h2>C6 – Prix de Vineuil</h2>
+<h2>C6 – Prix Mondial du Lion</h2>
 
 <div class="info">
-    <strong>16h50</strong> – Plat – 1 800 m – PSF –
-    Corde à droite – Poulains de 2 ans –
-    27 400 € – 12 partants
+<strong>16h50</strong> – Attelé – 2 850 m – Corde à gauche –
+27 000 € – 16 partants – Juments de 5 ans
 </div>
 
-<h3 class="section-title">Analyse ZenTurf</h3>
+<h3 class="section-title">Analyse des 5 dernières courses</h3>
 
 <div class="horse">
-<strong>3 – SILENT DESTINY</strong>
-<div class="form">Top chance signalée dans la synthèse actuelle</div>
-<div class="progress"><span style="width:95%"></span></div>
-</div>
-
-<div class="horse">
-<strong>10</strong>
-<div class="form">Profil à retenir</div>
-<div class="progress"><span style="width:89%"></span></div>
+<strong>2 – LASSIE</strong>
+<div class="form">2a – 2a – 5a – 8a – 3a</div>
+<div class="progress"><span style="width:94%"></span></div>
 </div>
 
 <div class="horse">
-<strong>11</strong>
-<div class="form">Chance régulière</div>
+<strong>14 – LESDY MAGODA</strong>
+<div class="form">2a – 2a – 3a – 8a – 5a</div>
+<div class="progress"><span style="width:91%"></span></div>
+</div>
+
+<div class="horse">
+<strong>13 – LADY DE SAFRAN</strong>
+<div class="form">4a – 5a – 3a – 5a – 4a</div>
+<div class="progress"><span style="width:88%"></span></div>
+</div>
+
+<div class="horse">
+<strong>5 – LOREZZA ERA</strong>
+<div class="form">4a – 8a – 3a – 1a – 1a</div>
 <div class="progress"><span style="width:85%"></span></div>
 </div>
 
 <div class="horse">
-<strong>1</strong>
-<div class="form">Possibilité pour une place</div>
-<div class="progress"><span style="width:81%"></span></div>
-</div>
-
-<div class="horse">
-<strong>8</strong>
-<div class="form">Outsider intéressant</div>
-<div class="progress"><span style="width:77%"></span></div>
+<strong>8 – LETTY DE BEYLEV</strong>
+<div class="form">5m – 2a – Da – Dm – 2m</div>
+<div class="progress"><span style="width:80%"></span></div>
 </div>
 
 <h3 class="section-title">TOP 5 ZenTurfPronos</h3>
 
-<p><strong>3 – 10 – 11 – 1 – 8</strong></p>
+<p><strong>2 – 14 – 13 – 5 – 8</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 3 – SILENT DESTINY
+<strong>Cheval sûr :</strong> 2 – LASSIE
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 8
+<strong>Cheval surprise :</strong> 13 – LADY DE SAFRAN
 </div>
 
 <div class="combo">
 <strong>Combinaison 5 :</strong>
-3 – 10 – 11 – 1 – 8
+2 – 14 – 13 – 5 – 8
 <br><br>
 <strong>Combinaison 8 :</strong>
-3 – 10 – 11 – 1 – 8 – 2 – 5 – 12
+2 – 14 – 13 – 5 – 8 – 1 – 11 – 16
 </div>
 
 </section>
@@ -762,71 +912,63 @@ les conditions de la course.
 
 <section class="race" id="c7">
 
-<h2>C7 – Prix du Salon Violet – Pick5</h2>
+<h2>C7 – Prix Alpha Saltor</h2>
 
 <div class="info">
-    <strong>17h25</strong> – Plat – 1 900 m – PSF –
-    Corde à droite – Handicap divisé – Classe 3 –
-    25 900 € – 16 partants
+<strong>17h25</strong> – Trot monté – 2 850 m –
+35 000 € – 10 partants
 </div>
 
-<h3 class="section-title">Analyse ZenTurf</h3>
-
-<p>
-Le Pick5 de cette réunion se dispute sur 1 900 mètres PSF.
-La synthèse disponible avant la course ne fournit pas encore une
-sélection complète détaillée ; ZenTurf conserve donc une lecture
-prudente pour cette épreuve.
-</p>
-
-<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
-
-<p><strong>2 – 7 – 9 – 13 – 15</strong></p>
+<h3 class="section-title">Analyse des 5 dernières courses</h3>
 
 <div class="horse">
-<strong>2</strong>
-<div class="form">Profil prioritaire dans l'analyse ZenTurf</div>
+<strong>6 – JUNIOR BERDIERE</strong>
+<div class="form">3m – 0m – 4m – 8m – 3m</div>
+<div class="progress"><span style="width:94%"></span></div>
+</div>
+
+<div class="horse">
+<strong>10 – STACCATO HL</strong>
+<div class="form">3m – 7m – 4m – 3m – 2m</div>
 <div class="progress"><span style="width:91%"></span></div>
 </div>
 
 <div class="horse">
-<strong>7</strong>
-<div class="form">Chance pour les places</div>
-<div class="progress"><span style="width:86%"></span></div>
+<strong>8 – JAZZY THOURJAN</strong>
+<div class="form">2m – 5m – 5m – 2m – 3m</div>
+<div class="progress"><span style="width:88%"></span></div>
 </div>
 
 <div class="horse">
-<strong>9</strong>
-<div class="form">Outsider intéressant</div>
+<strong>9 – JOSELITO DU VIVIER</strong>
+<div class="form">5m – 5m – Dm – Dm – 1m</div>
 <div class="progress"><span style="width:82%"></span></div>
 </div>
 
 <div class="horse">
-<strong>13</strong>
-<div class="form">À conserver dans une combinaison élargie</div>
+<strong>3 – RED HOT ROADSTER</strong>
+<div class="form">4m – 9a – 0a – 2a – 3a</div>
 <div class="progress"><span style="width:78%"></span></div>
 </div>
 
-<div class="horse">
-<strong>15</strong>
-<div class="form">Coup de poker</div>
-<div class="progress"><span style="width:74%"></span></div>
-</div>
+<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
+
+<p><strong>6 – 10 – 8 – 9 – 3</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 2
+<strong>Cheval sûr :</strong> 6 – JUNIOR BERDIERE
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 15
+<strong>Cheval surprise :</strong> 8 – JAZZY THOURJAN
 </div>
 
 <div class="combo">
-<strong>Combinaison Pick5 :</strong>
-2 – 7 – 9 – 13 – 15
+<strong>Combinaison 5 :</strong>
+6 – 10 – 8 – 9 – 3
 <br><br>
-<strong>Combinaison élargie :</strong>
-2 – 7 – 9 – 13 – 15 – 4 – 6 – 11
+<strong>Combinaison 8 :</strong>
+6 – 10 – 8 – 9 – 3 – 5 – 2 – 1
 </div>
 
 </section>
@@ -836,142 +978,63 @@ prudente pour cette épreuve.
 
 <section class="race" id="c8">
 
-<h2>C8 – Prix de la Troublerie</h2>
+<h2>C8 – Prix Gala Téjy – Pick5</h2>
 
 <div class="info">
-    <strong>18h00</strong> – Plat – 1 800 m – PSF –
-    Corde à droite – Pouliches de 2 ans –
-    27 400 € – 10 partants
+<strong>18h00</strong> – Attelé – 2 850 m – Corde à gauche –
+27 000 € – 14 partants
 </div>
 
-<h3 class="section-title">Analyse ZenTurf</h3>
-
-<p>
-Course réservée aux pouliches de 2 ans. La synthèse disponible place
-les numéros suivants au premier plan.
-</p>
+<h3 class="section-title">Analyse des 5 dernières courses</h3>
 
 <div class="horse">
-<strong>2</strong>
-<div class="form">Indice ZenTurf indicatif : 93%</div>
-<div class="progress"><span style="width:93%"></span></div>
+<strong>5 – KANNABIS JELOCA</strong>
+<div class="form">1a – 1a – 1a – 1a – 3a</div>
+<div class="progress"><span style="width:98%"></span></div>
 </div>
 
 <div class="horse">
-<strong>3</strong>
-<div class="form">Indice ZenTurf indicatif : 89%</div>
-<div class="progress"><span style="width:89%"></span></div>
+<strong>11 – KING D'HERMES</strong>
+<div class="form">2a – 3a – 3a – 1a – 7a</div>
+<div class="progress"><span style="width:92%"></span></div>
 </div>
 
 <div class="horse">
-<strong>1</strong>
-<div class="form">Indice ZenTurf indicatif : 85%</div>
-<div class="progress"><span style="width:85%"></span></div>
-</div>
-
-<div class="horse">
-<strong>6</strong>
-<div class="form">Indice ZenTurf indicatif : 81%</div>
-<div class="progress"><span style="width:81%"></span></div>
-</div>
-
-<div class="horse">
-<strong>8</strong>
-<div class="form">Indice ZenTurf indicatif : 77%</div>
-<div class="progress"><span style="width:77%"></span></div>
-</div>
-
-<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
-
-<p><strong>2 – 3 – 1 – 6 – 8</strong></p>
-
-<div class="safe">
-<strong>Cheval sûr :</strong> 2
-</div>
-
-<div class="surprise">
-<strong>Cheval surprise :</strong> 8
-</div>
-
-<div class="combo">
-<strong>Combinaison 5 :</strong>
-2 – 3 – 1 – 6 – 8
-<br><br>
-<strong>Combinaison 8 :</strong>
-2 – 3 – 1 – 6 – 8 – 4 – 5 – 10
-</div>
-
-</section>
-
-
-<!-- C9 -->
-
-<section class="race" id="c9">
-
-<h2>C9 – Prix de Bonneval – Pick5</h2>
-
-<div class="info">
-    <strong>18h35</strong> – Plat – 1 100 m – Ligne droite –
-    Course Listed – 47 600 € – 12 partants
-</div>
-
-<h3 class="section-title">Analyse ZenTurf</h3>
-
-<p>
-Dernière course de la Réunion 1. Le Prix de Bonneval se dispute sur
-1 100 mètres en ligne droite et constitue également un Pick5.
-La sélection doit privilégier les chevaux rapides et adaptés à ce
-type de parcours.
-</p>
-
-<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
-
-<p><strong>11 – 3 – 5 – 7 – 9</strong></p>
-
-<div class="horse">
-<strong>11 – KIMI REY</strong>
-<div class="form">Top chance signalée dans la synthèse actuelle</div>
-<div class="progress"><span style="width:94%"></span></div>
-</div>
-
-<div class="horse">
-<strong>3</strong>
-<div class="form">Profil à retenir</div>
+<strong>12 – KINASSE DE VIVOIN</strong>
+<div class="form">4a – 1a – 4a – 7a – 5a</div>
 <div class="progress"><span style="width:88%"></span></div>
 </div>
 
 <div class="horse">
-<strong>5</strong>
-<div class="form">Chance régulière</div>
+<strong>9 – KER POULGWEN</strong>
+<div class="form">4a – 1a – 1a – Da – 4a</div>
 <div class="progress"><span style="width:84%"></span></div>
 </div>
 
 <div class="horse">
-<strong>7</strong>
-<div class="form">Outsider intéressant</div>
-<div class="progress"><span style="width:80%"></span></div>
+<strong>2 – KASSIOPEIA</strong>
+<div class="form">6a – Aa – 8a – 7a – 4a</div>
+<div class="progress"><span style="width:78%"></span></div>
 </div>
 
-<div class="horse">
-<strong>9</strong>
-<div class="form">À conserver dans une combinaison élargie</div>
-<div class="progress"><span style="width:76%"></span></div>
-</div>
+<h3 class="section-title">TOP 5 ZenTurfPronos</h3>
+
+<p><strong>5 – 11 – 12 – 9 – 2</strong></p>
 
 <div class="safe">
-<strong>Cheval sûr :</strong> 11 – KIMI REY
+<strong>Cheval sûr :</strong> 5 – KANNABIS JELOCA
 </div>
 
 <div class="surprise">
-<strong>Cheval surprise :</strong> 7
+<strong>Cheval surprise :</strong> 9 – KER POULGWEN
 </div>
 
 <div class="combo">
 <strong>Combinaison Pick5 :</strong>
-11 – 3 – 5 – 7 – 9
+5 – 11 – 12 – 9 – 2
 <br><br>
 <strong>Combinaison élargie :</strong>
-11 – 3 – 5 – 7 – 9 – 1 – 4 – 8
+5 – 11 – 12 – 9 – 2 – 7 – 14 – 4
 </div>
 
 </section>
@@ -981,38 +1044,40 @@ type de parcours.
 
 <div class="seo">
 
-<h2>ZenTurfPronos – Pronostics hippiques français</h2>
+<h2>ZenTurfPronos – Pronostic algorithmique IA</h2>
 
 <p>
-ZenTurfPronos présente des analyses et pronostics consacrés aux
-courses hippiques françaises. Cette page est consacrée à la
-Réunion 1 de Chantilly du mardi 29 septembre 2026.
+ZenTurfPronos propose des analyses des courses hippiques françaises
+avec une approche combinant analyse des performances récentes,
+sélection algorithmique et classement probabiliste indicatif.
 </p>
 
 <p>
-Retrouvez les horaires des courses, les principales sélections,
-l'analyse des performances, le Top 5 ZenTurfPronos, le cheval sûr,
-le cheval surprise ainsi que les combinaisons de 5 et 8 chevaux.
+Pour le Quinté+ du <strong>Grand Prix Anjou-Maine</strong> à Laval,
+le classement algorithmique communiqué est :
+<strong>7 – 5 – 3 – 13 – 14 – 9 – 15 – 8</strong>.
 </p>
 
 <p>
-<strong>Réunion :</strong> R1 Chantilly<br>
-<strong>Date :</strong> mardi 29 septembre 2026<br>
-<strong>Nombre de courses :</strong> 9<br>
-<strong>Quinté+ :</strong> Prix de la Chambre du Duc<br>
-<strong>Pick5 :</strong> Prix du Salon Violet et Prix de Bonneval
+<strong>Réunion :</strong> R1 Laval<br>
+<strong>Date :</strong> mercredi 30 septembre 2026<br>
+<strong>Courses :</strong> 8<br>
+<strong>Quinté+ :</strong> Grand Prix Anjou-Maine<br>
+<strong>Distance Quinté+ :</strong> 2 850 mètres<br>
+<strong>Discipline :</strong> Trot attelé
 </p>
 
 <p>
-Les indices et sélections présentés sur ZenTurfPronos sont des
-analyses indicatives et personnelles. Ils ne garantissent pas le
-résultat d'une course.
+La méthode présentée sous le nom de
+<strong>Plackett-Luce</strong> est utilisée ici comme cadre de
+classement probabiliste indicatif. Les estimations affichées ne sont
+pas des probabilités officielles et ne garantissent pas l'arrivée.
 </p>
 
 <p>
 Cette page est destinée aux passionnés de courses hippiques françaises
-et aux internautes recherchant des analyses, pronostics et sélections
-pour la Réunion 1 de Chantilly.
+à la recherche de pronostics, analyses, sélections et combinaisons
+pour la Réunion 1 de Laval.
 </p>
 
 </div>
@@ -1020,9 +1085,11 @@ pour la Réunion 1 de Chantilly.
 </div>
 
 <footer>
-    © 2026 ZenTurfPronos – Pronostics et analyses des courses hippiques françaises
-    <br>
-    R1 Chantilly – Mardi 29 septembre 2026
+© 2026 ZenTurfPronos – Pronostics et analyses des courses hippiques françaises
+<br>
+R1 Laval – Mercredi 30 septembre 2026
+<br>
+Pronostic algorithmique IA – Estimation indicative modèle Plackett-Luce
 </footer>
 
 </body>
