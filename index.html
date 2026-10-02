@@ -2,24 +2,15 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ZenTurfPronos – R1 Vincennes – Vendredi 2 octobre 2026</title>
-
-<meta name="description" content="ZenTurfPronos – R1 Vincennes du vendredi 2 octobre 2026. Pronostic algorithmique IA, modèle Plackett-Luce, analyse des 5 dernières courses, Top 5, cheval sûr, cheval surprise, combinaisons 5 et 8 chevaux et indice de force.">
-
-<meta name="robots" content="index, follow, max-image-preview:large">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ZenTurfPronos – R1 Longchamp – Samedi 3 octobre 2026</title>
+<meta name="description" content="ZenTurfPronos – Pronostic algorithmique IA et estimation Plackett-Luce pour R1 Longchamp du samedi 3 octobre 2026.">
+<meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://natachalovostory-stack.github.io/zenturfpronos/">
-
-<meta property="og:title" content="ZenTurfPronos – R1 Vincennes – 2 octobre 2026">
-<meta property="og:description" content="Pronostics algorithmiques IA – R1 Vincennes – vendredi 2 octobre 2026">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://natachalovostory-stack.github.io/zenturfpronos/">
 
 <style>
 *{box-sizing:border-box}
-
+html{scroll-behavior:smooth}
 body{
 margin:0;
 font-family:Arial,Helvetica,sans-serif;
@@ -27,280 +18,179 @@ background:#f4f4f4;
 color:#222;
 line-height:1.6
 }
-
-.zenturf-header{
-background:linear-gradient(135deg,#8b0000,#b51d1d);
+.header{
+background:linear-gradient(135deg,#a80000,#d71919);
 color:white;
-padding:28px 15px;
 text-align:center;
+padding:30px 14px 38px;
 border-radius:0 0 35px 35px;
-box-shadow:0 5px 15px rgba(0,0,0,.18)
+box-shadow:0 8px 20px #aaa
 }
-
-.zenturf-header h1{
-margin:0;
-font-size:32px
+.header h1{
+font-size:42px;
+margin:0 0 20px;
+font-weight:800
 }
-
-.zenturf-header p{
-margin:8px 0;
-font-size:18px
+.header h2{
+font-size:29px;
+font-weight:400;
+margin:0 0 35px
 }
-
-.site-link{
+.header p{
+font-size:25px;
+margin:12px 0
+}
+.header a{
 color:white;
 font-weight:bold;
 text-decoration:underline;
+font-size:24px;
 word-break:break-all
 }
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:18px
-}
-
-.navigation{
+.nav{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
 gap:12px;
-margin:22px 0
+padding:28px 12px
 }
-
-.navigation a{
-background:#8b0000;
+.nav a{
+background:#a80000;
 color:white;
 text-decoration:none;
-padding:12px 20px;
-border-radius:30px;
-font-size:18px;
-box-shadow:0 3px 7px rgba(0,0,0,.15)
-}
-
-.card,.course{
-background:white;
-border-radius:20px;
-padding:22px;
-margin-bottom:25px;
-box-shadow:0 3px 12px rgba(0,0,0,.10)
-}
-
-.card h2{
-color:#8b0000;
-margin-top:0
-}
-
-.ai-card{
-background:#fff8e8;
-border-left:6px solid #c58a00;
-border-radius:15px;
-padding:20px;
-margin-bottom:25px
-}
-
-.ai-card h2,.model-card h2{
-color:#8b0000;
-margin-top:0
-}
-
-.model-card{
-background:white;
-border-left:6px solid #8b0000;
-border-radius:15px;
-padding:20px;
-margin-bottom:25px;
-box-shadow:0 3px 10px rgba(0,0,0,.08)
-}
-
-.course-title{
-background:#8b0000;
-color:white;
-padding:15px;
-border-radius:15px;
-margin:-22px -22px 20px
-}
-
-.course-title h2{
-margin:0;
-font-size:22px
-}
-
-.info{
-background:#fafafa;
-border:1px solid #ddd;
-border-radius:12px;
-padding:15px;
-margin-bottom:18px
-}
-
-.section{
-margin-top:18px;
-padding:18px;
-border-radius:14px;
-background:#fff;
-border:1px solid #e1e1e1
-}
-
-.section h3{
-color:#8b0000;
-margin-top:0
-}
-
-.top5{
-display:flex;
-flex-wrap:wrap;
-gap:10px
-}
-
-.top5 span{
-background:#8b0000;
-color:white;
-padding:10px 18px;
-border-radius:25px;
-font-size:20px;
-font-weight:bold
-}
-
-.base{
-background:#fff1c7;
-border:1px solid #d4a72c;
-border-radius:12px;
-padding:15px;
 font-size:22px;
-font-weight:bold;
-color:#765600;
-text-align:center
+padding:12px 25px;
+border-radius:35px;
+box-shadow:0 3px 7px #aaa
 }
-
-.surprise{
-background:#f1f1f1;
-border-left:5px solid #8b0000;
-padding:15px;
-border-radius:10px;
-font-size:20px;
-font-weight:bold
+.container{
+max-width:950px;
+margin:auto;
+padding:0 18px
 }
-
-.combination{
-background:#fafafa;
-border-left:5px solid #8b0000;
-padding:15px;
-border-radius:10px;
-font-size:21px;
-font-weight:bold;
-letter-spacing:1px
+.card{
+background:white;
+border-radius:25px;
+padding:25px;
+margin:22px 0;
+box-shadow:0 3px 16px #ddd
 }
-
-.force-list{
+.card h2{
+color:#970000;
+font-size:32px;
+margin-top:0
+}
+.card h3{
+color:#9d0000;
+font-size:25px
+}
+.info{
 display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin:15px 0
+}
+.info div{
+background:#f9eeee;
+padding:10px;
+border-radius:12px;
+text-align:center;
+font-size:17px
+}
+.top{
+display:grid;
+grid-template-columns:repeat(5,1fr);
 gap:9px
 }
-
-.force-row{
-display:grid;
-grid-template-columns:50px 1fr 55px;
-align-items:center;
-gap:8px
-}
-
-.number{
-background:#8b0000;
-color:white;
+.horse{
+background:#fafafa;
+border:1px solid #ddd;
+border-radius:14px;
+padding:12px 5px;
 text-align:center;
-padding:6px;
-border-radius:8px;
 font-weight:bold
 }
-
-.bar{
-height:14px;
-background:#e5e5e5;
-border-radius:20px;
-overflow:hidden
-}
-
-.fill{
-height:100%;
-background:#8b0000
-}
-
-.percent{
-font-weight:bold;
-text-align:right
-}
-
-.quinte{
-background:linear-gradient(135deg,#fff0f0,#fff);
-border:2px solid #8b0000;
-border-radius:15px;
-padding:20px;
-text-align:center
-}
-
-.quinte h3{
-color:#8b0000
-}
-
-.quinte-number{
+.horse b{
+display:block;
 font-size:27px;
-color:#8b0000;
-font-weight:bold
+color:#980000
 }
-
-.disclaimer{
-background:#ededed;
-border-radius:15px;
-padding:20px;
-margin-top:30px;
-font-size:14px;
-text-align:center;
-color:#555
+.force{
+color:#a00000;
+font-size:18px
 }
-
+.safe{
+background:#e9f7ed;
+border-left:6px solid #16823b;
+padding:14px;
+border-radius:12px;
+font-size:19px;
+margin:15px 0
+}
+.surprise{
+background:#f6edff;
+border-left:6px solid #7a22a8;
+padding:14px;
+border-radius:12px;
+font-size:19px;
+margin:15px 0
+}
+.combo{
+background:#fff5f5;
+border-left:6px solid #a80000;
+padding:14px;
+border-radius:12px;
+font-size:19px;
+font-weight:bold;
+margin:10px 0
+}
+.ai{
+background:#eef5ff;
+border-left:6px solid #1769aa;
+padding:16px;
+border-radius:12px
+}
+.note{
+background:#fff8df;
+border-left:6px solid #d09a00;
+padding:15px;
+border-radius:12px
+}
 footer{
-background:#8b0000;
-color:white;
 text-align:center;
-padding:25px 15px;
-margin-top:30px
+padding:30px 15px;
+color:#666
 }
-
-footer a{
-color:white;
-font-weight:bold
-}
-
-@media(max-width:600px){
-.zenturf-header h1{font-size:28px}
-.navigation a{font-size:17px;padding:10px 17px}
-.force-row{grid-template-columns:45px 1fr 55px}
+@media(max-width:650px){
+.header h1{font-size:36px}
+.header h2{font-size:25px}
+.header p{font-size:21px}
+.header a{font-size:20px}
+.nav a{font-size:21px;padding:11px 23px}
+.card{padding:22px 18px}
+.card h2{font-size:29px}
+.top{grid-template-columns:repeat(2,1fr)}
+.info{grid-template-columns:1fr}
 }
 </style>
 </head>
 
 <body>
 
-<header class="zenturf-header">
-
+<header class="header">
 <h1>🏇 ZenTurfPronos</h1>
-
-<p>R1 Vincennes – Vendredi 2 octobre 2026</p>
-
+<h2>R1 Longchamp — Samedi 3 octobre 2026</h2>
+<p>Suivez moi à l'adresse suivante:</p>
 <p>
-Suivez moi à l'adresse suivante:<br>
-<a class="site-link" href="https://natachalovostory-stack.github.io/zenturfpronos/">
+<a href="https://natachalovostory-stack.github.io/zenturfpronos">
 https://natachalovostory-stack.github.io/zenturfpronos
 </a>
 </p>
-
 </header>
 
-<main class="container">
-
-<nav class="navigation">
+<nav class="nav">
 <a href="#quinte">Quinté+</a>
-<a href="#ia">Pronostic IA</a>
+<a href="#c1">C1</a>
 <a href="#c2">C2</a>
 <a href="#c3">C3</a>
 <a href="#c4">C4</a>
@@ -308,682 +198,288 @@ https://natachalovostory-stack.github.io/zenturfpronos
 <a href="#c6">C6</a>
 <a href="#c7">C7</a>
 <a href="#c8">C8</a>
+<a href="#c9">C9</a>
 </nav>
 
-<div class="card">
+<main class="container">
 
-<h2>🏇 Réunion 1 – Vincennes</h2>
-
-<h3>Vendredi 2 octobre 2026</h3>
-
+<section class="card">
+<h2>🏇 Réunion 1 — Longchamp</h2>
+<h3>Samedi 3 octobre 2026</h3>
 <p>
-ZenTurfPronos présente l'analyse des huit courses
-de la réunion R1 Vincennes du vendredi 2 octobre 2026.
+ZenTurfPronos présente l'analyse algorithmique des neuf courses de la
+réunion R1 Longchamp du samedi 3 octobre 2026.
 </p>
-
-<p>
-Retrouvez le pronostic algorithmique IA, l'estimation du
-modèle Plackett-Luce, l'analyse des 5 dernières courses,
-le Top 5 ZenTurfPronos, le cheval sûr, le cheval surprise,
-les combinaisons proposées en 5 et 8 chevaux ainsi que
-l'indice de force de chaque cheval.
-</p>
-
+<div class="info">
+<div><strong>Réunion</strong><br>R1 Longchamp</div>
+<div><strong>Date</strong><br>Samedi 3 octobre 2026</div>
+<div><strong>Discipline</strong><br>Plat</div>
+<div><strong>Nombre de courses</strong><br>9</div>
 </div>
+</section>
 
-<div class="ai-card" id="ia">
-
+<section class="card ai" id="ia">
 <h2>🤖 Pronostic algorithmique IA</h2>
-
 <p>
-Le pronostic algorithmique ZenTurfPronos classe les chevaux
-selon leur ordre de sélection fourni par le modèle.
+Les sélections affichées correspondent aux résultats du modèle algorithmique
+utilisé par ZenTurfPronos.
 </p>
-
 <p>
-Les premiers numéros constituent les priorités du modèle,
-suivis par les chevaux complémentaires de la sélection élargie.
+<strong>Estimation des probabilités — modèle Plackett-Luce</strong>
 </p>
-
-</div>
-
-<div class="model-card">
-
-<h2>📊 Estimation des probabilités modèle (Plackett-Luce)</h2>
-
 <p>
-Le modèle <strong>Plackett-Luce</strong> est utilisé comme
-méthode de classement probabiliste afin d'établir un ordre
-préférentiel entre les concurrents.
+Les pourcentages indiqués ci-dessous sont des
+<strong>indices de force relatifs</strong> calculés à partir du classement
+fourni par l'algorithme. Ils ne représentent pas des probabilités officielles
+et ne constituent pas une garantie de résultat.
 </p>
-
-<p>
-Les pourcentages affichés dans cette page correspondent à un
-<strong>indice de force relatif ZenTurfPronos</strong> basé sur
-l'ordre fourni par le modèle. Ils ne constituent pas des
-probabilités officielles de victoire.
-</p>
-
-</div>
-
-
-<!-- COURSE 1 -->
-
-<section class="course">
-
-<div class="course-title">
-<h2>🏇 Course 1 – Prix Charley Mills</h2>
-</div>
-
-<div class="info">
-<strong>Départ :</strong> 18h23<br>
-<strong>Distance :</strong> 2700 m<br>
-<strong>Type :</strong> Attelé<br>
-<strong>Allocation :</strong> 75 000 €<br>
-<strong>Partants :</strong> 13
-</div>
-
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Le modèle place le 3 en première position, devant les 9, 12,
-8 et 11. Les numéros 4, 5 et 10 complètent la sélection.
-</p>
-</div>
-
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>3</span><span>9</span><span>12</span><span>8</span><span>11</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Cheval sûr</h3>
-<div class="base">3</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">10</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">3 – 9 – 12 – 8 – 11</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">3 – 9 – 12 – 8 – 11 – 4 – 5 – 10</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-
-<div class="force-list">
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">12</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">8</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">11</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">10</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
 </section>
 
-
-<!-- COURSE 2 -->
-
-<section class="course" id="c2">
-
-<div class="course-title">
-<h2>🏇 Course 2 – Prix Justicia</h2>
-</div>
-
+<section class="card" id="c1">
+<a id="quinte"></a>
+<h2>🏆 C1 — Qatar Prix Chaudeny</h2>
 <div class="info">
-<strong>Départ :</strong> 18h58<br>
-<strong>Distance :</strong> 2850 m<br>
-<strong>Type :</strong> Attelé – Femelles<br>
-<strong>Allocation :</strong> 46 000 €<br>
-<strong>Partants :</strong> 16
+<div><strong>Départ</strong><br>13h23</div>
+<div><strong>Distance</strong><br>3000m</div>
+<div><strong>Partants</strong><br>8</div>
+<div><strong>Allocation</strong><br>183000 €</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les bases du modèle sont les 12 et 13. Les numéros 15, 11 et 9
-forment le Top 5, suivis des 5, 3 et 8.
-</p>
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>4</b><span class="force">100%</span></div>
+<div class="horse"><b> 6</b><span class="force">96%</span></div>
+<div class="horse"><b>7</b><span class="force">92%</span></div>
+<div class="horse"><b>2</b><span class="force">88%</span></div>
+<div class="horse"><b>5</b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>12</span><span>13</span><span>15</span><span>11</span><span>9</span>
-</div>
-</div>
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 4 </div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 8</div>
 
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">12 – 13</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">8</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">12 – 13 – 15 – 11 – 9</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">12 – 13 – 15 – 11 – 9 – 5 – 3 – 8</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">12</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">13</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">15</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">11</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">8</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="combo">Combinaison proposée 5 chevaux : 4 – 6 – 7– 2 – 5</div>
+<div class="combo">Combinaison proposée 8 chevaux : 4 – 6 – 7– 2 – 5 – 1 – 3– 8 </div>
 </section>
 
-
-<!-- COURSE 3 -->
-
-<section class="course" id="c3">
-
-<div class="course-title">
-<h2>🏇 Course 3 – Prix Atalante</h2>
-</div>
-
+<section class="card" id="c2">
+<h2>🏇 Course 2 — Qatar Prix Dollar</h2>
 <div class="info">
-<strong>Départ :</strong> 19h33<br>
-<strong>Distance :</strong> 2700 m<br>
-<strong>Type :</strong> Attelé<br>
-<strong>Allocation :</strong> 41 000 €<br>
-<strong>Partants :</strong> 18
+<div><strong>Départ</strong><br>13h58</div>
+<div><strong>Distance</strong><br>1950 m</div>
+<div><strong>Partants</strong><br>7</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Le classement algorithmique place le 9 en tête, suivi des 14,
-4, 18 et 10. Les numéros 2, 3 et 5 complètent la sélection.
-</p>
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>3</b><span class="force">100%</span></div>
+<div class="horse"><b>6</b><span class="force">96%</span></div>
+<div class="horse"><b>7</b><span class="force">92%</span></div>
+<div class="horse"><b>4</b><span class="force">88%</span></div>
+<div class="horse"><b>1</b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>9</span><span>14</span><span>4</span><span>18</span><span>10</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Cheval sûr</h3>
-<div class="base">9</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">5</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">9 – 14 – 4 – 18 – 10</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">9 – 14 – 4 – 18 – 10 – 2 – 3 – 5</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">14</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">18</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">10</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">2</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 3</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 7</div>
+<div class="combo">Combinaison 5 chevaux : 3 – 6 – 7 – 4 – 1</div>
+<div class="combo">Combinaison 7 chevaux : 3 – 6 – 7– 4– 1 – 5 – 2</div>
 </section>
 
-
-<!-- COURSE 4 QUINTE -->
-
-<section class="course" id="c4">
-
-<div class="course-title">
-<h2>🏆 Course 4 – Prix Ludovica – Quinté+</h2>
-</div>
-
+<section class="card" id="c3">
+<h2>🏇 Course 3 — Qatar Arabian Trophy des Juments</h2>
 <div class="info">
-<strong>Départ :</strong> 20h15<br>
-<strong>Distance :</strong> 2700 m<br>
-<strong>Type :</strong> Attelé<br>
-<strong>Allocation :</strong> 56 000 €<br>
-<strong>Partants :</strong> 14
+<div><strong>Départ</strong><br>14h33</div>
+<div><strong>Distance</strong><br>2000 m</div>
+<div><strong>Partants</strong><br>12</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-<div class="quinte" id="quinte">
-
-<h3>🤖 Pronostic algorithmique IA – Quinté+</h3>
-
-<div class="quinte-number">
-6 – 4 – 9 – 13 – 11
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>2</b><span class="force">100%</span></div>
+<div class="horse"><b>6 </b><span class="force">96%</span></div>
+<div class="horse"><b>10</b><span class="force">92%</span></div>
+<div class="horse"><b> 12</b><span class="force">88%</span></div>
+<div class="horse"><b>4</b><span class="force">84%</span></div>
 </div>
 
-<p>
-Sélection élargie :
-<strong>6 – 4 – 9 – 13 – 11 – 3 – 12 – 10</strong>
-</p>
-
-</div>
-
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les bases du modèle sont les 6 et 4. Les numéros 9, 13 et 11
-complètent le Top 5. Les 3, 12 et 10 élargissent la sélection.
-</p>
-</div>
-
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>6</span><span>4</span><span>9</span><span>13</span><span>11</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">6 – 4</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">10</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">6 – 4 – 9 – 13 – 11</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">6 – 4 – 9 – 13 – 11 – 3 – 12 – 10</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">6</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">13</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">11</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">12</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">10</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 2</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 10</div>
+<div class="combo">Combinaison 5 chevaux : 2 – 6 – 10– 12 – 4</div>
+<div class="combo">Combinaison 8 chevaux : 2 – 6– 10– 12– 4– 3 – 5 – 1</div>
 </section>
 
-
-<!-- COURSE 5 -->
-
-<section class="course" id="c5">
-
-<div class="course-title">
-<h2>🏇 Course 5 – Prix Hip'poker Tour</h2>
-</div>
-
+<section class="card" id="c4">
+<h2>🏇 Course 4 — Qatar Prix de la Place des Vosges</h2>
 <div class="info">
-<strong>Départ :</strong> 20h45<br>
-<strong>Distance :</strong> 2700 m<br>
-<strong>Type :</strong> Attelé<br>
-<strong>Allocation :</strong> 46 000 €<br>
-<strong>Partants :</strong> 13
+<div><strong>Départ</strong><br>15h15</div>
+<div><strong>Distance</strong><br>2500 m</div>
+<div><strong>Partants</strong><br>18</div>
+<div><strong>Type</strong><br>Quinté+</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les trois bases du modèle sont les 6, 13 et 11. Les numéros
-8 et 7 suivent dans le classement, puis 1, 2 et 5.
-</p>
+<h3>Pronostic algorithmique IA</h3>
+<div class="top">
+<div class="horse"><b>4</b><span class="force">100%</span></div>
+<div class="horse"><b>9</b><span class="force">96%</span></div>
+<div class="horse"><b>13</b><span class="force">92%</span></div>
+<div class="horse"><b>8</b><span class="force">88%</span></div>
+<div class="horse"><b>16</b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>6</span><span>13</span><span>11</span><span>8</span><span>7</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">6 – 13 – 11</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">5</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">6 – 13 – 11 – 8 – 7</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">6 – 13 – 11 – 8 – 7 – 1 – 2 – 5</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">6</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">13</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">11</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">8</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">7</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">1</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">2</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 4 – 9</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 13</div>
+<div class="combo">Combinaison 5 chevaux : 4 – 9– 13– 8– 16</div>
+<div class="combo">Combinaison 8 chevaux : 4 – 9 – 13– 8– 16 – 18 – 5– 3</div>
 </section>
 
-
-<!-- COURSE 6 -->
-
-<section class="course" id="c6">
-
-<div class="course-title">
-<h2>🏇 Course 6 – Prix Etamin</h2>
-</div>
-
+<section class="card" id="c5">
+<h2>🏇 Course 5 — Arqana Series – Haras de Bouquetot</h2>
 <div class="info">
-<strong>Départ :</strong> 21h15<br>
-<strong>Distance :</strong> 2100 m<br>
-<strong>Type :</strong> Attelé – Autostart<br>
-<strong>Allocation :</strong> 46 000 €<br>
-<strong>Partants :</strong> 9
+<div><strong>Départ</strong><br>15h50</div>
+<div><strong>Distance</strong><br>1600 m</div>
+<div><strong>Partants</strong><br>15</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les bases du modèle sont les 5 et 1. La sélection élargie
-est complétée par les 2, 7, 9, 6, 3 et 4.
-</p>
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>7</b><span class="force">100%</span></div>
+<div class="horse"><b>13</b><span class="force">96%</span></div>
+<div class="horse"><b>11 </b><span class="force">92%</span></div>
+<div class="horse"><b>14 </b><span class="force">88%</span></div>
+<div class="horse"><b>3 </b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>5</span><span>2</span><span>7</span><span>9</span><span>6</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">5 – 1</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">4</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">5 – 2 – 7 – 9 – 6</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">5 – 2 – 7 – 9 – 6 – 1 – 3 – 4</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">2</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">7</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">6</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">1</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 7</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 12</div>
+<div class="combo">Combinaison 5 chevaux : 7 – 13 – 11 – 14 – 3 </div>
+<div class="combo">Combinaison 8 chevaux : 7 – 13 – 11 – 14 – 3 – 5 – 9 – 2</div>
 </section>
 
-
-<!-- COURSE 7 -->
-
-<section class="course" id="c7">
-
-<div class="course-title">
-<h2>🏇 Course 7 – Prix Lilius</h2>
-</div>
-
+<section class="card" id="c6">
+<h2>🏇 Course 6 — Qatar Prix de Royallieu</h2>
 <div class="info">
-<strong>Départ :</strong> 21h45<br>
-<strong>Distance :</strong> 2700 m<br>
-<strong>Type :</strong> Monté<br>
-<strong>Allocation :</strong> 60 000 €<br>
-<strong>Partants :</strong> 9
+<div><strong>Départ</strong><br>16h25</div>
+<div><strong>Distance</strong><br>2800 m</div>
+<div><strong>Partants</strong><br>11</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les bases du modèle sont les 3 et 6. Les numéros 7, 5 et 9
-forment le Top 5, suivis des 1, 2 et 4.
-</p>
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>6</b><span class="force">100%</span></div>
+<div class="horse"><b>3</b><span class="force">96%</span></div>
+<div class="horse"><b>1</b><span class="force">92%</span></div>
+<div class="horse"><b>5</b><span class="force">88%</span></div>
+<div class="horse"><b>8</b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>3</span><span>6</span><span>7</span><span>5</span><span>9</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">3 – 6</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">4</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">3 – 6 – 7 – 5 – 9</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">3 – 6 – 7 – 5 – 9 – 1 – 2 – 4</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">6</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">7</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">1</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">2</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 6</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 8</div>
+<div class="combo">Combinaison 5 chevaux : 6 – 3 – 1– 5 – 8 </div>
+<div class="combo">Combinaison 8 chevaux : 6 – 3– 1 – 5 – 8 – 2 – 11– 9 )</div>
 </section>
 
-
-<!-- COURSE 8 -->
-
-<section class="course" id="c8">
-
-<div class="course-title">
-<h2>🏇 Course 8 – Prix Eliane de Bellaigue</h2>
-</div>
-
+<section class="card" id="c7">
+<h2>🏇 Course 7 — Qatar Prix du Cadran</h2>
 <div class="info">
-<strong>Départ :</strong> 22h10<br>
-<strong>Distance :</strong> 2100 m<br>
-<strong>Type :</strong> Attelé – Autostart<br>
-<strong>Allocation :</strong> 12 000 €<br>
-<strong>Partants :</strong> 12
+<div><strong>Départ</strong><br>17h00</div>
+<div><strong>Distance</strong><br>4000 m</div>
+<div><strong>Partants</strong><br>10</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-<div class="section">
-<h3>🔎 Analyse des 5 dernières courses</h3>
-<p>
-Les bases du modèle sont les 5 et 3. Les numéros 4, 11 et 1
-complètent le Top 5, suivis des 7, 2 et 9.
-</p>
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>1</b><span class="force">100%</span></div>
+<div class="horse"><b>7</b><span class="force">96%</span></div>
+<div class="horse"><b>9</b><span class="force">92%</span></div>
+<div class="horse"><b>2</b><span class="force">88%</span></div>
+<div class="horse"><b>5</b><span class="force">84%</span></div>
 </div>
 
-<div class="section">
-<h3>🏆 TOP 5 ZenTurfPronos</h3>
-<div class="top5">
-<span>5</span><span>3</span><span>4</span><span>11</span><span>1</span>
-</div>
-</div>
-
-<div class="section">
-<h3>⭐ Chevaux sûrs</h3>
-<div class="base">5 – 3</div>
-</div>
-
-<div class="section">
-<h3>🎯 Cheval surprise</h3>
-<div class="surprise">9</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 5 chevaux</h3>
-<div class="combination">5 – 3 – 4 – 11 – 1</div>
-</div>
-
-<div class="section">
-<h3>🔢 Combinaison proposée – 8 chevaux</h3>
-<div class="combination">5 – 3 – 4 – 11 – 1 – 7 – 2 – 9</div>
-</div>
-
-<div class="section">
-<h3>📊 Force de chaque cheval</h3>
-<div class="force-list">
-<div class="force-row"><div class="number">5</div><div class="bar"><div class="fill" style="width:100%"></div></div><div class="percent">100%</div></div>
-<div class="force-row"><div class="number">3</div><div class="bar"><div class="fill" style="width:95%"></div></div><div class="percent">95%</div></div>
-<div class="force-row"><div class="number">4</div><div class="bar"><div class="fill" style="width:90%"></div></div><div class="percent">90%</div></div>
-<div class="force-row"><div class="number">11</div><div class="bar"><div class="fill" style="width:85%"></div></div><div class="percent">85%</div></div>
-<div class="force-row"><div class="number">1</div><div class="bar"><div class="fill" style="width:80%"></div></div><div class="percent">80%</div></div>
-<div class="force-row"><div class="number">7</div><div class="bar"><div class="fill" style="width:75%"></div></div><div class="percent">75%</div></div>
-<div class="force-row"><div class="number">2</div><div class="bar"><div class="fill" style="width:70%"></div></div><div class="percent">70%</div></div>
-<div class="force-row"><div class="number">9</div><div class="bar"><div class="fill" style="width:65%"></div></div><div class="percent">65%</div></div>
-</div>
-</div>
-
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 1</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 8</div>
+<div class="combo">Combinaison 5 chevaux : 1 – 7– 9– 2 – 5</div>
+<div class="combo">Combinaison 8 chevaux : 1 – 7 – 9– 2– 5 – 8 – 3 – 11</div>
 </section>
 
-
-<div class="card">
-
-<h2>🧠 Méthode ZenTurfPronos</h2>
-
-<p>
-<strong>Pronostic algorithmique IA :</strong>
-les numéros sont classés selon la sortie du modèle algorithmique
-utilisé pour cette réunion.
-</p>
-
-<p>
-<strong>Modèle Plackett-Luce :</strong>
-le classement permet de hiérarchiser les concurrents selon leur
-position relative dans le modèle.
-</p>
-
-<p>
-<strong>Indice de force :</strong>
-les pourcentages affichés sont des indices relatifs destinés
-à visualiser l'ordre de sélection des chevaux. Ils ne constituent
-pas des probabilités officielles.
-</p>
-
+<section class="card" id="c8">
+<h2>🏇 Course 8 — Qatar Prix Daniel Wildenstein</h2>
+<div class="info">
+<div><strong>Départ</strong><br>17h35</div>
+<div><strong>Distance</strong><br>1600 m</div>
+<div><strong>Partants</strong><br>10</div>
+<div><strong>Type</strong><br>Plat</div>
 </div>
 
-
-<div class="disclaimer">
-
-<strong>⚠️ Avertissement</strong>
-
-<p>
-Les pronostics ZenTurfPronos sont fournis à titre informatif.
-Ils ne garantissent pas le résultat d'une course ni un gain.
-Les courses hippiques comportent une part d'incertitude.
-</p>
-
-<p>
-Jouez de manière responsable.
-</p>
-
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>1</b><span class="force">100%</span></div>
+<div class="horse"><b>10</b><span class="force">96%</span></div>
+<div class="horse"><b>3</b><span class="force">92%</span></div>
+<div class="horse"><b>2</b><span class="force">88%</span></div>
+<div class="horse"><b>9</b><span class="force">84%</span></div>
 </div>
+
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 1 </div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 6</div>
+<div class="combo">Combinaison 5 chevaux : 1 – 10 – 3 – 2 – 9</div>
+<div class="combo">Combinaison 8 chevaux : 1 – 10 – 3 – 2 – 9 – 4 – 6 – 7 </div>
+</section>
+
+<section class="card" id="c9">
+<h2>🏇 Course 9 — Qatar Prix de la Place de la Concorde</h2>
+<div class="info">
+<div><strong>Départ</strong><br>18h10</div>
+<div><strong>Distance</strong><br>1600 m</div>
+<div><strong>Partants</strong><br>15</div>
+<div><strong>Type</strong><br>Handicap</div>
+</div>
+
+<h3>TOP 5 ZenTurfPronos</h3>
+<div class="top">
+<div class="horse"><b>9</b><span class="force">100%</span></div>
+<div class="horse"><b>1</b><span class="force">96%</span></div>
+<div class="horse"><b>10</b><span class="force">92%</span></div>
+<div class="horse"><b>3</b><span class="force">88%</span></div>
+<div class="horse"><b>5</b><span class="force">84%</span></div>
+</div>
+
+<div class="safe"><strong>🐎 Cheval sûr :</strong> 9</div>
+<div class="surprise"><strong>🎯 Cheval surprise :</strong> 12</div>
+<div class="combo">Combinaison 5 chevaux : 9– 1 – 10 – 3– 5</div>
+<div class="combo">Combinaison 8 chevaux : 9 – 1 – 10– 3 – 5– 16– 8– 12 </div>
+</section>
+
+<section class="card">
+<h2>📊 Estimation des probabilités – Modèle Plackett-Luce</h2>
+<p>
+ZenTurfPronos utilise ici un classement algorithmique des concurrents.
+L'indice de force est relatif à l'ordre fourni par le modèle pour chaque course.
+</p>
+<div class="note">
+<strong>Important :</strong> ces pourcentages sont des indices de force
+relatifs et non des probabilités officielles de victoire.
+</div>
+</section>
+
+<section class="card">
+<h2>⚠️ Information</h2>
+<p>
+Les pronostics ZenTurfPronos sont proposés à titre informatif et statistique.
+Les résultats des courses restent incertains et aucun pronostic ne garantit
+le résultat.
+</p>
+</section>
 
 </main>
 
 <footer>
-
-<p><strong>🏇 ZenTurfPronos</strong></p>
-
-<p>
-Suivez moi à l'adresse suivante:<br>
-<a href="https://natachalovostory-stack.github.io/zenturfpronos/">
-https://natachalovostory-stack.github.io/zenturfpronos
-</a>
-</p>
-
-<p>© 2026 ZenTurfPronos – Pronostics hippiques</p>
-
+<strong>🏇 ZenTurfPronos</strong><br>
+Pronostic algorithmique IA — Modèle Plackett-Luce<br>
+R1 Longchamp — Samedi 3 octobre 2026
 </footer>
 
 </body>
