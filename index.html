@@ -1,1 +1,585 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>ZenTurfPronos – R1 Auteuil – Dimanche 11 octobre 2026</title>
+
+<meta name="description" content="ZenTurfPronos : pronostics des 8 courses de la réunion R1 Auteuil du dimanche 11 octobre 2026. Sélections, chevaux sûrs, Top 5 et combinaisons, avec le Quinté+ Prix Montgomery.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://natachalovostory-stack.github.io/zenturfpronos/">
+
+<meta property="og:title" content="ZenTurfPronos – R1 Auteuil – Dimanche 11 octobre 2026">
+<meta property="og:description" content="Les sélections ZenTurfPronos pour les 8 courses d'Auteuil : chevaux sûrs, Top 5 et combinaisons.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://natachalovostory-stack.github.io/zenturfpronos/">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ZenTurfPronos – R1 Auteuil – 11 octobre 2026">
+<meta name="twitter:description" content="Pronostics et sélections pour les 8 courses d'Auteuil.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ZenTurfPronos",
+  "url": "https://natachalovostory-stack.github.io/zenturfpronos/",
+  "inLanguage": "fr-FR",
+  "description": "Pronostics indépendants et sélections de courses hippiques françaises."
+}
+</script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #252525;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #800020, #b22222);
+    color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+    border-bottom: 5px solid #d4af37;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 27px;
+}
+
+header p {
+    margin: 6px 0;
+}
+
+header a {
+    color: #fff4b8;
+    font-weight: bold;
+    overflow-wrap: anywhere;
+}
+
+nav {
+    background: #ffffff;
+    padding: 12px 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+nav a {
+    display: inline-block;
+    color: #800020;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 7px 9px;
+    margin: 3px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background: #800020;
+    color: #ffffff;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 12px;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    border-left: 5px solid #800020;
+}
+
+h2 {
+    color: #800020;
+    margin-top: 0;
+    border-bottom: 2px solid #f0d6dc;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #9b1c31;
+    margin-bottom: 8px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.info-box {
+    background: #fff5f6;
+    border: 1px solid #efd3d9;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background: #800020;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 3px 3px 3px 0;
+}
+
+.quinte {
+    background: #d4af37;
+    color: #2c2100;
+}
+
+.pick {
+    background: #1e6b42;
+}
+
+.horse-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.horse {
+    display: inline-block;
+    min-width: 38px;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 7px;
+    background: #f1e5e8;
+    color: #800020;
+    font-weight: bold;
+    border: 1px solid #e5c5ce;
+}
+
+.safe {
+    background: #e4f4e9;
+    border: 1px solid #b6ddc3;
+    color: #155d31;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 12px 0;
+}
+
+.combination {
+    background: #f8f8f8;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px dashed #b22222;
+    margin-top: 12px;
+}
+
+.note {
+    color: #666;
+    font-size: 13px;
+}
+
+footer {
+    background: #292929;
+    color: #ffffff;
+    text-align: center;
+    padding: 22px 12px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #ffe5a3;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>ZenTurfPronos</h1>
+    <p>Pronostics des courses hippiques françaises</p>
+    <p><strong>R1 Auteuil – Dimanche 11 octobre 2026</strong></p>
+    <p>Suivez moi à l'adresse suivante :</p>
+    <p>
+        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
+            https://natachalovostory-stack.github.io/zenturfpronos/
+        </a>
+    </p>
+</header>
+
+<nav>
+    <a href="#reunion">Réunion</a>
+    <a href="#quinte">Quinté+</a>
+    <a href="#c1">C1</a>
+    <a href="#c2">C2</a>
+    <a href="#c3">C3</a>
+    <a href="#c4">C4</a>
+    <a href="#c5">C5</a>
+    <a href="#c6">C6</a>
+    <a href="#c7">C7</a>
+    <a href="#c8">C8</a>
+    <a href="#apropos">À propos</a>
+</nav>
+
+<main class="container">
+
+<section class="card" id="reunion">
+    <h2>Programme officiel – R1 Auteuil</h2>
+
+    <p>
+        Retrouvez les huit courses de la réunion d'Auteuil du dimanche
+        11 octobre 2026, avec les sélections proposées par ZenTurfPronos.
+    </p>
+
+    <div class="info-grid">
+        <div class="info-box">
+            <strong>Hippodrome</strong><br>
+            Auteuil
+        </div>
+
+        <div class="info-box">
+            <strong>Date</strong><br>
+            Dimanche 11 octobre 2026
+        </div>
+
+        <div class="info-box">
+            <strong>Nombre de courses</strong><br>
+            8 courses
+        </div>
+
+        <div class="info-box">
+            <strong>Discipline</strong><br>
+            Galop – Obstacle
+        </div>
+
+        <div class="info-box">
+            <strong>Première course</strong><br>
+            13h58
+        </div>
+
+        <div class="info-box">
+            <strong>Dernière course</strong><br>
+            18h33
+        </div>
+
+        <div class="info-box">
+            <strong>Quinté+</strong><br>
+            C3 – Prix Montgomery
+        </div>
+
+        <div class="info-box">
+            <strong>Départ du Quinté+</strong><br>
+            15h15
+        </div>
+    </div>
+
+    <p class="note">
+        Les horaires, distances, disciplines, allocations et nombres de partants
+        ci-dessous correspondent au programme publié pour cette réunion.
+        Les partants peuvent évoluer avant le départ.
+    </p>
+</section>
+
+<section class="card" id="c1">
+    <h2>C1 – Prix Noiro</h2>
+
+    <span class="badge">13h58</span>
+    <span class="badge">Steeple-chase</span>
+    <span class="badge">3 600 m</span>
+    <span class="badge">88 000 €</span>
+    <span class="badge">9 partants</span>
+
+    <h3>Top 5 ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">1</span>
+        <span class="horse">2</span>
+        <span class="horse">7</span>
+        <span class="horse">6</span>
+        <span class="horse">8</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 1 – 7
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        1 – 2 – 7 – 6 – 8 – 9 – 3
+    </div>
+</section>
+
+<section class="card" id="c2">
+    <h2>C2 – Prix Beaurepaire</h2>
+
+    <span class="badge">14h33</span>
+    <span class="badge">Haies</span>
+    <span class="badge">3 600 m</span>
+    <span class="badge">58 000 €</span>
+    <span class="badge">14 partants</span>
+
+    <h3>Top 5 ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">3</span>
+        <span class="horse">12</span>
+        <span class="horse">7</span>
+        <span class="horse">6</span>
+        <span class="horse">8</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 3 – 12
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        3 – 12 – 7 – 6 – 8 – 2 – 1 – 4
+    </div>
+</section>
+
+<section class="card" id="quinte">
+    <h2>C3 – Prix Montgomery (Groupe III) – Quinté+</h2>
+
+    <span class="badge quinte">QUINTÉ+</span>
+    <span class="badge">15h15</span>
+    <span class="badge">Steeple-chase</span>
+    <span class="badge">4 700 m</span>
+    <span class="badge">152 000 €</span>
+    <span class="badge">16 partants</span>
+
+    <h3>Top 5 ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">2</span>
+        <span class="horse">15</span>
+        <span class="horse">7</span>
+        <span class="horse">10</span>
+        <span class="horse">8</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 2 – 15
+    </div>
+
+    <div class="combination">
+        <strong>Combinaison Quinté+ – 8 chevaux :</strong><br>
+        2 – 15 – 7 – 10 – 8 – 16 – 3 – 14
+    </div>
+</section>
+
+<section class="card" id="c4">
+    <h2>C4 – Prix Magne</h2>
+
+    <span class="badge">15h50</span>
+    <span class="badge">Haies</span>
+    <span class="badge">3 600 m</span>
+    <span class="badge">125 000 €</span>
+    <span class="badge">7 partants</span>
+
+    <h3>Sélection ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">4</span>
+        <span class="horse">1</span>
+        <span class="horse">5</span>
+        <span class="horse">3</span>
+        <span class="horse">2</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 4 – 1
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        4 – 1 – 5 – 3 – 2
+    </div>
+</section>
+
+<section class="card" id="c5">
+    <h2>C5 – Prix Jack Barbe</h2>
+
+    <span class="badge">16h30</span>
+    <span class="badge">Haies</span>
+    <span class="badge">3 600 m</span>
+    <span class="badge">53 000 €</span>
+    <span class="badge">14 partants</span>
+    <span class="badge pick">Pick 5</span>
+
+    <h3>Top 5 ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">5</span>
+        <span class="horse">9</span>
+        <span class="horse">12</span>
+        <span class="horse">6</span>
+        <span class="horse">10</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 5 – 9
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        5 – 9 – 12 – 6 – 10 – 3 – 1 – 13
+    </div>
+</section>
+
+<section class="card" id="c6">
+    <h2>C6 – Prix Georges de Talhouet-Roy</h2>
+
+    <span class="badge">17h17</span>
+    <span class="badge">Haies</span>
+    <span class="badge">3 600 m</span>
+    <span class="badge">161 000 €</span>
+    <span class="badge">7 partants</span>
+
+    <h3>Sélection ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">1</span>
+        <span class="horse">2</span>
+        <span class="horse">5</span>
+        <span class="horse">6</span>
+    </div>
+
+    <div class="safe">
+        <strong>Cheval sûr :</strong> 1
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        1 – 2 – 5 – 6
+    </div>
+
+    <p class="note">
+        Sélection limitée aux quatre chevaux communiqués.
+    </p>
+</section>
+
+<section class="card" id="c7">
+    <h2>C7 – Prix Carmarthen</h2>
+
+    <span class="badge">17h50</span>
+    <span class="badge">Haies</span>
+    <span class="badge">4 300 m</span>
+    <span class="badge">125 000 €</span>
+    <span class="badge">8 partants</span>
+
+    <h3>Sélection ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">1</span>
+        <span class="horse">4</span>
+        <span class="horse">7</span>
+        <span class="horse">6</span>
+        <span class="horse">5</span>
+    </div>
+
+    <div class="safe">
+        <strong>Cheval sûr :</strong> 1
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        1 – 4 – 7 – 6 – 5
+    </div>
+</section>
+
+<section class="card" id="c8">
+    <h2>C8 – Prix Bayonnet</h2>
+
+    <span class="badge">18h33</span>
+    <span class="badge">Steeple-chase</span>
+    <span class="badge">4 400 m</span>
+    <span class="badge">88 000 €</span>
+    <span class="badge">9 partants</span>
+
+    <h3>Top 5 ZenTurfPronos</h3>
+    <div class="horse-list">
+        <span class="horse">1</span>
+        <span class="horse">8</span>
+        <span class="horse">4</span>
+        <span class="horse">5</span>
+        <span class="horse">6</span>
+    </div>
+
+    <div class="safe">
+        <strong>Chevaux sûrs :</strong> 1 – 5
+    </div>
+
+    <div class="combination">
+        <strong>Sélection :</strong>
+        1 – 8 – 4 – 5 – 6 – 7
+    </div>
+</section>
+
+<section class="card" id="apropos">
+    <h2>À propos de ZenTurfPronos</h2>
+
+    <p>
+        ZenTurfPronos est un site indépendant consacré aux courses hippiques
+        françaises. Il propose des sélections, des chevaux sûrs et des
+        combinaisons pour aider les passionnés à préparer leurs courses.
+    </p>
+
+    <p>
+        Les pronostics publiés sont des estimations et ne garantissent
+        aucun résultat. Les performances passées, les conditions de course
+        et les partants définitifs peuvent influencer l'arrivée.
+    </p>
+
+    <p>
+        Consultez le programme officiel et les dernières informations
+        avant chaque course.
+    </p>
+
+    <p>
+        <strong>ZenTurfPronos – Analyse, sélection et passion des courses.</strong>
+    </p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 ZenTurfPronos – Pronostics hippiques indépendants</p>
+    <p>
+        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
+            Visiter ZenTurfPronos
+        </a>
+    </p>
+    <p class="note" style="color:#dddddd;">
+        Les pronostics ne constituent pas une garantie de gain.
+        Jouez de manière responsable.
+    </p>
+</footer>
+
+</body>
+</html>
+HTML
