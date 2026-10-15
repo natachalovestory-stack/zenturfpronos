@@ -4,21 +4,19 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZenTurfPronos – R1 Reims – Mercredi 14 octobre 2026</title>
+<title>ZenTurfPronos – R1 Chantilly – Jeudi 15 octobre 2026</title>
 
-<meta name="description" content="ZenTurfPronos : pronostics des 8 courses de Reims du mercredi 14 octobre 2026. Grand National du Trot, Quinté+, chevaux sûrs, sélections et combinaisons.">
-
+<meta name="description" content="ZenTurfPronos : pronostics des 8 courses de plat à Chantilly le jeudi 15 octobre 2026. Pronos en 5, pronos en 8, chevaux sûrs et programme des courses.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://natachalovostory-stack.github.io/zenturfpronos/">
 
-<meta property="og:title" content="ZenTurfPronos – R1 Reims – 14 octobre 2026">
-<meta property="og:description" content="Les sélections ZenTurfPronos pour les 8 courses de Reims : chevaux sûrs, combinaisons et Quinté+.">
+<meta property="og:title" content="ZenTurfPronos – R1 Chantilly – 15 octobre 2026">
+<meta property="og:description" content="Pronostics en 5 et en 8 chevaux pour les courses de Chantilly.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://natachalovostory-stack.github.io/zenturfpronos/">
-
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZenTurfPronos – R1 Reims">
-<meta name="twitter:description" content="Pronostics hippiques français du mercredi 14 octobre 2026.">
+<meta name="twitter:title" content="ZenTurfPronos – R1 Chantilly">
+<meta name="twitter:description" content="Pronostics hippiques français – Jeudi 15 octobre 2026.">
 
 <script type="application/ld+json">
 {
@@ -26,8 +24,7 @@
   "@type": "WebSite",
   "name": "ZenTurfPronos",
   "url": "https://natachalovostory-stack.github.io/zenturfpronos/",
-  "inLanguage": "fr-FR",
-  "description": "Pronostics indépendants et sélections des courses hippiques françaises."
+  "description": "Pronostics et programme des courses hippiques françaises."
 }
 </script>
 
@@ -38,607 +35,886 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 15px;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f4f6f8;
-    color: #252525;
-    line-height: 1.6;
+    background: #f1f2f5;
+    color: #292929;
+    line-height: 1.8;
 }
 
 header {
-    background: linear-gradient(135deg, #800020, #b22222);
-    color: #ffffff;
+    background: linear-gradient(135deg, #850020, #b51e2b);
+    color: #fff;
     text-align: center;
-    padding: 25px 15px;
-    border-bottom: 5px solid #d4af37;
+    padding: 28px 18px 35px;
+    border-bottom: 6px solid #d6ad45;
 }
 
 header h1 {
-    margin: 0 0 8px;
-    font-size: 28px;
+    font-size: 35px;
+    margin: 0 0 10px;
+    font-weight: 800;
 }
 
-header p {
-    margin: 6px 0;
+header .subtitle {
+    font-size: 20px;
+    margin: 8px 0;
 }
 
-header a {
-    color: #fff0b3;
+header .meeting-title {
+    font-size: 29px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+header .follow {
+    font-size: 21px;
+    margin: 15px 0 8px;
+}
+
+header .site-link {
+    display: inline-block;
+    color: #ffe6a0;
+    font-size: 21px;
     font-weight: bold;
     overflow-wrap: anywhere;
 }
 
 nav {
-    background: #ffffff;
-    padding: 12px 8px;
-    text-align: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 16px 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 nav a {
     display: inline-block;
     color: #800020;
     text-decoration: none;
+    font-size: 19px;
     font-weight: bold;
-    padding: 7px 9px;
-    margin: 3px;
+    padding: 10px 13px;
     border-radius: 6px;
 }
 
 nav a:hover {
+    background: #fff0f2;
+    color: #b22222;
+}
+
+nav a.prono-link {
     background: #800020;
-    color: #ffffff;
+    color: white;
+    margin: 4px;
+}
+
+nav a.prono-link:hover {
+    background: #b22222;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 0 12px;
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
 }
 
 .card {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-    border-left: 5px solid #800020;
+    background: #fff;
+    border-radius: 25px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    border-left: 9px solid #800020;
 }
 
 h2 {
     color: #800020;
-    margin-top: 0;
-    border-bottom: 2px solid #f0d6dc;
-    padding-bottom: 8px;
+    font-size: 29px;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #efd9df;
+    line-height: 1.4;
 }
 
 h3 {
-    color: #9b1c31;
-    margin-bottom: 8px;
+    color: #800020;
+    font-size: 24px;
+    margin: 0 0 15px;
 }
 
-.info-grid {
+.meeting-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
 }
 
 .info-box {
-    background: #fff5f6;
-    border: 1px solid #efd3d9;
+    text-align: center;
+    padding: 14px 10px;
+    border-radius: 12px;
+    background: #fff3f5;
+    border: 1px solid #efd5dc;
+}
+
+.info-box strong {
+    display: block;
+    color: #800020;
+    font-size: 17px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
     padding: 12px;
-    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+th {
+    background: #800020;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background: #fff5f6;
+}
+
+.race-details {
+    background: #faf2f4;
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+}
+
+.safe {
+    background: #edf8ee;
+    border-left: 5px solid #28823b;
+    border-radius: 9px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.selection {
+    background: #fff7e6;
+    border-left: 5px solid #d6ad45;
+    border-radius: 9px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.prono-five {
+    background: #f1f5ff;
+    border-left: 5px solid #3659a2;
+    border-radius: 9px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.horses {
+    font-size: 23px;
+    color: #800020;
+    font-weight: bold;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+    line-height: 1.7;
+}
+
+.prono-five .horses {
+    color: #244887;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 17px;
 }
 
 .badge {
     display: inline-block;
     background: #800020;
-    color: #ffffff;
-    padding: 4px 10px;
-    border-radius: 20px;
-    font-size: 13px;
+    color: #fff;
+    padding: 3px 11px;
+    border-radius: 6px;
+    font-size: 14px;
     font-weight: bold;
-    margin: 3px 3px 3px 0;
-}
-
-.quinte {
-    background: #d4af37;
-    color: #2c2100;
-}
-
-.pick {
-    background: #1e6b42;
-}
-
-.safe {
-    background: #e4f4e9;
-    border: 1px solid #b6ddc3;
-    color: #155d31;
-    padding: 12px;
-    border-radius: 8px;
-    margin: 12px 0;
-}
-
-.horse-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 12px 0;
-}
-
-.horse {
-    display: inline-block;
-    min-width: 38px;
-    text-align: center;
-    padding: 8px 12px;
-    border-radius: 7px;
-    background: #f1e5e8;
-    color: #800020;
-    font-weight: bold;
-    border: 1px solid #e5c5ce;
-}
-
-.combination {
-    background: #f8f8f8;
-    padding: 13px;
-    border-radius: 8px;
-    border: 1px dashed #b22222;
-    margin-top: 12px;
+    margin-bottom: 8px;
 }
 
 .note {
-    color: #666666;
-    font-size: 13px;
+    font-size: 14px;
+    color: #555;
+}
+
+.top-button {
+    display: inline-block;
+    background: #800020;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.top-button:hover {
+    background: #b22222;
 }
 
 footer {
-    background: #292929;
-    color: #ffffff;
+    background: #302528;
+    color: #fff;
     text-align: center;
-    padding: 22px 12px;
-    margin-top: 30px;
+    padding: 25px 15px;
+    margin-top: 35px;
 }
 
 footer a {
-    color: #ffe5a3;
+    color: #ffe6a0;
+    overflow-wrap: anywhere;
 }
 
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 22px;
+    header {
+        padding: 22px 15px 28px;
     }
 
-    .card {
-        padding: 15px;
+    header h1 {
+        font-size: 30px;
+    }
+
+    header .subtitle {
+        font-size: 18px;
+    }
+
+    header .meeting-title {
+        font-size: 25px;
+        line-height: 1.5;
+    }
+
+    header .follow {
+        font-size: 19px;
+    }
+
+    header .site-link {
+        font-size: 18px;
+    }
+
+    nav {
+        padding: 12px 5px;
     }
 
     nav a {
-        font-size: 14px;
-        padding: 6px;
+        font-size: 17px;
+        padding: 9px 10px;
+    }
+
+    .container {
+        padding: 0 12px;
+        margin-top: 20px;
+    }
+
+    .card {
+        padding: 20px 17px;
+        border-radius: 20px;
+        border-left-width: 7px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .horses {
+        font-size: 21px;
     }
 }
 </style>
 </head>
 
-<body>
+<body id="top">
 
 <header>
     <h1>ZenTurfPronos</h1>
-    <p>Pronostics des courses hippiques françaises</p>
-    <p><strong>R1 Reims – Mercredi 14 octobre 2026</strong></p>
-    <p>Suivez moi à l'adresse suivante :</p>
-    <p>
-        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
-            https://natachalovostory-stack.github.io/zenturfpronos/
-        </a>
+    <p class="subtitle">Pronostics des courses hippiques françaises</p>
+
+    <p class="meeting-title">
+        R1 Chantilly – Jeudi 15 octobre 2026
     </p>
+
+    <p class="follow">Suivez moi à l'adresse suivante :</p>
+
+    <a class="site-link" href="https://natachalovostory-stack.github.io/zenturfpronos/">
+        https://natachalovostory-stack.github.io/zenturfpronos/
+    </a>
 </header>
 
-<nav>
+<nav aria-label="Navigation principale">
     <a href="#reunion">Réunion</a>
     <a href="#quinte">Quinté+</a>
-    <a href="#c1">C1</a>
-    <a href="#c2">C2</a>
-    <a href="#c3">C3</a>
-    <a href="#c4">C4</a>
-    <a href="#c5">C5</a>
-    <a href="#c6">C6</a>
-    <a href="#c7">C7</a>
-    <a href="#c8">C8</a>
+    <a href="#r1c1">C1</a>
+    <a href="#r1c2">C2</a>
+    <a href="#r1c3">C3</a>
+    <a href="#r1c4">C4</a>
+    <a href="#r1c5">C5</a>
+    <a href="#r1c6">C6</a>
+    <a href="#r1c7">C7</a>
+    <a href="#r1c8">C8</a>
+    <a class="prono-link" href="#pronos5">Pronos en 5</a>
+    <a class="prono-link" href="#pronos8">Pronos en 8</a>
     <a href="#apropos">À propos</a>
 </nav>
 
 <main class="container">
 
 <section class="card" id="reunion">
-    <h2>Programme de la réunion R1 – Reims</h2>
+    <h2>Programme de la réunion R1 – Chantilly</h2>
 
     <p>
-        Retrouvez les huit courses de la réunion de Reims du mercredi
-        14 octobre 2026, avec les sélections communiquées par ZenTurfPronos.
+        Retrouvez les huit courses de plat de la réunion de Chantilly
+        du jeudi 15 octobre 2026, avec les chevaux sûrs et les sélections
+        ZenTurfPronos.
     </p>
 
-    <div class="info-grid">
+    <div class="meeting-info">
         <div class="info-box">
-            <strong>Hippodrome</strong><br>
-            Reims
+            <strong>Hippodrome</strong>
+            Chantilly
         </div>
 
         <div class="info-box">
-            <strong>Date</strong><br>
-            Mercredi 14 octobre 2026
+            <strong>Réunion</strong>
+            R1
         </div>
 
         <div class="info-box">
-            <strong>Nombre de courses</strong><br>
-            8 courses
+            <strong>Discipline</strong>
+            Plat
         </div>
 
         <div class="info-box">
-            <strong>Discipline</strong><br>
-            Trot
+            <strong>Nombre de courses</strong>
+            8
         </div>
 
         <div class="info-box">
-            <strong>Première course</strong><br>
+            <strong>Première course</strong>
             13h55
         </div>
 
         <div class="info-box">
-            <strong>Dernière course</strong><br>
+            <strong>Dernière course</strong>
             18h00
         </div>
+    </div>
+</section>
 
-        <div class="info-box">
-            <strong>Quinté+</strong><br>
-            C1 – Grand National du Trot
-        </div>
+<section class="card">
+    <h2>Programme officiel des courses</h2>
 
-        <div class="info-box">
-            <strong>Départ du Quinté+</strong><br>
-            13h55
-        </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Nom du prix</th>
+                    <th>Heure</th>
+                    <th>Allocation</th>
+                    <th>Distance</th>
+                    <th>Partants</th>
+                    <th>Discipline</th>
+                </tr>
+            </thead>
 
-        <div class="info-box">
-            <strong>Départ habituel</strong><br>
-            Corde à droite
-        </div>
+            <tbody>
+                <tr>
+                    <td>R1C1</td>
+                    <td>Prix de la Vierge de Lorette</td>
+                    <td>13h55</td>
+                    <td>50 900 €</td>
+                    <td>1 200 m</td>
+                    <td>16</td>
+                    <td>Plat – Quinté+</td>
+                </tr>
 
-        <div class="info-box">
-            <strong>Étape du jour</strong><br>
-            Grand National du Trot 2026
-        </div>
+                <tr>
+                    <td>R1C2</td>
+                    <td>Prix de Saint-Désir</td>
+                    <td>14h30</td>
+                    <td>45 700 €</td>
+                    <td>1 600 m</td>
+                    <td>6</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C3</td>
+                    <td>Prix d'Hotot-en-Auge</td>
+                    <td>15h05</td>
+                    <td>45 700 €</td>
+                    <td>1 600 m</td>
+                    <td>8</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C4</td>
+                    <td>Prix du Jardin Anglais</td>
+                    <td>15h40</td>
+                    <td>27 400 €</td>
+                    <td>1 200 m</td>
+                    <td>7</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C5</td>
+                    <td>Prix du Chêne de la Basse Pommeraie</td>
+                    <td>16h15</td>
+                    <td>20 200 €</td>
+                    <td>1 800 m</td>
+                    <td>16</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C6</td>
+                    <td>Prix de l'Amante Inquiète</td>
+                    <td>16h50</td>
+                    <td>25 900 €</td>
+                    <td>1 200 m</td>
+                    <td>16</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C7</td>
+                    <td>Prix du Chêne des Grès</td>
+                    <td>17h25</td>
+                    <td>18 200 €</td>
+                    <td>1 800 m</td>
+                    <td>15</td>
+                    <td>Plat</td>
+                </tr>
+
+                <tr>
+                    <td>R1C8</td>
+                    <td>Prix du Chêne du Coup de Foudre</td>
+                    <td>18h00</td>
+                    <td>24 000 €</td>
+                    <td>1 800 m</td>
+                    <td>16</td>
+                    <td>Plat</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
     <p class="note">
-        Programme vérifié à partir des calendriers de courses consultés.
-        Les horaires, les partants et les conditions peuvent être modifiés
-        par les organisateurs.
+        Programme consulté sur plusieurs sites hippiques pour le
+        jeudi 15 octobre 2026. Les horaires et les partants sont
+        susceptibles de changer selon les annonces officielles.
     </p>
 </section>
 
 <section class="card" id="quinte">
-    <h2>C1 – Grand National du Trot – Quinté+</h2>
+    <h2>Quinté+ du jour – R1C1</h2>
 
-    <span class="badge quinte">QUINTÉ+</span>
-    <span class="badge">13h55</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">90 000 €</span>
-    <span class="badge">16 partants</span>
+    <span class="badge">Prix de la Vierge de Lorette</span>
 
-    <p>
-        Course de Groupe III du Grand National du Trot.
-        Épreuve réservée aux chevaux de 5 à 10 ans répondant aux conditions
-        de gains du programme.
-    </p>
-
-    <h3>Top 5 ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">10</span>
-        <span class="horse">2</span>
-        <span class="horse">15</span>
-        <span class="horse">13</span>
-        <span class="horse">9</span>
+    <div class="race-details">
+        <strong>Départ :</strong> 13h55<br>
+        <strong>Discipline :</strong> Plat<br>
+        <strong>Distance :</strong> 1 200 mètres<br>
+        <strong>Allocation :</strong> 50 900 €<br>
+        <strong>Partants annoncés :</strong> 16
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 10 – 2
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">7 – 1</div>
     </div>
 
-    <div class="combination">
-        <strong>Combinaison Quinté+ – 8 chevaux :</strong><br>
-        10 – 2 – 15 – 13 – 9 – 5 – 16 – 8
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4 – 11 – 12 – 10</div>
     </div>
 </section>
 
-<section class="card" id="c2">
-    <h2>C2 – Grand National des Amateurs – Prix de l'UNAT</h2>
-
-    <span class="badge">14h30</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">8 000 €</span>
-    <span class="badge">11 partants</span>
-
-    <p>
-        Course réservée aux amateurs.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">6</span>
-        <span class="horse">4</span>
-        <span class="horse">11</span>
-        <span class="horse">1</span>
-        <span class="horse">7</span>
-        <span class="horse">10</span>
-        <span class="horse">2</span>
-        <span class="horse">9</span>
-    </div>
+<section class="card" id="r1c1">
+    <h2>R1C1 – Prix de la Vierge de Lorette</h2>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 6 – 4
+        <div class="label">Cheval sûr</div>
+        <div class="horses">7 – 1</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        6 – 4 – 11 – 1 – 7 – 10 – 2 – 9
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4 – 11 – 12 – 10</div>
     </div>
 </section>
 
-<section class="card" id="c3">
-    <h2>C3 – Prix Oscar Collard</h2>
+<section class="card" id="r1c2">
+    <h2>R1C2 – Prix de Saint-Désir</h2>
 
-    <span class="badge">15h05</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">30 000 €</span>
-    <span class="badge">16 partants</span>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">14</span>
-        <span class="horse">15</span>
-        <span class="horse">13</span>
-        <span class="horse">9</span>
-        <span class="horse">5</span>
-        <span class="horse">6</span>
-        <span class="horse">7</span>
-        <span class="horse">16</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 14h30<br>
+        <strong>Allocation :</strong> 45 700 €<br>
+        <strong>Distance :</strong> 1 600 mètres<br>
+        <strong>Partants annoncés :</strong> 6<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 14 – 15
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">3 – 6</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        14 – 15 – 13 – 9 – 5 – 6 – 7 – 16
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">3 – 6 – 1 – 4 – 5</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8 – sélection fournie</div>
+        <div class="horses">3 – 6 – 1 – 4 – 5 – 2</div>
     </div>
 </section>
 
-<section class="card" id="c4">
-    <h2>C4 – Prix du Champagne Castelnau</h2>
+<section class="card" id="r1c3">
+    <h2>R1C3 – Prix d'Hotot-en-Auge</h2>
 
-    <span class="badge">15h40</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 500 m</span>
-    <span class="badge">23 000 €</span>
-    <span class="badge">14 partants</span>
-
-    <p>
-        Course au trot attelé avec départ à l'autostart.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">4</span>
-        <span class="horse">2</span>
-        <span class="horse">11</span>
-        <span class="horse">3</span>
-        <span class="horse">7</span>
-        <span class="horse">6</span>
-        <span class="horse">10</span>
-        <span class="horse">5</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 15h05<br>
+        <strong>Allocation :</strong> 45 700 €<br>
+        <strong>Distance :</strong> 1 600 mètres<br>
+        <strong>Partants annoncés :</strong> 8<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 4 – 2
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">2 – 1</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        4 – 2 – 11 – 3 – 7 – 6 – 10 – 5
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">2 – 1 – 8 – 7 – 3</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">2 – 1 – 8 – 7 – 3 – 5 – 6 – 4</div>
     </div>
 </section>
 
-<section class="card" id="c5">
-    <h2>C5 – Prix Gilbert Cornet</h2>
+<section class="card" id="r1c4">
+    <h2>R1C4 – Prix du Jardin Anglais</h2>
 
-    <span class="badge">16h15</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 500 m</span>
-    <span class="badge">27 000 €</span>
-    <span class="badge">9 partants</span>
-
-    <p>
-        Course au trot attelé avec départ à l'autostart.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">5</span>
-        <span class="horse">1</span>
-        <span class="horse">6</span>
-        <span class="horse">3</span>
-        <span class="horse">9</span>
-        <span class="horse">7</span>
-        <span class="horse">4</span>
-        <span class="horse">8</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 15h40<br>
+        <strong>Allocation :</strong> 27 400 €<br>
+        <strong>Distance :</strong> 1 200 mètres<br>
+        <strong>Partants annoncés :</strong> 7<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 5 – 1
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">5 – 7</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        5 – 1 – 6 – 3 – 9 – 7 – 4 – 8
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">5 – 7 – 2 – 6 – 1</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8 – sélection fournie</div>
+        <div class="horses">5 – 7 – 2 – 6 – 1 – 3</div>
     </div>
 </section>
 
-<section class="card" id="c6">
-    <h2>C6 – Grand National des Jockeys</h2>
+<section class="card" id="r1c5">
+    <h2>R1C5 – Prix du Chêne de la Basse Pommeraie</h2>
 
-    <span class="badge">16h50</span>
-    <span class="badge">Trot monté</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">30 000 €</span>
-    <span class="badge">9 partants</span>
-
-    <p>
-        Course européenne au trot monté.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">1</span>
-        <span class="horse">9</span>
-        <span class="horse">8</span>
-        <span class="horse">7</span>
-        <span class="horse">6</span>
-        <span class="horse">4</span>
-        <span class="horse">5</span>
-        <span class="horse">3</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 16h15<br>
+        <strong>Allocation :</strong> 20 200 €<br>
+        <strong>Distance :</strong> 1 800 mètres<br>
+        <strong>Partants annoncés :</strong> 16<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 1 – 9
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">2 – 3</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        1 – 9 – 8 – 7 – 6 – 4 – 5 – 3
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">2 – 3 – 1 – 6 – 5</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">2 – 3 – 1 – 6 – 5 – 10 – 4 – 8</div>
     </div>
 </section>
 
-<section class="card" id="c7">
-    <h2>C7 – Prix PMU Le Bon Accueil-Tinqueux</h2>
+<section class="card" id="r1c6">
+    <h2>R1C6 – Prix de l'Amante Inquiète</h2>
 
-    <span class="badge">17h25</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">23 000 €</span>
-    <span class="badge">12 partants</span>
-
-    <p>
-        Course au trot attelé. Le programme associe également cette épreuve
-        au Prix Ready Cash.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">11</span>
-        <span class="horse">3</span>
-        <span class="horse">6</span>
-        <span class="horse">12</span>
-        <span class="horse">9</span>
-        <span class="horse">4</span>
-        <span class="horse">1</span>
-        <span class="horse">7</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 16h50<br>
+        <strong>Allocation :</strong> 25 900 €<br>
+        <strong>Distance :</strong> 1 200 mètres<br>
+        <strong>Partants annoncés :</strong> 16<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 11 – 3
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">9 – 3</div>
     </div>
 
-    <div class="combination">
-        <strong>Sélection – 8 chevaux :</strong><br>
-        11 – 3 – 6 – 12 – 9 – 4 – 1 – 7
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">9 – 3 – 7 – 2 – 14</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">9 – 3 – 7 – 2 – 14 – 6 – 1 – 12</div>
     </div>
 </section>
 
-<section class="card" id="c8">
-    <h2>C8 – Prix des Nouveaux Partenaires PMU</h2>
+<section class="card" id="r1c7">
+    <h2>R1C7 – Prix du Chêne des Grès</h2>
 
-    <span class="badge">18h00</span>
-    <span class="badge">Trot attelé</span>
-    <span class="badge">2 550 m</span>
-    <span class="badge">30 000 €</span>
-    <span class="badge">14 partants</span>
-    <span class="badge pick">Pick 5</span>
-
-    <p>
-        Course au trot attelé, associée au Prix du Grand Reims.
-    </p>
-
-    <h3>Sélection ZenTurfPronos</h3>
-    <div class="horse-list">
-        <span class="horse">6</span>
-        <span class="horse">2</span>
-        <span class="horse">12</span>
-        <span class="horse">10</span>
-        <span class="horse">3</span>
-        <span class="horse">7</span>
-        <span class="horse">14</span>
-        <span class="horse">11</span>
+    <div class="race-details">
+        <strong>Heure :</strong> 17h25<br>
+        <strong>Allocation :</strong> 18 200 €<br>
+        <strong>Distance :</strong> 1 800 mètres<br>
+        <strong>Partants annoncés :</strong> 15<br>
+        <strong>Discipline :</strong> Plat
     </div>
 
     <div class="safe">
-        <strong>Chevaux sûrs :</strong> 6 – 2
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">2 – 4</div>
     </div>
 
-    <div class="combination">
-        <strong>Combinaison – 8 chevaux :</strong><br>
-        6 – 2 – 12 – 10 – 3 – 7 – 14 – 11
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">2 – 4 – 1 – 15 – 5</div>
     </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">2 – 4 – 1 – 15 – 5 – 9 – 8 – 10</div>
+    </div>
+</section>
+
+<section class="card" id="r1c8">
+    <h2>R1C8 – Prix du Chêne du Coup de Foudre</h2>
+
+    <div class="race-details">
+        <strong>Heure :</strong> 18h00<br>
+        <strong>Allocation :</strong> 24 000 €<br>
+        <strong>Distance :</strong> 1 800 mètres<br>
+        <strong>Partants annoncés :</strong> 16<br>
+        <strong>Discipline :</strong> Plat
+    </div>
+
+    <div class="safe">
+        <div class="label">Chevaux sûrs</div>
+        <div class="horses">8 – 3</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">Pronos en 5</div>
+        <div class="horses">8 – 3 – 4 – 6 – 9</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">Pronos en 8</div>
+        <div class="horses">8 – 3 – 4 – 6 – 9 – 1 – 13 – 12</div>
+    </div>
+</section>
+
+<section class="card" id="pronos5">
+    <h2>Pronos en 5 – Les huit courses</h2>
+
+    <p>Les cinq premiers chevaux de chaque sélection :</p>
+
+    <div class="prono-five">
+        <div class="label">R1C1 – Quinté+</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C2</div>
+        <div class="horses">3 – 6 – 1 – 4 – 5</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C3</div>
+        <div class="horses">2 – 1 – 8 – 7 – 3</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C4</div>
+        <div class="horses">5 – 7 – 2 – 6 – 1</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C5</div>
+        <div class="horses">2 – 3 – 1 – 6 – 5</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C6</div>
+        <div class="horses">9 – 3 – 7 – 2 – 14</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C7</div>
+        <div class="horses">2 – 4 – 1 – 15 – 5</div>
+    </div>
+
+    <div class="prono-five">
+        <div class="label">R1C8</div>
+        <div class="horses">8 – 3 – 4 – 6 – 9</div>
+    </div>
+
+    <a class="top-button" href="#top">Retour en haut</a>
+</section>
+
+<section class="card" id="pronos8">
+    <h2>Pronos en 8 – Les huit courses</h2>
+
+    <p>Les sélections complètes fournies pour chaque course :</p>
+
+    <div class="selection">
+        <div class="label">R1C1 – Quinté+</div>
+        <div class="horses">7 – 1 – 8 – 9 – 4 – 11 – 12 – 10</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C2</div>
+        <div class="horses">3 – 6 – 1 – 4 – 5 – 2</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C3</div>
+        <div class="horses">2 – 1 – 8 – 7 – 3 – 5 – 6 – 4</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C4</div>
+        <div class="horses">5 – 7 – 2 – 6 – 1 – 3</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C5</div>
+        <div class="horses">2 – 3 – 1 – 6 – 5 – 10 – 4 – 8</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C6</div>
+        <div class="horses">9 – 3 – 7 – 2 – 14 – 6 – 1 – 12</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C7</div>
+        <div class="horses">2 – 4 – 1 – 15 – 5 – 9 – 8 – 10</div>
+    </div>
+
+    <div class="selection">
+        <div class="label">R1C8</div>
+        <div class="horses">8 – 3 – 4 – 6 – 9 – 1 – 13 – 12</div>
+    </div>
+
+    <a class="top-button" href="#top">Retour en haut</a>
 </section>
 
 <section class="card" id="apropos">
     <h2>À propos de ZenTurfPronos</h2>
 
     <p>
-        ZenTurfPronos est un site indépendant consacré aux courses
-        hippiques françaises. Il propose des sélections, des chevaux sûrs
-        et des combinaisons pour aider les passionnés à préparer leurs courses.
+        ZenTurfPronos propose des pronostics et des informations
+        sur les courses hippiques françaises. Les sélections en 5
+        et en 8 chevaux sont présentées pour faciliter la lecture
+        et la préparation des jeux.
     </p>
 
     <p>
-        Les pronostics sont des estimations indépendantes et ne garantissent
-        aucun résultat. Les conditions de course, les performances des chevaux
-        et les éventuels non-partants peuvent influencer l'arrivée.
+        Les pronostics sont indicatifs et ne garantissent pas
+        le résultat d'une course. Consultez les dernières informations
+        officielles avant le départ.
+    </p>
+
+    <p class="note">
+        Les courses hippiques comportent des risques financiers.
+        Jouez de manière responsable.
     </p>
 
     <p>
-        Consultez toujours le programme officiel et les dernières informations
-        avant chaque course.
+        Suivez moi à l'adresse suivante :
+        <br>
+        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
+            https://natachalovostory-stack.github.io/zenturfpronos/
+        </a>
     </p>
 
-    <p>
-        <strong>ZenTurfPronos – Analyse, sélection et passion des courses.</strong>
-    </p>
+    <a class="top-button" href="#top">Retour en haut</a>
 </section>
 
 </main>
 
 <footer>
-    <p>© 2026 ZenTurfPronos – Pronostics hippiques indépendants</p>
-
+    <p><strong>ZenTurfPronos</strong></p>
+    <p>Pronostics des courses hippiques françaises</p>
+    <p>R1 Chantilly – Jeudi 15 octobre 2026</p>
     <p>
         <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
-            Visiter ZenTurfPronos
+            https://natachalovostory-stack.github.io/zenturfpronos/
         </a>
     </p>
-
-    <p class="note" style="color:#dddddd;">
-        Les pronostics ne constituent pas une garantie de gain.
-        Jouez de manière responsable.
-    </p>
+    <p>© 2026 ZenTurfPronos – Tous droits réservés.</p>
 </footer>
 
 </body>
