@@ -3,20 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#9f2929">
 
-<title>ZenTurfPronos – R1 Saint-Cloud – Dimanche 25 octobre 2026</title>
+<title>Courses du jour 28 octobre 2026 | R1 Auteuil | ZenTurfPronos</title>
 
-<meta name="description" content="ZenTurfPronos : programme des 8 courses françaises à Saint-Cloud le dimanche 25 octobre 2026. Quinté+ Prix de l'Élevage, bases courses, jeux simples, pronos et sélections personnelles.">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="ZenTurfPronos : programme des 8 courses de la réunion R1 Auteuil du mercredi 28 octobre 2026. Horaires, distances, allocations, partants, bases et sélections.">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="ZenTurfPronos">
+
 <link rel="canonical" href="https://natachalovostory-stack.github.io/zenturfpronos/">
+<link rel="sitemap" type="application/xml" href="sitemap.xml">
 
-<meta property="og:title" content="ZenTurfPronos – R1 Saint-Cloud – 25 octobre 2026">
-<meta property="og:description" content="Programme et sélections personnelles des 8 courses françaises de Saint-Cloud du dimanche 25 octobre 2026.">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="ZenTurfPronos – R1 Auteuil – 28 octobre 2026">
+<meta property="og:description" content="Programme des huit courses d'Auteuil : horaires, distances, allocations, partants, bases et sélections.">
 <meta property="og:url" content="https://natachalovostory-stack.github.io/zenturfpronos/">
+<meta property="og:site_name" content="ZenTurfPronos">
+
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZenTurfPronos – R1 Saint-Cloud">
-<meta name="twitter:description" content="Pronostics hippiques français – Dimanche 25 octobre 2026.">
+<meta name="twitter:title" content="ZenTurfPronos – R1 Auteuil">
+<meta name="twitter:description" content="Programme, bases et sélections des huit courses françaises du 28 octobre 2026.">
 
 <script type="application/ld+json">
 {
@@ -24,7 +32,7 @@
   "@type": "WebSite",
   "name": "ZenTurfPronos",
   "url": "https://natachalovostory-stack.github.io/zenturfpronos/",
-  "description": "Programme et pronostics des courses hippiques françaises."
+  "description": "Programme et sélections des courses hippiques françaises."
 }
 </script>
 
@@ -33,985 +41,671 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 15px;
-}
-
 body {
     margin: 0;
-    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: #f1f2f5;
-    color: #292929;
-    line-height: 1.8;
-}
-
-header {
-    background: linear-gradient(135deg, #850020, #b51e2b);
-    color: #fff;
-    text-align: center;
-    padding: 28px 18px 35px;
-    border-bottom: 6px solid #d6ad45;
-}
-
-header h1 {
-    font-size: 35px;
-    margin: 0 0 10px;
-    font-weight: 800;
-}
-
-header .subtitle {
-    font-size: 20px;
-    margin: 8px 0;
-}
-
-header .meeting-title {
-    font-size: 29px;
-    font-weight: bold;
-    margin: 20px 0;
-}
-
-header .follow {
-    font-size: 21px;
-    margin: 15px 0 8px;
-}
-
-header .site-link {
-    display: inline-block;
-    color: #ffe6a0;
-    font-size: 21px;
-    font-weight: bold;
-    overflow-wrap: anywhere;
-}
-
-nav {
-    background: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0;
-    padding: 16px 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-nav a {
-    display: inline-block;
-    color: #800020;
-    text-decoration: none;
-    font-size: 19px;
-    font-weight: bold;
-    padding: 10px 13px;
-    border-radius: 6px;
-}
-
-nav a:hover {
-    background: #fff0f2;
-    color: #b22222;
-}
-
-nav a.prono-link {
-    background: #800020;
-    color: white;
-    margin: 4px;
-}
-
-nav a.prono-link:hover {
-    background: #b22222;
+    background: #f3f4f7;
+    color: #222;
+    line-height: 1.6;
 }
 
 .container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 25px auto;
-    padding: 0 15px;
-}
-
-.card {
-    background: #fff;
-    border-radius: 25px;
-    padding: 28px;
-    margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-    border-left: 9px solid #800020;
-}
-
-h2 {
-    color: #800020;
-    font-size: 29px;
-    margin: 0 0 20px;
-    padding-bottom: 12px;
-    border-bottom: 3px solid #efd9df;
-    line-height: 1.4;
-}
-
-h3 {
-    color: #800020;
-    font-size: 24px;
-    margin: 0 0 15px;
-}
-
-.meeting-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.info-box {
-    text-align: center;
-    padding: 14px 10px;
-    border-radius: 12px;
-    background: #fff3f5;
-    border: 1px solid #efd5dc;
-}
-
-.info-box strong {
-    display: block;
-    color: #800020;
-    font-size: 17px;
-}
-
-.table-wrap {
-    width: 100%;
-    overflow-x: auto;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 700px;
-}
-
-th, td {
+    max-width: 720px;
+    margin: auto;
     padding: 12px;
-    border: 1px solid #e5e5e5;
-    text-align: left;
 }
 
-th {
-    background: #800020;
-    color: white;
+/* EN-TÊTE HABITUEL ZENTURFPRONOS */
+
+.header,
+.section {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 5px 18px rgba(0,0,0,.09);
 }
 
-tr:nth-child(even) {
-    background: #fff5f6;
+.header {
+    text-align: center;
+    padding: 24px 15px;
+    margin-bottom: 14px;
 }
 
-.race-details {
-    background: #faf2f4;
-    padding: 15px;
-    border-radius: 12px;
-    margin: 15px 0;
+.header h1 {
+    margin: 0;
+    color: #b93434;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 900;
 }
 
-.safe {
-    background: #edf8ee;
-    border-left: 5px solid #28823b;
-    border-radius: 9px;
-    padding: 15px;
-    margin: 15px 0;
+.header .sub {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 7px;
+    color: #333;
 }
 
-.selection {
-    background: #fff7e6;
-    border-left: 5px solid #d6ad45;
-    border-radius: 9px;
-    padding: 15px;
-    margin: 15px 0;
-}
-
-.prono-five {
-    background: #f1f5ff;
-    border-left: 5px solid #3659a2;
-    border-radius: 9px;
-    padding: 15px;
-    margin: 15px 0;
-}
-
-.horses {
-    font-size: 23px;
-    color: #800020;
-    font-weight: bold;
-    letter-spacing: 1px;
+.header .link {
+    display: block;
+    margin-top: 10px;
+    color: #b93434;
+    font-size: 13px;
+    font-weight: 700;
     overflow-wrap: anywhere;
-    line-height: 1.7;
+    text-decoration: none;
 }
 
-.prono-five .horses {
-    color: #244887;
+/* PRÉSENTATION DE LA RÉUNION */
+
+.race {
+    background: linear-gradient(135deg, #b93434, #8f2222);
+    color: #fff;
+    border-radius: 18px;
+    padding: 18px;
+    margin-bottom: 14px;
 }
 
-.label {
-    font-weight: bold;
-    font-size: 17px;
+.race h2 {
+    margin: 0 0 9px;
+    font-size: 23px;
+}
+
+.race p {
+    margin: 6px 0;
+    font-size: 14px;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 12px;
 }
 
 .badge {
     display: inline-block;
-    background: #800020;
-    color: #fff;
-    padding: 3px 11px;
-    border-radius: 6px;
+    background: rgba(255,255,255,.18);
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+/* CARTES */
+
+.section {
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.section h2,
+.section h3 {
+    margin: 0 0 13px;
+    color: #9f2929;
+}
+
+.section h2 {
+    font-size: 21px;
+}
+
+.section h3 {
+    font-size: 18px;
+}
+
+.intro {
     font-size: 14px;
-    font-weight: bold;
+    line-height: 1.7;
+    color: #444;
+}
+
+/* INFORMATIONS DES COURSES */
+
+.race-title {
+    background: linear-gradient(135deg, #b93434, #8f2222);
+    color: #fff;
+    padding: 13px;
+    border-radius: 12px;
+    margin-bottom: 13px;
+}
+
+.race-title h2 {
+    margin: 0;
+    color: #fff;
+    font-size: 19px;
+}
+
+.race-title p {
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+.quinte-label {
+    display: inline-block;
+    background: #fff;
+    color: #a52d2d;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 900;
     margin-bottom: 8px;
 }
 
-.note {
-    font-size: 14px;
-    color: #555;
+.race-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 9px;
+    margin: 13px 0;
 }
 
-.top-button {
-    display: inline-block;
-    background: #800020;
-    color: white;
-    text-decoration: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin-top: 8px;
-}
-
-.top-button:hover {
-    background: #b22222;
-}
-
-footer {
-    background: #302528;
-    color: #fff;
+.meta-item {
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px 7px;
     text-align: center;
-    padding: 25px 15px;
-    margin-top: 35px;
 }
 
-footer a {
-    color: #ffe6a0;
+.meta-item strong {
+    display: block;
+    color: #9f2929;
+    font-size: 12px;
+}
+
+.meta-item span {
+    display: block;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+/* BASES ET SÉLECTIONS */
+
+.pick-box {
+    border-radius: 12px;
+    padding: 13px;
+    margin-top: 11px;
+    background: #f8f8f8;
+    border: 1px solid #eee;
+}
+
+.pick-box h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #9f2929;
+}
+
+.base {
+    border-left: 5px solid #218a4d;
+}
+
+.selection {
+    border-left: 5px solid #b93434;
+}
+
+.numbers {
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    overflow-wrap: anywhere;
+    color: #a52d2d;
+    line-height: 1.8;
+}
+
+.base .numbers {
+    color: #218a4d;
+}
+
+.selection .numbers {
+    color: #333;
+}
+
+/* MISE EN VALEUR DU QUINTÉ+ */
+
+.quinte-card {
+    border: 2px solid #d99b9b;
+    background: #fff;
+}
+
+.quinte-card .race-title {
+    background: linear-gradient(135deg, #9f2929, #671b1b);
+}
+
+.quinte-combo {
+    text-align: center;
+    padding: 14px 8px;
+    background: #fff3f3;
+    border: 2px solid #d99b9b;
+    border-radius: 12px;
+    margin-top: 13px;
+}
+
+.quinte-combo strong {
+    display: block;
+    color: #9f2929;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.quinte-combo span {
+    display: block;
+    font-size: 21px;
+    font-weight: 900;
+    color: #9f2929;
     overflow-wrap: anywhere;
 }
 
-@media (max-width: 600px) {
-    header {
-        padding: 22px 15px 28px;
+/* RÉCAPITULATIF */
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.summary-item:last-child {
+    border-bottom: 0;
+}
+
+.summary-course {
+    font-weight: 800;
+    color: #9f2929;
+    white-space: nowrap;
+}
+
+.summary-numbers {
+    font-weight: 800;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* INFORMATIONS SEO ET AVERTISSEMENT */
+
+.note {
+    background: #eef6ff;
+    padding: 12px;
+    border-radius: 12px;
+    color: #333;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.seo-text {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.7;
+}
+
+.footer {
+    text-align: center;
+    color: #777;
+    font-size: 12px;
+    padding: 12px 5px 25px;
+    line-height: 1.7;
+}
+
+.footer a {
+    color: #9f2929;
+    overflow-wrap: anywhere;
+    text-decoration: none;
+}
+
+/* NAVIGATION ENTRE LES COURSES */
+
+.course-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7px;
+    margin: 14px 0;
+}
+
+.course-nav a {
+    display: inline-block;
+    background: #b93434;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 9px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.course-nav a:hover {
+    background: #852020;
+}
+
+@media(max-width:480px) {
+    .container {
+        padding: 9px;
     }
 
-    header h1 {
-        font-size: 30px;
+    .header {
+        padding: 21px 10px;
     }
 
-    header .subtitle {
-        font-size: 18px;
+    .header h1 {
+        font-size: 27px;
     }
 
-    header .meeting-title {
-        font-size: 25px;
-        line-height: 1.5;
+    .header .sub {
+        font-size: 16px;
     }
 
-    header .follow {
+    .section {
+        padding: 13px;
+    }
+
+    .section h2 {
         font-size: 19px;
     }
 
-    header .site-link {
+    .race-title h2 {
         font-size: 18px;
     }
 
-    nav {
-        padding: 12px 5px;
+    .numbers {
+        font-size: 19px;
     }
 
-    nav a {
-        font-size: 17px;
-        padding: 9px 10px;
-    }
-
-    .container {
-        padding: 0 12px;
-        margin-top: 20px;
-    }
-
-    .card {
-        padding: 20px 17px;
-        border-radius: 20px;
-        border-left-width: 7px;
-    }
-
-    h2 {
-        font-size: 26px;
-    }
-
-    h3 {
-        font-size: 22px;
-    }
-
-    .horses {
-        font-size: 21px;
+    .summary-item {
+        align-items: flex-start;
     }
 }
 </style>
 </head>
 
-<body id="top">
-
-<header>
-    <h1>ZenTurfPronos</h1>
-    <p class="subtitle">Pronostics des courses hippiques françaises</p>
-
-    <p class="meeting-title">
-        R1 Saint-Cloud – Dimanche 25 octobre 2026
-    </p>
-
-    <p class="follow">Suivez moi à l'adresse suivante :</p>
-
-    <a class="site-link" href="https://natachalovostory-stack.github.io/zenturfpronos/">
-        https://natachalovostory-stack.github.io/zenturfpronos/
-    </a>
-</header>
-
-<nav aria-label="Navigation principale">
-    <a href="#reunion">Réunion</a>
-    <a href="#quinte">Quinté+</a>
-    <a href="#r1c1">C1</a>
-    <a href="#r1c2">C2</a>
-    <a href="#r1c3">C3</a>
-    <a href="#r1c4">C4</a>
-    <a href="#r1c5">C5</a>
-    <a href="#r1c6">C6</a>
-    <a href="#r1c7">C7</a>
-    <a href="#r1c8">C8</a>
-    <a class="prono-link" href="#jeuxsimples">Bases courses</a>
-    <a class="prono-link" href="#pronos5">Pronos en 5</a>
-    <a class="prono-link" href="#pronos8">Sélections complètes</a>
-    <a href="#apropos">À propos</a>
-</nav>
+<body>
 
 <main class="container">
 
-<section class="card" id="reunion">
-    <h2>Programme de la réunion R1 – Saint-Cloud</h2>
+<header class="header">
+    <h1>Zen Turf - Pronostics</h1>
+    <div class="sub">Pronostics et sélections des courses françaises</div>
+    <a class="link"
+       href="https://natachalovostory-stack.github.io/zenturfpronos/">
+       Suivez moi à l'adresse suivante :
+       https://natachalovostory-stack.github.io/zenturfpronos
+    </a>
+</header>
 
-    <p>
-        Retrouvez les huit courses françaises de plat de la réunion R1
-        de Saint-Cloud du dimanche 25 octobre 2026, avec les horaires,
-        les distances, les allocations et les nombres de partants annoncés.
-        Les bases courses et les sélections affichées correspondent à vos
-        choix personnels. Le Quinté+ du jour se dispute dans la R1C5,
-        Prix de l'Élevage.
+<section class="race">
+    <h2>R1 Auteuil — Mercredi 28 octobre 2026</h2>
+    <p><strong>Réunion de 8 courses — Obstacle — France</strong></p>
+    <p>Programme, horaires, distances, allocations, partants, bases et sélections.</p>
+    <div class="badges">
+        <span class="badge">R1 Auteuil</span>
+        <span class="badge">8 courses</span>
+        <span class="badge">Quinté+</span>
+        <span class="badge">ZenTurfPronos</span>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Programme de la réunion</h2>
+    <p class="intro">
+        Retrouvez les informations des huit courses d'Auteuil ainsi que
+        les bases et les sélections fournies pour chaque épreuve.
+        Les sélections sont indicatives et ne garantissent aucun résultat.
     </p>
-
-    <div class="meeting-info">
-        <div class="info-box">
-            <strong>Hippodrome</strong>
-            Saint-Cloud
-        </div>
-
-        <div class="info-box">
-            <strong>Réunion</strong>
-            R1
-        </div>
-
-        <div class="info-box">
-            <strong>Discipline</strong>
-            Plat
-        </div>
-
-        <div class="info-box">
-            <strong>Nombre de courses</strong>
-            8
-        </div>
-
-        <div class="info-box">
-            <strong>Première course</strong>
-            12h48
-        </div>
-
-        <div class="info-box">
-            <strong>Dernière course</strong>
-            17h00
-        </div>
-    </div>
-
-    <p class="note">
-        Programme consulté auprès de Zone-Turf, Geny et iTurf pour
-        le dimanche 25 octobre 2026. Les partants annoncés peuvent
-        changer en cas de forfait ou de non-partant.
-    </p>
+    <nav class="course-nav" aria-label="Navigation entre les courses">
+        <a href="#C1">Course 1</a>
+        <a href="#C2">Course 2</a>
+        <a href="#C3">Course 3</a>
+        <a href="#C4">Quinté+</a>
+        <a href="#C5">Course 5</a>
+        <a href="#C6">Course 6</a>
+        <a href="#C7">Course 7</a>
+        <a href="#C8">Course 8</a>
+    </nav>
 </section>
 
-<section class="card">
-    <h2>Programme détaillé des courses</h2>
-
-    <div class="table-wrap">
-        <table>
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Nom du prix</th>
-                    <th>Départ</th>
-                    <th>Allocation</th>
-                    <th>Distance</th>
-                    <th>Partants annoncés</th>
-                    <th>Discipline</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>R1C1</td>
-                    <td>Prix de Flore</td>
-                    <td>12h48</td>
-                    <td>73 200 €</td>
-                    <td>2 100 m</td>
-                    <td>9</td>
-                    <td>Plat – Groupe III</td>
-                </tr>
-
-                <tr>
-                    <td>R1C2</td>
-                    <td>Critérium International</td>
-                    <td>13h23</td>
-                    <td>250 000 €</td>
-                    <td>1 600 m</td>
-                    <td>7</td>
-                    <td>Plat – Groupe I</td>
-                </tr>
-
-                <tr>
-                    <td>R1C3</td>
-                    <td>Prix Perth</td>
-                    <td>13h58</td>
-                    <td>73 200 €</td>
-                    <td>1 600 m</td>
-                    <td>10</td>
-                    <td>Plat – Groupe III</td>
-                </tr>
-
-                <tr>
-                    <td>R1C4</td>
-                    <td>Critérium de Saint-Cloud</td>
-                    <td>14h33</td>
-                    <td>250 000 €</td>
-                    <td>2 000 m</td>
-                    <td>7</td>
-                    <td>Plat – Groupe I</td>
-                </tr>
-
-                <tr>
-                    <td>R1C5</td>
-                    <td>Prix de l'Élevage</td>
-                    <td>15h15</td>
-                    <td>50 900 €</td>
-                    <td>2 500 m</td>
-                    <td>16</td>
-                    <td>Plat – Handicap – Quinté+</td>
-                </tr>
-
-                <tr>
-                    <td>R1C6</td>
-                    <td>Prix Royal-Oak</td>
-                    <td>15h50</td>
-                    <td>350 000 €</td>
-                    <td>3 100 m</td>
-                    <td>8</td>
-                    <td>Plat – Groupe I</td>
-                </tr>
-
-                <tr>
-                    <td>R1C7</td>
-                    <td>Prix Belle de Nuit</td>
-                    <td>16h25</td>
-                    <td>73 200 €</td>
-                    <td>2 800 m</td>
-                    <td>13</td>
-                    <td>Plat – Groupe III</td>
-                </tr>
-
-                <tr>
-                    <td>R1C8</td>
-                    <td>Prix des Haras</td>
-                    <td>17h00</td>
-                    <td>25 900 €</td>
-                    <td>2 500 m</td>
-                    <td>15</td>
-                    <td>Plat</td>
-                </tr>
-            </tbody>
-        </table>
+<!-- COURSE 1 -->
+<section class="section" id="C1">
+    <div class="race-title">
+        <h2>R1C1 – Prix Maurice d'Okhuysen</h2>
+        <p>Steeple-chase · Départ à 12h00</p>
     </div>
-
-    <p class="note">
-        Sources du programme :
-        <a href="https://www.zone-turf.fr/programmes/r1-saint-cloud-199649.html" target="_blank" rel="noopener noreferrer">Zone-Turf</a> –
-        <a href="https://www.geny.com/programme/2026-10-25" target="_blank" rel="noopener noreferrer">Geny</a> –
-        <a href="https://iturf.b-cdn.net/programme/resultats.php?date=2026-10-25" target="_blank" rel="noopener noreferrer">iTurf</a>.
-    </p>
-</section>
-
-<section class="card" id="quinte">
-    <h2>Quinté+ du jour – R1C5</h2>
-
-    <span class="badge">Prix de l'Élevage</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 15h15<br>
-        <strong>Discipline :</strong> Plat – Handicap divisé<br>
-        <strong>Distance :</strong> 2 500 mètres<br>
-        <strong>Allocation :</strong> 50 900 €<br>
-        <strong>Partants annoncés :</strong> 16
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>12h00</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 500 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>55 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>8</span></div>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses – R1C5</div>
-        <div class="horses">07 – 02</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">1 – 4 – 3</div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5 – R1C5</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16 – 12 – 13 – 15</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">1 – 4 – 3 – 6 – 7 – 2 – 5</div>
     </div>
 </section>
 
-<section class="card" id="jeuxsimples">
-    <h2>Bases courses – Les huit courses</h2>
-
-    <p>
-        Voici les bases de jeux simples que vous avez choisies
-        pour les huit courses de la réunion R1 de Saint-Cloud.
-    </p>
-
-    <div class="safe">
-        <div class="label">R1C1 – Prix de Flore</div>
-        <div class="horses">04 – 03</div>
+<!-- COURSE 2 -->
+<section class="section" id="C2">
+    <div class="race-title">
+        <h2>R1C2 – Prix Hunorisk</h2>
+        <p>Haies · Départ à 12h35</p>
     </div>
-
-    <div class="safe">
-        <div class="label">R1C2 – Critérium International</div>
-        <div class="horses">07 – 01</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>12h35</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 600 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>51 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>7</span></div>
     </div>
-
-    <div class="safe">
-        <div class="label">R1C3 – Prix Perth</div>
-        <div class="horses">04 – 03</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">1 – 5</div>
     </div>
-
-    <div class="safe">
-        <div class="label">R1C4 – Critérium de Saint-Cloud</div>
-        <div class="horses">05 – 06</div>
-    </div>
-
-    <div class="safe">
-        <div class="label">R1C5 – Prix de l'Élevage – Quinté+</div>
-        <div class="horses">07 – 02</div>
-    </div>
-
-    <div class="safe">
-        <div class="label">R1C6 – Prix Royal-Oak</div>
-        <div class="horses">02 – 01</div>
-    </div>
-
-    <div class="safe">
-        <div class="label">R1C7 – Prix Belle de Nuit</div>
-        <div class="horses">02 – 03</div>
-    </div>
-
-    <div class="safe">
-        <div class="label">R1C8 – Prix des Haras</div>
-        <div class="horses">02 – 09</div>
-    </div>
-
-    <a class="top-button" href="#top">Retour en haut</a>
-</section>
-
-<section class="card" id="r1c1">
-    <h2>R1C1 – Prix de Flore</h2>
-
-    <span class="badge">Plat – Groupe III</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 12h48<br>
-        <strong>Allocation :</strong> 73 200 €<br>
-        <strong>Distance :</strong> 2 100 mètres<br>
-        <strong>Partants annoncés :</strong> 9<br>
-        <strong>Discipline :</strong> Plat – Femelles de 3 ans et plus
-    </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">04 – 03</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">04 – 03 – 01 – 06 – 08</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">04 – 03 – 01 – 06 – 08 – 05 – 07</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">1 – 5 – 2 – 7 – 3</div>
     </div>
 </section>
 
-<section class="card" id="r1c2">
-    <h2>R1C2 – Critérium International</h2>
-
-    <span class="badge">Plat – Groupe I</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 13h23<br>
-        <strong>Allocation :</strong> 250 000 €<br>
-        <strong>Distance :</strong> 1 600 mètres<br>
-        <strong>Partants annoncés :</strong> 7<br>
-        <strong>Discipline :</strong> Plat
+<!-- COURSE 3 -->
+<section class="section" id="C3">
+    <div class="race-title">
+        <h2>R1C3 – Prix Elisa</h2>
+        <p>Steeple-chase · Départ à 13h10</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">07 – 01</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>13h10</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>4 400 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>55 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>7</span></div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos selon votre sélection</div>
-        <div class="horses">07 – 01 – 02 – 06 – 03</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">5 – 3 – 1</div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">07 – 01 – 02 – 06 – 03 – 05 – 04</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">5 – 3 – 1 – 2 – 6 – 7 – 4</div>
     </div>
 </section>
 
-<section class="card" id="r1c3">
-    <h2>R1C3 – Prix Perth</h2>
-
-    <span class="badge">Plat – Groupe III</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 13h58<br>
-        <strong>Allocation :</strong> 73 200 €<br>
-        <strong>Distance :</strong> 1 600 mètres<br>
-        <strong>Partants annoncés :</strong> 10<br>
-        <strong>Discipline :</strong> Plat
+<!-- COURSE 4 : QUINTE+ -->
+<section class="section quinte-card" id="C4">
+    <div class="race-title">
+        <span class="quinte-label">QUINTÉ+</span>
+        <h2>R1C4 – Prix Santo Pietro</h2>
+        <p>Haies · Départ à 13h55</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">04 – 03</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>13h55</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 600 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>98 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>15</span></div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">04 – 03 – 05 – 06 – 08</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">3 – 8</div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">04 – 03 – 05 – 06 – 08 – 02 – 01</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection Quinté+</h3>
+        <div class="numbers">3 – 8 – 4 – 11 – 6 – 12 – 9 – 10 – 2</div>
+    </div>
+    <div class="quinte-combo">
+        <strong>Les cinq premiers numéros de la sélection</strong>
+        <span>3 – 8 – 4 – 11 – 6</span>
     </div>
 </section>
 
-<section class="card" id="r1c4">
-    <h2>R1C4 – Critérium de Saint-Cloud</h2>
-
-    <span class="badge">Plat – Groupe I</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 14h33<br>
-        <strong>Allocation :</strong> 250 000 €<br>
-        <strong>Distance :</strong> 2 000 mètres<br>
-        <strong>Partants annoncés :</strong> 7<br>
-        <strong>Discipline :</strong> Plat
+<!-- COURSE 5 -->
+<section class="section" id="C5">
+    <div class="race-title">
+        <h2>R1C5 – Prix Lusignan</h2>
+        <p>Haies · Départ à 14h30</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">05 – 06</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>14h30</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 500 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>51 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>12</span></div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">05 – 06 – 02 – 01 – 03</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">1 – 2</div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">05 – 06 – 02 – 01 – 03 – 04</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">1 – 2 – 8 – 7 – 9 – 4 – 3 – 5</div>
     </div>
 </section>
 
-<section class="card" id="r1c5">
-    <h2>R1C5 – Prix de l'Élevage</h2>
-
-    <span class="badge">Quinté+ – Plat – Handicap</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 15h15<br>
-        <strong>Allocation :</strong> 50 900 €<br>
-        <strong>Distance :</strong> 2 500 mètres<br>
-        <strong>Partants annoncés :</strong> 16<br>
-        <strong>Discipline :</strong> Plat – Handicap divisé
+<!-- COURSE 6 -->
+<section class="section" id="C6">
+    <div class="race-title">
+        <h2>R1C6 – Prix Cap</h2>
+        <p>Haies · Départ à 15h05</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">07 – 02</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>15h05</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 600 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>60 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>10</span></div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">3 – 2</div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16 – 12 – 13 – 15</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">3 – 2 – 9 – 7 – 1 – 6 – 5</div>
     </div>
 </section>
 
-<section class="card" id="r1c6">
-    <h2>R1C6 – Prix Royal-Oak</h2>
-
-    <span class="badge">Plat – Groupe I</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 15h50<br>
-        <strong>Allocation :</strong> 350 000 €<br>
-        <strong>Distance :</strong> 3 100 mètres<br>
-        <strong>Partants annoncés :</strong> 8<br>
-        <strong>Discipline :</strong> Plat
+<!-- COURSE 7 -->
+<section class="section" id="C7">
+    <div class="race-title">
+        <h2>R1C7 – Prix Frascati</h2>
+        <p>Haies · Départ à 15h40</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">02 – 01</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>15h40</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>3 600 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>49 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>11</span></div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complémentaire</div>
-        <p>2.5.6.8.7.</p>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">3 – 4</div>
+    </div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">3 – 4 – 11 – 10 – 1 – 8 – 9 – 7</div>
     </div>
 </section>
 
-<section class="card" id="r1c7">
-    <h2>R1C7 – Prix Belle de Nuit</h2>
-
-    <span class="badge">Plat – Groupe III</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 16h25<br>
-        <strong>Allocation :</strong> 73 200 €<br>
-        <strong>Distance :</strong> 2 800 mètres<br>
-        <strong>Partants annoncés :</strong> 13<br>
-        <strong>Discipline :</strong> Plat
+<!-- COURSE 8 -->
+<section class="section" id="C8">
+    <div class="race-title">
+        <h2>R1C8 – Prix Robert Bates</h2>
+        <p>Steeple-chase · Départ à 16h15</p>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">02 – 03</div>
+    <div class="race-meta">
+        <div class="meta-item"><strong>Départ</strong><span>16h15</span></div>
+        <div class="meta-item"><strong>Distance</strong><span>4 400 m</span></div>
+        <div class="meta-item"><strong>Allocation</strong><span>69 000 €</span></div>
+        <div class="meta-item"><strong>Partants</strong><span>13</span></div>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">02 – 03 – 13 – 05 – 01</div>
+    <div class="pick-box base">
+        <h3>Bases</h3>
+        <div class="numbers">2 – 1 – 3</div>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">02 – 03 – 13 – 05 – 01 – 07 – 10</div>
+    <div class="pick-box selection">
+        <h3>Ma sélection</h3>
+        <div class="numbers">2 – 1 – 3 – 5 – 4 – 9 – 12 – 6</div>
     </div>
 </section>
 
-<section class="card" id="r1c8">
-    <h2>R1C8 – Prix des Haras</h2>
-
-    <span class="badge">Plat</span>
-
-    <div class="race-details">
-        <strong>Départ :</strong> 17h00<br>
-        <strong>Allocation :</strong> 25 900 €<br>
-        <strong>Distance :</strong> 2 500 mètres<br>
-        <strong>Partants annoncés :</strong> 15<br>
-        <strong>Discipline :</strong> Plat
+<section class="section">
+    <h2>Récapitulatif des bases</h2>
+    <div class="summary-item">
+        <span class="summary-course">R1C1</span>
+        <span class="summary-numbers">1 – 4 – 3</span>
     </div>
-
-    <div class="safe">
-        <div class="label">Bases courses</div>
-        <div class="horses">02 – 09</div>
+    <div class="summary-item">
+        <span class="summary-course">R1C2</span>
+        <span class="summary-numbers">1 – 5</span>
     </div>
-
-    <div class="prono-five">
-        <div class="label">Pronos en 5</div>
-        <div class="horses">02 – 09 – 01 – 13 – 08</div>
+    <div class="summary-item">
+        <span class="summary-course">R1C3</span>
+        <span class="summary-numbers">5 – 3 – 1</span>
     </div>
-
-    <div class="selection">
-        <div class="label">Sélection complète</div>
-        <div class="horses">02 – 09 – 01 – 13 – 08 – 12 – 04 – 05</div>
+    <div class="summary-item">
+        <span class="summary-course">R1C4 Quinté+</span>
+        <span class="summary-numbers">3 – 8</span>
+    </div>
+    <div class="summary-item">
+        <span class="summary-course">R1C5</span>
+        <span class="summary-numbers">1 – 2</span>
+    </div>
+    <div class="summary-item">
+        <span class="summary-course">R1C6</span>
+        <span class="summary-numbers">3 – 2</span>
+    </div>
+    <div class="summary-item">
+        <span class="summary-course">R1C7</span>
+        <span class="summary-numbers">3 – 4</span>
+    </div>
+    <div class="summary-item">
+        <span class="summary-course">R1C8</span>
+        <span class="summary-numbers">2 – 1 – 3</span>
     </div>
 </section>
 
-<section class="card" id="pronos5">
-    <h2>Pronos en 5 – Les huit courses</h2>
-
-    <div class="prono-five">
-        <div class="label">R1C1 – Prix de Flore</div>
-        <div class="horses">04 – 03 – 01 – 06 – 08</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C2 – Critérium International</div>
-        <div class="horses">07 – 01 – 02 – 06 – 03</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C3 – Prix Perth</div>
-        <div class="horses">04 – 03 – 05 – 06 – 08</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C4 – Critérium de Saint-Cloud</div>
-        <div class="horses">05 – 06 – 02 – 01 – 03</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C5 – Prix de l'Élevage – Quinté+</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C6 – Prix Royal-Oak</div>
-        <div class="horses">02 – 01</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C7 – Prix Belle de Nuit</div>
-        <div class="horses">02 – 03 – 13 – 05 – 01</div>
-    </div>
-
-    <div class="prono-five">
-        <div class="label">R1C8 – Prix des Haras</div>
-        <div class="horses">02 – 09 – 01 – 13 – 08</div>
-    </div>
-
-    <a class="top-button" href="#top">Retour en haut</a>
-</section>
-
-<section class="card" id="pronos8">
-    <h2>Sélections complètes – Les huit courses</h2>
-
-    <div class="selection">
-        <div class="label">R1C1 – Prix de Flore</div>
-        <div class="horses">04 – 03 – 01 – 06 – 08 – 05 – 07</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C2 – Critérium International</div>
-        <div class="horses">07 – 01 – 02 – 06 – 03 – 05 – 04</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C3 – Prix Perth</div>
-        <div class="horses">04 – 03 – 05 – 06 – 08 – 02 – 01</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C4 – Critérium de Saint-Cloud</div>
-        <div class="horses">05 – 06 – 02 – 01 – 03 – 04</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C5 – Prix de l'Élevage – Quinté+</div>
-        <div class="horses">07 – 02 – 04 – 09 – 16 – 12 – 13 – 15</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C6 – Prix Royal-Oak</div>
-        <div class="horses">02 – 01</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C7 – Prix Belle de Nuit</div>
-        <div class="horses">02 – 03 – 13 – 05 – 01 – 07 – 10</div>
-    </div>
-
-    <div class="selection">
-        <div class="label">R1C8 – Prix des Haras</div>
-        <div class="horses">02 – 09 – 01 – 13 – 08 – 12 – 04 – 05</div>
-    </div>
-
-    <a class="top-button" href="#top">Retour en haut</a>
-</section>
-
-<section class="card" id="apropos">
+<section class="section">
     <h2>À propos de ZenTurfPronos</h2>
-
-    <p>
-        ZenTurfPronos présente les programmes des courses hippiques
-        françaises et vos sélections personnelles pour chaque réunion.
-        Les bases courses, les pronos et les sélections sont affichés
-        pour faciliter la consultation sur ordinateur et téléphone.
+    <p class="seo-text">
+        ZenTurfPronos présente le programme des courses hippiques françaises,
+        les horaires de départ, les distances, les allocations, les partants,
+        les bases et les sélections proposées pour chaque réunion.
     </p>
-
-    <p>
-        La réunion R1 de Saint-Cloud du dimanche 25 octobre 2026
-        comporte huit courses de plat. Le Quinté+ est programmé
-        dans la R1C5, Prix de l'Élevage.
+    <p class="seo-text">
+        Cette page présente la réunion R1 Auteuil du mercredi 28 octobre 2026.
+        Les sélections sont indicatives et ne garantissent aucun résultat.
     </p>
-
-    <p>
-        Les horaires, distances, allocations et nombres de partants
-        sont ceux des programmes consultés. Vérifiez les partants
-        définitifs et les éventuels non-partants avant chaque course.
+    <p class="seo-text">
+        ZenTurfPronos est un site indépendant et n'est affilié à aucun
+        opérateur de paris hippiques.
     </p>
-
-    <p>
-        Les sélections publiées sont des pronostics personnels
-        et ne garantissent pas le résultat d'une course.
-    </p>
-
-    <p class="note">
+    <div class="note">
         Les courses hippiques comportent des risques financiers.
         Jouez de manière responsable.
-    </p>
-
-    <p>
-        Suivez moi à l'adresse suivante :
-        <br>
-        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
-            https://natachalovostory-stack.github.io/zenturfpronos/
-        </a>
-    </p>
-
-    <p class="note">
-        Sources du programme :
-        <a href="https://www.zone-turf.fr/programmes/r1-saint-cloud-199649.html" target="_blank" rel="noopener noreferrer">Zone-Turf</a> –
-        <a href="https://www.geny.com/programme/2026-10-25" target="_blank" rel="noopener noreferrer">Geny</a> –
-        <a href="https://iturf.b-cdn.net/programme/resultats.php?date=2026-10-25" target="_blank" rel="noopener noreferrer">iTurf</a>.
-    </p>
-
-    <a class="top-button" href="#top">Retour en haut</a>
+    </div>
 </section>
 
-</main>
-
-<footer>
-    <p><strong>ZenTurfPronos</strong></p>
-    <p>Pronostics des courses hippiques françaises</p>
-    <p>R1 Saint-Cloud – Dimanche 25 octobre 2026</p>
-    <p>
-        <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
-            https://natachalovostory-stack.github.io/zenturfpronos/
-        </a>
-    </p>
-    <p>© 2026 ZenTurfPronos – Tous droits réservés.</p>
+<footer class="footer">
+    © 2026 ZenTurfPronos — Courses hippiques françaises<br>
+    <a href="https://natachalovostory-stack.github.io/zenturfpronos/">
+        https://natachalovostory-stack.github.io/zenturfpronos/
+    </a>
 </footer>
 
+</main>
 </body>
 </html>
-HTML
